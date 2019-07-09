@@ -1,0 +1,12 @@
+$nav-bar-padding-bottom: $spacing-unit !default;
+$nav-bar-padding-left: $spacing-unit !default;
+$nav-bar-padding-right: $spacing-unit !default;
+$nav-bar-padding-top: $spacing-unit !default;
+
+.c-nav-bar {
+  padding: $nav-bar-padding-top $nav-bar-padding-right $nav-bar-padding-bottom $nav-bar-padding-left;
+}
+
+.c-nav-bar.is-fixed {
+  position: fixed;
+}

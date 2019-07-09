@@ -1,0 +1,11 @@
+{
+  "packages": [
+    "packages/aurora-components",
+    "packages/aurora-elements",
+    "packages/aurora-documentation",
+    "packages/aurora-icons",
+    "packages/aurora-palettes",
+    "packages/aurora-themes"
+  ],
+  "version": "independent"
+}

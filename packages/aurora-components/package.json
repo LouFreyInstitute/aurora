@@ -1,0 +1,29 @@
+{
+  "author": "Mike Barnahrdt <mikebarnhardt+github@gmail.com>",
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "prop-types": "^15.7.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.5.0",
+    "@babel/core": "^7.5.0",
+    "@babel/preset-env": "^7.5.2",
+    "@babel/preset-react": "^7.0.0",
+    "react": "^16.8.6"
+  },
+  "description": "React component library using Aurora.",
+  "keywords": [
+    "react"
+  ],
+  "license": "UNLICENSED",
+  "main": "es/index.js",
+  "name": "aurora-components",
+  "peerDependencies": {
+    "react": "^16.8.6"
+  },
+  "scripts": {
+    "build": "babel src -d es",
+    "start": "babel src -d es -w"
+  },
+  "version": "0.0.0"
+}

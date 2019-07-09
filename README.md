@@ -1,2 +1,2 @@
-# aurora
-Style library for Lou Frey Institute websites
+# Aurora
+A styles and components library for Lou Frey Institute websites.

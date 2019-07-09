@@ -1,0 +1,47 @@
+{
+  "author": "Mike Barnhardt <mikebarnhardt+github@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/loufreyinstitute/aurora/issues"
+  },
+  "dependencies": {
+    "aurora-components": "0.0.0",
+    "aurora-elements": "0.0.0",
+    "gatsby": "^2.13.9",
+    "gatsby-image": "^2.2.4",
+    "gatsby-plugin-manifest": "^2.2.1",
+    "gatsby-plugin-offline": "^2.2.1",
+    "gatsby-plugin-react-helmet": "^3.1.0",
+    "gatsby-plugin-sharp": "^2.2.3",
+    "gatsby-source-filesystem": "^2.1.2",
+    "gatsby-transformer-sharp": "^2.2.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-helmet": "^5.2.1"
+  },
+  "description": "Aurora documentation.",
+  "devDependencies": {
+    "gh-pages": "^2.0.1",
+    "prettier": "^1.18.2"
+  },
+  "keywords": [
+    "documentation",
+    "gatsby",
+    "react"
+  ],
+  "license": "UNLICENSED",
+  "name": "aurora-documentation",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/loufreyinstitute/aurora"
+  },
+  "scripts": {
+    "build": "gatsby build",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
+    "develop": "gatsby develop",
+    "serve": "gatsby serve",
+    "start": "npm run develop"
+  },
+  "version": "0.0.0"
+}

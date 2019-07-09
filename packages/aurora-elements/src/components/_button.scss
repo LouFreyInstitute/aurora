@@ -1,0 +1,13 @@
+.c-button {
+  border-style: solid;
+  border-width: 2px;
+  cursor: pointer;
+}
+
+.c-button.is-default {
+  --button-background-color: mediumturquoise;
+  --button-color: black;
+
+  @include css-property-fallback("background-color", "--button-background-color", "mediumturquoise");
+  @include css-property-fallback("color", "--button-color", "black");
+}

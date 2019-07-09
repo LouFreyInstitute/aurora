@@ -1,0 +1,18 @@
+{
+  "author": "Mike Barnahrdt <mikebarnhardt+github@gmail.com>",
+  "description": "Themable CSS styles written in SCSS.",
+  "devDependencies": {
+    "sass": "^1.22.2"
+  },
+  "keywords": [
+    "css",
+    "scss"
+  ],
+  "license": "UNLICENSED",
+  "main": "dist/styles.css",
+  "name": "aurora-elements",
+  "scripts": {
+    "start": "sass src/styles.scss dist/styles.css"
+  },
+  "version": "0.0.0"
+}
