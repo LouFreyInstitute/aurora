@@ -25,5 +25,6 @@
     "build": "babel src -d es",
     "start": "babel src -d es -w"
   },
-  "version": "0.0.0"
+  "version": "0.0.0",
+  "xo": false
 }

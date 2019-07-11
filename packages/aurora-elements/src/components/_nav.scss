@@ -1,0 +1,8 @@
+$nav-padding-bottom: $spacing-unit !default;
+$nav-padding-left: $spacing-unit !default;
+$nav-padding-right: $spacing-unit !default;
+$nav-padding-top: $spacing-unit !default;
+
+.c-nav {
+  padding: $nav-padding-top $nav-padding-right $nav-padding-bottom $nav-padding-left;
+}

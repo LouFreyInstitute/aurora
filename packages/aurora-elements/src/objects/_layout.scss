@@ -1,0 +1,17 @@
+.o-layout {
+  display: flex;
+}
+
+.o-layout.is-horizontal {
+  flex-direction: row;
+}
+
+.o-layout.is-vertical {
+  flex-direction: column;
+}
+
+  .o-layout-item { }
+
+  .o-layout-item.is-fill {
+    flex: 1;
+  }

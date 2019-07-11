@@ -1,8 +1,6 @@
 {
   "author": "Mike Barnhardt <mikebarnhardt+github@gmail.com>",
-  "bugs": {
-    "url": "https://github.com/loufreyinstitute/aurora/issues"
-  },
+  "bugs": "https://github.com/loufreyinstitute/aurora/issues",
   "dependencies": {
     "aurora-components": "0.0.0",
     "aurora-elements": "0.0.0",
@@ -21,8 +19,7 @@
   },
   "description": "Aurora documentation.",
   "devDependencies": {
-    "gh-pages": "^2.0.1",
-    "prettier": "^1.18.2"
+    "gh-pages": "^2.0.1"
   },
   "keywords": [
     "documentation",
@@ -32,16 +29,11 @@
   "license": "UNLICENSED",
   "name": "aurora-documentation",
   "private": true,
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/loufreyinstitute/aurora"
-  },
+  "repository": "https://github.com/LouFreyInstitute/aurora.git",
   "scripts": {
-    "build": "gatsby build",
     "deploy": "gatsby build --prefix-paths && gh-pages -d public",
-    "develop": "gatsby develop",
-    "serve": "gatsby serve",
-    "start": "npm run develop"
+    "start": "gatsby develop"
   },
-  "version": "0.0.0"
+  "version": "0.0.0",
+  "xo": false
 }

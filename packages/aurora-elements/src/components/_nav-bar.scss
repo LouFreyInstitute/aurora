@@ -1,9 +1,12 @@
+$nav-bar-background-color: mediumturquoise !default;
+
 $nav-bar-padding-bottom: $spacing-unit !default;
 $nav-bar-padding-left: $spacing-unit !default;
 $nav-bar-padding-right: $spacing-unit !default;
 $nav-bar-padding-top: $spacing-unit !default;
 
 .c-nav-bar {
+  background-color: $nav-bar-background-color;
   padding: $nav-bar-padding-top $nav-bar-padding-right $nav-bar-padding-bottom $nav-bar-padding-left;
 }
 

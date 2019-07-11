@@ -4,12 +4,12 @@ import {Button} from 'aurora-components';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 
-const IndexPage = () => (
+const ButtonDocumentation = () => (
 	<Layout>
-		<SEO title="Home" />
+		<SEO title="Button" />
 
-		<h1>Home</h1>
+		<Button color="default">This is my button</Button>
 	</Layout>
 );
 
-export default IndexPage;
+export default ButtonDocumentation;

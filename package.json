@@ -1,6 +1,15 @@
 {
   "devDependencies": {
-    "lerna": "^3.15.0"
+    "eslint-config-xo-react": "^0.20.0",
+    "eslint-plugin-react": "^7.14.2",
+    "eslint-plugin-react-hooks": "^1.6.1",
+    "lerna": "^3.15.0",
+    "react": "^16.8.6",
+    "xo": "^0.24.0"
   },
-  "private": true
+  "private": true,
+  "xo": {
+    "extends": "xo-react",
+    "prettier": true
+  }
 }

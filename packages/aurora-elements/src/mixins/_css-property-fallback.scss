@@ -1,10 +1,12 @@
-// You can override this variable to `false` to test fallback values or just
-// disable it completely if it's not needed.
+/**
+ * You can override this variable to `false` to test fallback values or just
+ * disable it completely if it's not needed.
+ */
 $enable-css-properties: true !default;
 
 @mixin css-property-fallback($property-name, $css-property-name, $property-value) {
   #{$property-name}: #{$property-value};
-  
+
   @if $enable-css-properties {
     #{$property-name}: var(#{$css-property-name});
   }
