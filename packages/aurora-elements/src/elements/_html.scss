@@ -3,9 +3,13 @@ $html-font-size: $font-size !default;
 $html-line-height: 1.5 !default;
 
 html {
-  background-color: #f0f0f0;
+  background-color: #e8f0f0;
+  color: #404060;
   font-family: $html-font-family;
   font-size: $html-font-size;
-  color: #404040;
+  font-smoothing: antialiased;
   line-height: $html-line-height;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: grayscale;
 }

@@ -1,0 +1,15 @@
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+p > a {
+  box-shadow: inset 0 ($font-size * -0.125) 0 0 mediumturquoise;
+  padding: $font-size * 0.125;
+  transition: box-shadow 160ms, color 160ms;
+}
+
+p > a:hover {
+  box-shadow: inset 0 ($font-size * -1.5) 0 0 #404060;
+  color: white;
+}

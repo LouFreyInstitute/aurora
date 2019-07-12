@@ -1,4 +1,4 @@
-$block-margin-bottom: $spacing-unit !default;
+$block-margin-bottom: $spacing-unit * 2 !default;
 
 @mixin block() {
   margin: 0;

@@ -4,12 +4,15 @@
 @import 'mixins/block';
 @import 'mixins/css-property-fallback';
 @import 'globals/box-sizing';
+@import 'elements/a';
 @import 'elements/body';
 @import 'elements/code';
 @import 'elements/html';
+@import 'elements/p';
 @import 'elements/pre';
 @import 'objects/layout';
 @import 'components/button';
+@import 'components/heading';
 @import 'components/nav';
 @import 'components/nav-bar';
 @import 'utilities/full-height';

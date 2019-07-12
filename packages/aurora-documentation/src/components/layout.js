@@ -27,8 +27,8 @@ const Layout = ({children}) => {
 		<div className="o-layout is-vertical u-full-height">
 			<Header siteTitle={data.site.siteMetadata.title} />
 			<div className="o-layout is-horizontal o-layout-item is-fill">
-				<Sidebar style={{padding: '1rem'}} />
-				<main style={{padding: '1rem'}}>{children}</main>
+				<Sidebar style={{fontSize: '0.875rem', padding: '1rem'}} />
+				<main style={{maxWidth: '640px', padding: '1rem'}}>{children}</main>
 			</div>
 			<footer style={{padding: '1rem'}}>
 				© {new Date().getFullYear()}, Built with

@@ -12,10 +12,10 @@ const ButtonElement = () => (
 	<Layout>
 		<SEO title="Button" />
 
-		<h1>Button</h1>
+		<h1 className="c-heading is-large">Button</h1>
 		<p>Used to interact with page navigation, forms, or other elements.</p>
 
-		<h2>Classes</h2>
+		<h2 className="c-heading is-small">Classes</h2>
 		<dl>
 			<dt>
 				<code>c-button</code>
@@ -23,7 +23,7 @@ const ButtonElement = () => (
 			<dd>The default setting for buttons without any styling.</dd>
 		</dl>
 
-		<h2>Examples</h2>
+		<h2 className="c-heading is-small">Examples</h2>
 		<h3>Code</h3>
 		<pre>
 			<code>{code}</code>
