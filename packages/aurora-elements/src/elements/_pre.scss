@@ -1,0 +1,15 @@
+$pre-padding-bottom: $spacing-unit !default;
+$pre-padding-left: $spacing-unit !default;
+$pre-padding-right: $spacing-unit !default;
+$pre-padding-top: $spacing-unit !default;
+
+pre {
+  @include block;
+  background-color: #404040;
+  color: #f0f0f0;
+  overflow: auto;
+  padding-bottom: $pre-padding-bottom;
+  padding-left: $pre-padding-left;
+  padding-right: $pre-padding-right;
+  padding-top: $pre-padding-top;
+}

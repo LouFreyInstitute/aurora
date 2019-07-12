@@ -1,0 +1,9 @@
+$block-margin-bottom: $spacing-unit !default;
+
+@mixin block() {
+  margin: 0;
+
+  &:not(:last-child) {
+    margin-bottom: $block-margin-bottom;
+  }
+}
