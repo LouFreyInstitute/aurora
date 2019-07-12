@@ -9,23 +9,30 @@ function Sidebar(props) {
 			<ul>
 				<li>
 					<h4>Components</h4>
-				</li>
-				<li>
-					<Link to="/button-component">Button</Link>
-				</li>
-				<li>
-					<Link to="/nav">Nav</Link>
-				</li>
-				<li>
-					<Link to="/nav-bar">NavBar</Link>
+					<ul>
+						<li>
+							<Link to="/button-component">Button</Link>
+						</li>
+						<li>
+							<Link to="/nav">Nav</Link>
+						</li>
+						<li>
+							<Link to="/nav-bar">NavBar</Link>
+						</li>
+					</ul>
 				</li>
 			</ul>
 			<ul>
 				<li>
 					<h4>Elements</h4>
-				</li>
-				<li>
-					<Link to="/button-element">Button</Link>
+					<ul>
+						<li>Components</li>
+						<ul>
+							<li>
+								<Link to="/button-element">Button</Link>
+							</li>
+						</ul>
+					</ul>
 				</li>
 			</ul>
 		</div>
