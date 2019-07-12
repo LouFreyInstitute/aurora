@@ -4,9 +4,9 @@ import {Button} from 'aurora-components';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 
-const code = `
-<Button color="default">This is my button</Button>
-`;
+const code = `<Button color="default">
+  This is my button
+</Button>`;
 
 const ButtonComponent = () => (
 	<Layout>

@@ -3,8 +3,7 @@ import React from 'react';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 
-const code = `
-<button class="c-button is-default" type="button">
+const code = `<button class="c-button is-default" type="button">
   This is my button
 </button>
 `;
