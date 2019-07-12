@@ -11,7 +11,7 @@ function Sidebar(props) {
 					<h4>Components</h4>
 				</li>
 				<li>
-					<Link to="/button">Button</Link>
+					<Link to="/button-component">Button</Link>
 				</li>
 				<li>
 					<Link to="/nav">Nav</Link>
@@ -23,6 +23,9 @@ function Sidebar(props) {
 			<ul>
 				<li>
 					<h4>Elements</h4>
+				</li>
+				<li>
+					<Link to="/button-element">Button</Link>
 				</li>
 			</ul>
 		</div>
