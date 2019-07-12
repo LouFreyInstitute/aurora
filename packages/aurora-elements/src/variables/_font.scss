@@ -1,0 +1,21 @@
+/**
+ * Font Stacks for monospaced, sans-serif and serif fonts.
+ */
+$font-family-mono:
+  "SFMono-Regular",
+  Consolas,
+  "Liberation Mono",
+  Menlo,
+  Courier,
+  monospace;
+  
+$font-family-sans:
+  sans-serif;
+
+$font-family-serif:
+  serif;
+
+/**
+ * Font sizes
+ */
+$font-size: $base-font-size;
