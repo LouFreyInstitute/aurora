@@ -48,8 +48,8 @@ const ButtonElement = () => (
 
 			<h2 className="c-heading is-small">Examples</h2>
 
-			<div className="o-layout is-horizontal">
-				<div>
+			<div className="o-grid">
+				<div className="o-grid-column is-3/4">
 					<h3 className="c-heading is-tiny">Code</h3>
 					<pre>
 						<code>{`<button class="c-button is-brand" type="button">
@@ -57,7 +57,7 @@ const ButtonElement = () => (
 </button>`}</code>
 					</pre>
 				</div>
-				<div>
+				<div className="o-grid-column is-1/4">
 					<h3 className="c-heading is-tiny">Result</h3>
 					<button className="c-button is-brand" type="button">
 						Action Text
@@ -65,8 +65,8 @@ const ButtonElement = () => (
 				</div>
 			</div>
 
-			<div className="o-layout is-horizontal">
-				<div>
+			<div className="o-grid">
+				<div className="o-grid-column is-3/4">
 					<h3 className="c-heading is-tiny">Code</h3>
 					<pre>
 						<code>{`<button class="c-button is-light" type="button">
@@ -74,7 +74,7 @@ const ButtonElement = () => (
 </button>`}</code>
 					</pre>
 				</div>
-				<div>
+				<div className="o-grid-column is-1/4">
 					<h3 className="c-heading is-tiny">Result</h3>
 					<button className="c-button is-light" type="button">
 						Action Text
@@ -82,8 +82,8 @@ const ButtonElement = () => (
 				</div>
 			</div>
 
-			<div className="o-layout is-horizontal">
-				<div>
+			<div className="o-grid">
+				<div className="o-grid-column is-3/4">
 					<h3 className="c-heading is-tiny">Code</h3>
 					<pre>
 						<code>{`<button class="c-button is-dark" type="button">
@@ -91,7 +91,7 @@ const ButtonElement = () => (
 </button>`}</code>
 					</pre>
 				</div>
-				<div>
+				<div className="o-grid-column is-1/4">
 					<h3 className="c-heading is-tiny">Result</h3>
 					<button className="c-button is-dark" type="button">
 						Action Text
