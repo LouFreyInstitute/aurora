@@ -1,7 +1,9 @@
-$button-padding-bottom: $spacing-unit * 0.5 !default;
-$button-padding-left: $spacing-unit !default;
-$button-padding-right: $spacing-unit !default;
-$button-padding-top: $spacing-unit * 0.5 !default;
+$button-border-radius: 0.125rem !default;
+$button-border-width: 0.125rem !default;
+$button-padding-bottom: 0.25rem !default;
+$button-padding-left: 0.5rem !default;
+$button-padding-right: 0.5rem !default;
+$button-padding-top: 0.25rem !default;
 
 /**
  * These are the standard button styles that all other button states inherit.
@@ -9,37 +11,43 @@ $button-padding-top: $spacing-unit * 0.5 !default;
 .c-button {
   background-color: transparent;
   border-color: transparent;
-  border-radius: $spacing-unit * 0.25;
+  border-radius: $button-border-radius;
   border-style: solid;
-  border-width: $spacing-unit * 0.25;
+  border-width: $button-border-width;
   color: inherit;
   cursor: pointer;
   font: inherit;
   margin: 0;
-  padding-bottom: $button-padding-bottom - ($spacing-unit * 0.25);
-  padding-left: $button-padding-left - ($spacing-unit * 0.25);
-  padding-right: $button-padding-right - ($spacing-unit * 0.25);
-  padding-top: $button-padding-top - ($spacing-unit * 0.25);
+  padding-bottom: $button-padding-bottom - $button-border-width;
+  padding-left: $button-padding-left - $button-border-width;
+  padding-right: $button-padding-right - $button-border-width;
+  padding-top: $button-padding-top - $button-border-width;
   white-space: nowrap;
 }
 
 /**
  * Button color variations
  */
+.c-button.is-accent {
+  background-color: #aae;
+  border-color: #aae;
+  color: #383040;
+ }
+
 .c-button.is-brand {
   background-color: #aee;
   border-color: #aee;
-}
-
-.c-button.is-light {
-  background-color: white;
-  border-color: white;
 }
 
 .c-button.is-dark {
   background-color: #605868;
   border-color: #605868;
   color: white;
+}
+
+.c-button.is-light {
+  background-color: white;
+  border-color: white;
 }
 
 /**

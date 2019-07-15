@@ -1,14 +1,13 @@
-$pre-padding-bottom: $spacing-unit !default;
-$pre-padding-left: $spacing-unit !default;
-$pre-padding-right: $spacing-unit !default;
-$pre-padding-top: $spacing-unit !default;
+$pre-padding-bottom: 0.5rem !default;
+$pre-padding-left: 0.5rem !default;
+$pre-padding-right: 0.5rem !default;
+$pre-padding-top: 0.5rem !default;
 
 pre {
   @include block;
   background-color: #605868;
   border-radius: 0.125rem;
   color: white;
-  font-size: 0.875rem;
   overflow: auto;
   padding-bottom: $pre-padding-bottom;
   padding-left: $pre-padding-left;

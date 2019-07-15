@@ -18,6 +18,26 @@ const ButtonElement = () => (
 
 			<p>Used to interact with page navigation, forms, or other elements.</p>
 
+			<button className="c-button" type="button">
+				Default
+			</button>
+			{` `}
+			<button className="c-button is-brand" type="button">
+				Brand
+			</button>
+			{` `}
+			<button className="c-button is-accent" type="button">
+				Accent
+			</button>
+			{` `}
+			<button className="c-button is-light" type="button">
+				Light
+			</button>
+			{` `}
+			<button className="c-button is-dark" type="button">
+				Dark
+			</button>
+
 			<h2 className="c-heading is-small">Classes</h2>
 			<dl>
 				<dt>
@@ -29,7 +49,7 @@ const ButtonElement = () => (
 			<h2 className="c-heading is-small">Examples</h2>
 
 			<div className="o-layout is-horizontal">
-				<div className="o-block is-large">
+				<div>
 					<h3 className="c-heading is-tiny">Code</h3>
 					<pre>
 						<code>{`<button class="c-button is-brand" type="button">
@@ -37,7 +57,7 @@ const ButtonElement = () => (
 </button>`}</code>
 					</pre>
 				</div>
-				<div className="o-block is-large">
+				<div>
 					<h3 className="c-heading is-tiny">Result</h3>
 					<button className="c-button is-brand" type="button">
 						Action Text
@@ -46,7 +66,7 @@ const ButtonElement = () => (
 			</div>
 
 			<div className="o-layout is-horizontal">
-				<div className="o-block is-large">
+				<div>
 					<h3 className="c-heading is-tiny">Code</h3>
 					<pre>
 						<code>{`<button class="c-button is-light" type="button">
@@ -54,7 +74,7 @@ const ButtonElement = () => (
 </button>`}</code>
 					</pre>
 				</div>
-				<div className="o-block is-large">
+				<div>
 					<h3 className="c-heading is-tiny">Result</h3>
 					<button className="c-button is-light" type="button">
 						Action Text
@@ -63,7 +83,7 @@ const ButtonElement = () => (
 			</div>
 
 			<div className="o-layout is-horizontal">
-				<div className="o-block is-large">
+				<div>
 					<h3 className="c-heading is-tiny">Code</h3>
 					<pre>
 						<code>{`<button class="c-button is-dark" type="button">
@@ -71,7 +91,7 @@ const ButtonElement = () => (
 </button>`}</code>
 					</pre>
 				</div>
-				<div className="o-block is-large">
+				<div>
 					<h3 className="c-heading is-tiny">Result</h3>
 					<button className="c-button is-dark" type="button">
 						Action Text
