@@ -35,7 +35,7 @@ const Layout = ({children}) => {
 				</main>
 			</div>
 
-			<footer className="o-block" style={{backgroundColor: '#f0f0f0'}}>
+			<footer className="o-block" style={{backgroundColor: '#f4f4f8'}}>
 				© {new Date().getFullYear()}, Built with
 				{` `}
 				<a href="https://www.gatsbyjs.org">Gatsby</a>
