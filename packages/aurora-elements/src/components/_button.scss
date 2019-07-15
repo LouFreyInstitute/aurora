@@ -16,18 +16,19 @@ $button-padding-top: $spacing-unit !default;
   cursor: pointer;
   font: inherit;
   margin: 0;
-  padding-bottom: $button-padding-bottom;
-  padding-left: $button-padding-left;
-  padding-right: $button-padding-right;
-  padding-top: $button-padding-top;
+  padding-bottom: $button-padding-bottom - ($spacing-unit * 0.25);
+  padding-left: $button-padding-left - ($spacing-unit * 0.25);
+  padding-right: $button-padding-right - ($spacing-unit * 0.25);
+  padding-top: $button-padding-top - ($spacing-unit * 0.25);
+  white-space: nowrap;
 }
 
 /**
  * Button color variations
  */
 .c-button.is-default {
-  background-color: mediumturquoise;
-  border-color: currentColor;
+  background-color: #aee;
+  border-color: #aee;
 }
 
 /**

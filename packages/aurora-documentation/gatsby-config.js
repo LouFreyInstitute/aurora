@@ -28,7 +28,7 @@ module.exports = {
 		// `gatsby-plugin-offline`,
 	],
 	siteMetadata: {
-		title: `Aurora Documentation`,
+		title: `Aurora`,
 		description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
 		author: `@mikebarnhardt`
 	}

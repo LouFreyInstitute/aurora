@@ -6,7 +6,9 @@ import React from 'react';
 const Header = ({siteTitle}) => (
 	<NavBar>
 		<Nav>
-			<Link to="/">{siteTitle}</Link>
+			<h1 className="c-heading is-tiny">
+				<Link to="/">{siteTitle}</Link>
+			</h1>
 		</Nav>
 
 		<Nav fill />

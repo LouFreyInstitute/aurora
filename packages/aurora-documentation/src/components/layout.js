@@ -26,11 +26,19 @@ const Layout = ({children}) => {
 	return (
 		<div className="o-layout is-vertical u-full-height">
 			<Header siteTitle={data.site.siteMetadata.title} />
+
 			<div className="o-layout is-horizontal o-layout-item is-fill">
-				<Sidebar style={{fontSize: '0.875rem', padding: '1rem'}} />
-				<main style={{maxWidth: '640px', padding: '1rem'}}>{children}</main>
+				<Sidebar />
+
+				<main className="o-block is-large" style={{maxWidth: '640px'}}>
+					{children}
+				</main>
 			</div>
-			<footer style={{padding: '1rem'}}>
+
+			<footer
+				className="o-block is-large"
+				style={{backgroundColor: '#605868', color: 'white'}}
+			>
 				© {new Date().getFullYear()}, Built with
 				{` `}
 				<a href="https://www.gatsbyjs.org">Gatsby</a>

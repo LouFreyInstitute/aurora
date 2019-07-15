@@ -2,6 +2,10 @@
   display: flex;
 }
 
+.o-layout.is-centered {
+  align-items: center;
+}
+
 .o-layout.is-horizontal {
   flex-direction: row;
 }
@@ -15,3 +19,7 @@
   .o-layout-item.is-fill {
     flex: 1;
   }
+
+.is-one-half {
+  width: 50%;
+}

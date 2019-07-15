@@ -1,0 +1,37 @@
+/**
+ * Prose is used for content written using various methods, such as from text
+ * editors, plain html, converted Markdown, etc.
+ * 
+ * This solution is not ideal, but is here for when a general style is needed
+ * for the above content when there is no access to classes or React.
+ */
+.s-prose {}
+ 
+.s-prose.is-larger {
+  font-size: 1.125em;
+  line-height: 1.75;
+}
+
+.s-prose.is-smaller {
+  font-size: 0.875em;
+  line-height: 1.25;
+}
+
+.s-prose em,
+.s-prose i {
+  font-style: italic;
+}
+
+.s-prose b,
+.s-prose strong {
+  font-weight: bold;
+}
+
+.s-prose h1,
+.s-prose h2,
+.s-prose h3,
+.s-prose h4,
+.s-prose h5,
+.s-prose h6 {
+  padding-top: $spacing-unit * 2;
+}

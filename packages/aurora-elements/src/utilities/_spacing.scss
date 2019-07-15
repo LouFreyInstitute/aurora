@@ -1,0 +1,55 @@
+.u-margin {
+  margin: $spacing-unit;
+}
+
+.u-margin-bottom {
+  margin-bottom: $spacing-unit;
+}
+
+.u-margin-bottom\+ {
+  margin-bottom: $spacing-unit * 2;
+}
+
+.u-margin-bottom\+\+ {
+  margin-bottom: $spacing-unit * 4;
+}
+
+.u-margin-left {
+  margin-left: $spacing-unit;
+}
+
+.u-margin-none {
+  margin: 0 !important;
+}
+
+.u-margin-right {
+  margin-right: $spacing-unit;
+}
+
+.u-margin-top {
+  margin-top: $spacing-unit;
+}
+
+.u-padding {
+  padding: $spacing-unit;
+}
+
+.u-padding-bottom {
+  padding-bottom: $spacing-unit;
+}
+
+.u-padding-left {
+  padding-left: $spacing-unit;
+}
+
+.u-padding-none {
+  padding: 0;
+}
+
+.u-padding-right {
+  padding-right: $spacing-unit;
+}
+
+.u-padding-top {
+  padding-top: $spacing-unit;
+}

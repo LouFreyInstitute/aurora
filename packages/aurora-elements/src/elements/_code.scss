@@ -1,5 +1,5 @@
 $code-font-family: $font-family-mono !default;
-$code-font-size: $font-size !default;
+$code-font-size: $font-size * 0.875 !default;
 
 code {
   font-family: $code-font-family;

@@ -1,70 +1,64 @@
 import React from 'react';
 import {Link} from 'gatsby';
+import {NavItem} from 'aurora-components';
 
-function Sidebar(props) {
-	const {...passProps} = props;
-
+function Sidebar() {
 	return (
-		<nav className="o-layout is-vertical c-nav" {...passProps}>
-			<div>
-				<strong>Components</strong>
-			</div>
-			<nav className="o-layout is-vertical c-nav">
-				<div>
-					<Link to="/button-component">Button</Link>
-				</div>
-				<div>
-					<Link to="/nav">Nav</Link>
-				</div>
-				<div>
-					<Link to="/nav-bar">NavBar</Link>
-				</div>
+		<div className="o-block is-large" style={{fontSize: '0.875rem'}}>
+			<nav className="o-layout is-vertical u-margin-bottom+">
+				<NavItem className="c-heading is-tiny u-margin-none" Component="h4">
+					Components
+				</NavItem>
+				<NavItem Component={Link} to="/button-component">
+					Button
+				</NavItem>
+				<NavItem Component={Link} to="/nav">
+					Nav
+				</NavItem>
+				<NavItem Component={Link} to="/nav-bar">
+					NavBar
+				</NavItem>
 			</nav>
 
-			<div>
-				<strong>Elements</strong>
-			</div>
-			<nav className="o-layout is-vertical c-nav">
-				<div>Components</div>
-				<nav className="o-layout is-vertical c-nav">
-					<Link to="/button-element">Button</Link>
-				</nav>
-
-				<div>Elements</div>
-				<nav className="o-layout is-vertical c-nav">
-					<Link to="/body-element">Body</Link>
-					<Link to="/html-element">HTML</Link>
-				</nav>
-
-				<div>Mixins</div>
-				<nav className="o-layout is-vertical c-nav">
-					<Link to="/block-mixin">Block</Link>
-					<Link to="/css-property-fallback-mixin">CSS Property Fallback</Link>
-				</nav>
-
-				<div>Objects</div>
-				<nav className="o-layout is-vertical c-nav">
-					<Link to="/layout-object">Layout</Link>
-				</nav>
-
-				<div>Variables</div>
-				<nav className="o-layout is-vertical c-nav">
-					<Link to="/base-variables">Base</Link>
-					<Link to="/font-variables">Font</Link>
-					<Link to="/spacing-variables">Spacing</Link>
-				</nav>
+			<nav className="o-layout is-vertical u-margin-bottom+">
+				<NavItem className="c-heading is-tiny u-margin-none" Component="h4">
+					Elements
+				</NavItem>
+				<NavItem Component={Link} to="/button-element">
+					.c-button
+				</NavItem>
+				<NavItem Component={Link} to="/c-nav">
+					.c-nav
+				</NavItem>
+				<NavItem Component={Link} to="/c-nav-bar">
+					.c-nav-bar
+				</NavItem>
+				<NavItem Component={Link} to="/c-nav-item">
+					.c-nav-item
+				</NavItem>
+				<NavItem Component={Link} to="/layout-object">
+					.o-layout
+				</NavItem>
 			</nav>
 
-			<div>
-				<strong>Themes</strong>
-			</div>
-			<nav className="o-layout is-vertical c-nav">
-				<Link to="/aurora-theme">Aurora</Link>
-				<Link to="/civics360-theme">Civics360</Link>
-				<Link to="/citizen-theme">Citizen</Link>
-				<Link to="/institute-theme">Institute</Link>
+			<nav className="o-layout is-vertical">
+				<NavItem className="c-heading is-tiny u-margin-none" Component="h4">
+					Themes
+				</NavItem>
+				<NavItem Component={Link} to="/aurora-theme">
+					Aurora
+				</NavItem>
+				<NavItem Component={Link} to="/civics360-theme">
+					Civics360
+				</NavItem>
+				<NavItem Component={Link} to="/citizen-theme">
+					Citizen
+				</NavItem>
+				<NavItem Component={Link} to="/institute-theme">
+					Institute
+				</NavItem>
 			</nav>
-		</nav>
+		</div>
 	);
 }
 
