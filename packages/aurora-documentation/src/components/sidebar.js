@@ -4,7 +4,7 @@ import {NavItem} from 'aurora-components';
 
 function Sidebar() {
 	return (
-		<div className="o-block is-large" style={{fontSize: '0.875rem'}}>
+		<div className="o-block is-large">
 			<nav className="o-layout is-vertical u-margin-bottom+">
 				<NavItem className="c-heading is-tiny u-margin-none" Component="h4">
 					Components

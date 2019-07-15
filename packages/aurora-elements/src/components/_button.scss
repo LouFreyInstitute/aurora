@@ -1,7 +1,7 @@
-$button-padding-bottom: $spacing-unit !default;
+$button-padding-bottom: $spacing-unit * 0.5 !default;
 $button-padding-left: $spacing-unit !default;
 $button-padding-right: $spacing-unit !default;
-$button-padding-top: $spacing-unit !default;
+$button-padding-top: $spacing-unit * 0.5 !default;
 
 /**
  * These are the standard button styles that all other button states inherit.
@@ -26,9 +26,20 @@ $button-padding-top: $spacing-unit !default;
 /**
  * Button color variations
  */
-.c-button.is-default {
+.c-button.is-brand {
   background-color: #aee;
   border-color: #aee;
+}
+
+.c-button.is-light {
+  background-color: white;
+  border-color: white;
+}
+
+.c-button.is-dark {
+  background-color: #605868;
+  border-color: #605868;
+  color: white;
 }
 
 /**

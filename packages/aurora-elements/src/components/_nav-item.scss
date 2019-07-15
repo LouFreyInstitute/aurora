@@ -1,3 +1,7 @@
 .c-nav-item {
-  padding: $spacing-unit;
+  display: block;
+  padding-bottom: $spacing-unit * 0.5;
+  padding-left: $spacing-unit;
+  padding-right: $spacing-unit;
+  padding-top: $spacing-unit * 0.5;
 }

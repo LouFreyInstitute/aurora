@@ -3,11 +3,6 @@ import React from 'react';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 
-const code = `<button class="c-button is-default" type="button">
-  This is my button
-</button>
-`;
-
 const ButtonElement = () => (
 	<Layout>
 		<SEO title="Button" />
@@ -37,13 +32,49 @@ const ButtonElement = () => (
 				<div className="o-block is-large">
 					<h3 className="c-heading is-tiny">Code</h3>
 					<pre>
-						<code>{code}</code>
+						<code>{`<button class="c-button is-brand" type="button">
+  This is my button
+</button>`}</code>
 					</pre>
 				</div>
 				<div className="o-block is-large">
 					<h3 className="c-heading is-tiny">Result</h3>
-					<button className="c-button is-default" type="button">
-						This is my button with no wrapping!
+					<button className="c-button is-brand" type="button">
+						Action Text
+					</button>
+				</div>
+			</div>
+
+			<div className="o-layout is-horizontal">
+				<div className="o-block is-large">
+					<h3 className="c-heading is-tiny">Code</h3>
+					<pre>
+						<code>{`<button class="c-button is-light" type="button">
+  This is my button
+</button>`}</code>
+					</pre>
+				</div>
+				<div className="o-block is-large">
+					<h3 className="c-heading is-tiny">Result</h3>
+					<button className="c-button is-light" type="button">
+						Action Text
+					</button>
+				</div>
+			</div>
+
+			<div className="o-layout is-horizontal">
+				<div className="o-block is-large">
+					<h3 className="c-heading is-tiny">Code</h3>
+					<pre>
+						<code>{`<button class="c-button is-dark" type="button">
+  This is my button
+</button>`}</code>
+					</pre>
+				</div>
+				<div className="o-block is-large">
+					<h3 className="c-heading is-tiny">Result</h3>
+					<button className="c-button is-dark" type="button">
+						Action Text
 					</button>
 				</div>
 			</div>

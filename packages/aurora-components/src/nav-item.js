@@ -3,30 +3,21 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 function NavItem(props) {
-	const {className, Component, fill, ...passProps} = props;
+	const {className, Component, ...passProps} = props;
 
-	const navClassNames = cx(
-		'o-layout-item',
-		'c-nav-item',
-		{
-			'is-fill': fill
-		},
-		className
-	);
+	const navClassNames = cx('c-nav-item', className);
 
 	return <Component className={navClassNames} {...passProps} />;
 }
 
 NavItem.propTypes = {
 	className: PropTypes.string,
-	Component: PropTypes.node,
-	fill: PropTypes.bool
+	Component: PropTypes.elementType
 };
 
 NavItem.defaultProps = {
 	className: '',
-	Component: 'a',
-	fill: false
+	Component: 'a'
 };
 
 export default NavItem;

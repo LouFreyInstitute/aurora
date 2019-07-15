@@ -24,17 +24,13 @@ const IndexPage = () => (
 			<p>
 				It was born out of exploration of various frameworks and technologies,
 				which always seemed to be over-engineered or bloated, and a want to be
-				as minimalist as possible. Chances are, if you use this product, more
-				code and features will be removed than added.
+				as minimalist as possible.
 			</p>
 
 			<h2 className="c-heading is-small">Aurora Components</h2>
 			<p>
-				React components that use <em>Elements</em> classes for styling. It is
-				possible to use without <em>Elements</em>, but you would need to look
-				into the source for the classnames used. It&apos;d be easier to use a
-				custom <em>Theme</em>. You can also supply custom custom classes to any
-				component.
+				React components that use <em>Elements</em> classes for styling. You can
+				also supply your own <code>className</code> property.
 			</p>
 
 			<h2 className="c-heading is-small">Aurora Elements</h2>
