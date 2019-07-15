@@ -1,7 +1,11 @@
 .o-block {
-  padding: 0.5rem;
+  padding: 1rem;
 }
 
 .o-block.is-large {
-  padding: 1.5rem;
+  padding: 2rem;
+}
+
+.o-block.is-small {
+  padding: 0.5rem;
 }

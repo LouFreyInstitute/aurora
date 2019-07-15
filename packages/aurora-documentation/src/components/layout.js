@@ -35,10 +35,7 @@ const Layout = ({children}) => {
 				</main>
 			</div>
 
-			<footer
-				className="o-block is-large"
-				style={{backgroundColor: '#605868', color: 'white'}}
-			>
+			<footer className="o-block" style={{backgroundColor: '#f0f0f0'}}>
 				© {new Date().getFullYear()}, Built with
 				{` `}
 				<a href="https://www.gatsbyjs.org">Gatsby</a>
