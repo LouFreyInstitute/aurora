@@ -1,0 +1,14 @@
+@import "../../node_modules/aurora-palettes/src/aurora";
+
+// Map colors to variable patterns.
+$background-color: white !default;
+$border-color: $aurora-gray-30 !default;
+$color: $aurora-gray-70 !default;
+
+$background-color-brand: $aurora-green-20 !default;
+$border-color-brand: $aurora-green-50 !default;
+$color-brand: $aurora-green-70 !default;
+
+$background-color-accent: $aurora-purple-30 !default;
+$border-color-accent: $aurora-purple-60 !default;
+$color-accent: $aurora-purple-80 !default;

@@ -1,0 +1,7 @@
+{
+  "author": "Mike Barnhardt <mikebarnhardt+github@gmail.com>",
+  "description": "Palettes used in Aurora themes.",
+  "main": "src/aurora.scss",
+  "name": "aurora-palettes",
+  "version": "0.0.0"
+}

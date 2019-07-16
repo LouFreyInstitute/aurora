@@ -9,3 +9,9 @@
  * any HTML element.
  */
 import 'aurora-elements';
+
+/**
+ * Themes that use CSS Custom Properties (variables) should be imported as well.
+ */
+import 'aurora-themes/dist/aurora.css';
+import 'aurora-themes/dist/civics360.css';

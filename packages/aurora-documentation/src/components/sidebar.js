@@ -5,7 +5,7 @@ import {NavItem} from 'aurora-components';
 function Sidebar() {
 	return (
 		<div className="o-block is-large">
-			<nav className="o-layout is-vertical u-margin-bottom+">
+			<nav className="o-layout is-vertical u-margin-bottom">
 				<NavItem className="c-heading is-tiny u-margin-none" Component="h4">
 					Components
 				</NavItem>
@@ -20,7 +20,7 @@ function Sidebar() {
 				</NavItem>
 			</nav>
 
-			<nav className="o-layout is-vertical u-margin-bottom+">
+			<nav className="o-layout is-vertical u-margin-bottom">
 				<NavItem className="c-heading is-tiny u-margin-none" Component="h4">
 					Elements
 				</NavItem>

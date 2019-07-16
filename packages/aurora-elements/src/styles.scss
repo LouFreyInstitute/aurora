@@ -1,4 +1,7 @@
-@import 'variables/font';
+// $enable-css-properties: false;
+
+@import 'variables/colors';
+@import 'variables/font-families';
 
 @import 'mixins/block';
 @import 'mixins/css-property-fallback';
@@ -13,6 +16,7 @@
 @import 'elements/pre';
 
 @import 'objects/block';
+@import 'objects/container';
 @import 'objects/grid';
 @import 'objects/layout';
 
@@ -24,7 +28,7 @@
 
 @import 'utilities/color';
 @import 'utilities/font';
-@import 'utilities/full-height';
+@import 'utilities/sizing';
 @import 'utilities/spacing';
 
 @import 'scopes/prose';

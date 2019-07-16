@@ -4,18 +4,21 @@
   "dependencies": {
     "aurora-components": "0.0.0",
     "aurora-elements": "0.0.0",
+    "aurora-themes": "0.0.0",
     "gatsby": "^2.13.9",
     "gatsby-image": "^2.2.4",
     "gatsby-plugin-manifest": "^2.2.1",
     "gatsby-plugin-offline": "^2.2.1",
     "gatsby-plugin-react-helmet": "^3.1.0",
+    "gatsby-plugin-sass": "^2.1.3",
     "gatsby-plugin-sharp": "^2.2.3",
     "gatsby-source-filesystem": "^2.1.2",
     "gatsby-transformer-sharp": "^2.2.1",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-helmet": "^5.2.1"
+    "react-helmet": "^5.2.1",
+    "sass": "^1.22.5"
   },
   "description": "Aurora documentation.",
   "devDependencies": {

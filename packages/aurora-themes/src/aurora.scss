@@ -1,0 +1,28 @@
+// Import our color palette from the `aurora-palettes` module.
+@import "../node_modules/aurora-palettes/src/aurora";
+
+/**
+ * CSS Custom Properties for Aurora theme.
+ */
+.t-aurora {
+  --background-color: white;
+  --border-color: #{$aurora-gray-40};
+  --color: #{$aurora-gray-70};
+  
+  --background-color-brand: #{$aurora-green-20};
+  --border-color-brand: #{$aurora-green-60};
+  --color-brand: #{$aurora-green-70};
+  
+  --background-color-accent: #{$aurora-purple-30};
+  --border-color-accent: #{$aurora-purple-70};
+  --color-accent: #{$aurora-purple-80};
+}
+
+/**
+ * CSS Custom Properties for Aurora theme in dark mode.
+ */
+.t-aurora.is-dark {
+  --background-color: #{$aurora-gray-80};
+  --border-color: #{$aurora-gray-50};
+  --color: #{$aurora-gray-10};
+}

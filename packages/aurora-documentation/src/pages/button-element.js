@@ -23,20 +23,24 @@ const ButtonElement = () => (
 					Default
 				</button>
 				{` `}
-				<button className="c-button is-brand" type="button">
+				<button className="c-button is-brand is-large" type="button">
 					Brand
 				</button>
 				{` `}
-				<button className="c-button is-accent" type="button">
+				<button className="c-button is-accent is-small" type="button">
 					Accent
 				</button>
 				{` `}
-				<button className="c-button is-light" type="button">
-					Light
+				<button className="c-button is-hollow" type="button">
+					Default
 				</button>
 				{` `}
-				<button className="c-button is-dark" type="button">
-					Dark
+				<button className="c-button is-brand is-hollow is-large" type="button">
+					Brand
+				</button>
+				{` `}
+				<button className="c-button is-accent is-hollow is-small" type="button">
+					Accent
 				</button>
 			</p>
 

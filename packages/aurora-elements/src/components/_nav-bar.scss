@@ -1,7 +1,17 @@
-$nav-bar-background-color: #aee !default;
-
 .c-nav-bar {
-  background-color: $nav-bar-background-color;
+  --nav-bar-background-color: var(--background-color);
+  --nav-bar-color: var(--color);
+  
+  @include css-property-fallback("background-color", "--nav-bar-background-color", $background-color);
+  @include css-property-fallback("color", "--nav-bar-color", $color);
+}
+
+.c-nav-bar.is-brand {
+  --nav-bar-background-color: var(--background-color-brand);
+  --nav-bar-color: var(--color-brand);
+  
+  @include css-property-fallback("background-color", "--nav-bar-background-color", $background-color-brand);
+  @include css-property-fallback("color", "--nav-bar-color", $color-brand);
 }
 
 .c-nav-bar.is-fixed {

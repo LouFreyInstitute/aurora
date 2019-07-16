@@ -3,13 +3,14 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 function NavBar(props) {
-	const {className, fixed, ...passProps} = props;
+	const {className, color, isFixed, ...passProps} = props;
 
 	const navBarClassNames = cx(
 		'o-layout',
 		'c-nav-bar',
 		{
-			'is-fixed': fixed
+			[`is-${color}`]: color,
+			'is-fixed': isFixed
 		},
 		className
 	);
@@ -19,12 +20,14 @@ function NavBar(props) {
 
 NavBar.propTypes = {
 	className: PropTypes.string,
-	fixed: PropTypes.bool
+	color: PropTypes.string,
+	isFixed: PropTypes.bool
 };
 
 NavBar.defaultProps = {
 	className: '',
-	fixed: false
+	color: undefined,
+	isFixed: false
 };
 
 export default NavBar;

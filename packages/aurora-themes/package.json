@@ -1,0 +1,16 @@
+{
+  "author": "Mike Barnhardt <mikebarnhardt+github@gmail.com>",
+  "dependencies": {
+    "aurora-palettes": "0.0.0"
+  },
+  "description": "Themes used in Aurora elements.",
+  "main": "src/aurora.scss",
+  "name": "aurora-themes",
+  "scripts": {
+    "start": "sass src/:dist/"
+  },
+  "version": "0.0.0",
+  "devDependencies": {
+    "sass": "^1.22.5"
+  }
+}

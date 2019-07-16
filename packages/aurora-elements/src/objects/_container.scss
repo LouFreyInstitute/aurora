@@ -1,0 +1,12 @@
+.o-container {
+  max-width: 640px;
+  width: 100%;
+}
+
+.o-container.is-large {
+  max-width: 960px;
+}
+
+.o-container.is-small {
+  max-width: 480px;
+}

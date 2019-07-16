@@ -3,23 +3,23 @@
  * Use only bottom and left margins to prevent margin collapse.
  */
 .u-margin {
-  margin: 0.5rem;
+  margin: 1rem;
 }
 
 .u-margin-bottom {
-  margin-bottom: 0.5rem;
-}
-
-.u-margin-bottom\+ {
   margin-bottom: 1rem;
 }
 
-.u-margin-bottom\+\+ {
+.u-margin-bottom\+ {
   margin-bottom: 2rem;
 }
 
+.u-margin-bottom\- {
+  margin-bottom: 0.5rem;
+}
+
 .u-margin-left {
-  margin-left: 0.5rem;
+  margin-left: 1rem;
 }
 
 .u-margin-none {
@@ -30,15 +30,15 @@
  * Padding Utilities
  */
 .u-padding {
-  padding: 0.5rem;
+  padding: 1rem;
 }
 
 .u-padding-bottom {
-  padding-bottom: 0.5rem;
+  padding-bottom: 1rem;
 }
 
 .u-padding-left {
-  padding-left: 0.5rem;
+  padding-left: 1rem;
 }
 
 .u-padding-none {
@@ -46,9 +46,9 @@
 }
 
 .u-padding-right {
-  padding-right: 0.5rem;
+  padding-right: 1rem;
 }
 
 .u-padding-top {
-  padding-top: 0.5rem;
+  padding-top: 1rem;
 }

@@ -3,8 +3,13 @@ $html-font-size: 16px !default;
 $html-line-height: 1.5 !default;
 
 html {
-  background-color: white;
-  color: #605868;
+  @if $enable-css-properties {
+    --html-background-color: var(--background-color);
+    --html-color: var(--color);
+  }
+  
+  @include css-property-fallback("background-color", "--html-background-color", $background-color);
+  @include css-property-fallback("color", "--html-color", $color);
   font-family: $html-font-family;
   font-size: $html-font-size;
   font-smoothing: antialiased;

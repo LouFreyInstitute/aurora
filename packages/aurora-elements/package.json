@@ -1,5 +1,8 @@
 {
   "author": "Mike Barnahrdt <mikebarnhardt+github@gmail.com>",
+  "dependencies": {
+    "aurora-palettes": "0.0.0"
+  },
   "description": "Themable CSS styles written in SCSS.",
   "devDependencies": {
     "sass": "^1.22.2"

@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 const Header = ({siteTitle}) => (
-	<NavBar>
+	<NavBar color="brand">
 		<Nav>
 			<NavItem Component="h1" className="c-heading is-tiny">
 				<Link to="/">{siteTitle}</Link>

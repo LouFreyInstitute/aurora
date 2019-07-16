@@ -1,5 +1,6 @@
 $button-border-radius: 0.125rem !default;
 $button-border-width: 0.125rem !default;
+
 $button-padding-bottom: 0.25rem !default;
 $button-padding-left: 0.5rem !default;
 $button-padding-right: 0.5rem !default;
@@ -7,14 +8,20 @@ $button-padding-top: 0.25rem !default;
 
 /**
  * These are the standard button styles that all other button states inherit.
+ * By default `background-color` and `color` are inverted to make switching
+ * between `light` and `dark` modes easier.
  */
 .c-button {
-  background-color: transparent;
-  border-color: transparent;
+  --button-background-color: var(--color);
+  --button-border-color: var(--border-color);
+  --button-color: var(--background-color);
+
+  @include css-property-fallback("background-color", "--button-background-color", $color);
+  @include css-property-fallback("border-color", "--button-border-color", $border-color);
+  @include css-property-fallback("color", "--button-color", $background-color);
   border-radius: $button-border-radius;
   border-style: solid;
   border-width: $button-border-width;
-  color: inherit;
   cursor: pointer;
   font: inherit;
   margin: 0;
@@ -22,6 +29,7 @@ $button-padding-top: 0.25rem !default;
   padding-left: $button-padding-left - $button-border-width;
   padding-right: $button-padding-right - $button-border-width;
   padding-top: $button-padding-top - $button-border-width;
+  vertical-align: middle;
   white-space: nowrap;
 }
 
@@ -29,27 +37,44 @@ $button-padding-top: 0.25rem !default;
  * Button color variations
  */
 .c-button.is-accent {
-  background-color: #aae;
-  border-color: #aae;
-  color: #383040;
+  --button-background-color: var(--background-color-accent);
+  --button-border-color: var(--border-color-accent);
+  --button-color: var(--color-accent);
+
+  @include css-property-fallback("background-color", "--button-background-color", $background-color-accent);
+  @include css-property-fallback("border-color", "--button-border-color", $border-color-accent);
+  @include css-property-fallback("color", "--button-color", $color-accent);
  }
 
 .c-button.is-brand {
-  background-color: #aee;
-  border-color: #aee;
+  --button-background-color: var(--background-color-brand);
+  --button-border-color: var(--border-color-brand);
+  --button-color: var(--color-brand);
+
+  @include css-property-fallback("background-color", "--button-background-color", $background-color-brand);
+  @include css-property-fallback("border-color", "--button-border-color", $border-color-brand);
+  @include css-property-fallback("color", "--button-color", $color-brand);
 }
 
-.c-button.is-dark {
-  background-color: #605868;
-  border-color: #605868;
-  color: white;
-}
-
-.c-button.is-light {
-  background-color: white;
-  border-color: white;
+.c-button.is-hollow {
+  background-color: transparent;
 }
 
 /**
  * Button size variations
  */
+.c-button.is-large {
+  font-size: 1.125rem;
+  line-height: (24 / 18);
+  padding-bottom: 0.5rem - $button-border-width;
+  padding-left: 1rem - $button-border-width;
+  padding-right: 1rem - $button-border-width;
+  padding-top: 0.5rem - $button-border-width;
+}
+
+.c-button.is-small {
+  font-size: 0.875rem;
+  line-height: (16 / 14);
+  padding-left: 0.25rem - $button-border-width;
+  padding-right: 0.25rem - $button-border-width;
+}

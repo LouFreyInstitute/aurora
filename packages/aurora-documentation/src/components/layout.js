@@ -30,12 +30,12 @@ const Layout = ({children}) => {
 			<div className="o-layout is-horizontal o-layout-item is-fill">
 				<Sidebar />
 
-				<main className="o-block is-large" style={{maxWidth: '640px'}}>
-					{children}
+				<main className="o-block is-large">
+					<div className="o-container">{children}</div>
 				</main>
 			</div>
 
-			<footer className="o-block" style={{backgroundColor: '#f4f4f8'}}>
+			<footer className="o-block">
 				© {new Date().getFullYear()}, Built with
 				{` `}
 				<a href="https://www.gatsbyjs.org">Gatsby</a>
