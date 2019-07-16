@@ -18,25 +18,27 @@ const ButtonElement = () => (
 
 			<p>Used to interact with page navigation, forms, or other elements.</p>
 
-			<button className="c-button" type="button">
-				Default
-			</button>
-			{` `}
-			<button className="c-button is-brand" type="button">
-				Brand
-			</button>
-			{` `}
-			<button className="c-button is-accent" type="button">
-				Accent
-			</button>
-			{` `}
-			<button className="c-button is-light" type="button">
-				Light
-			</button>
-			{` `}
-			<button className="c-button is-dark" type="button">
-				Dark
-			</button>
+			<p>
+				<button className="c-button" type="button">
+					Default
+				</button>
+				{` `}
+				<button className="c-button is-brand" type="button">
+					Brand
+				</button>
+				{` `}
+				<button className="c-button is-accent" type="button">
+					Accent
+				</button>
+				{` `}
+				<button className="c-button is-light" type="button">
+					Light
+				</button>
+				{` `}
+				<button className="c-button is-dark" type="button">
+					Dark
+				</button>
+			</p>
 
 			<h2 className="c-heading is-small">Classes</h2>
 			<dl>
