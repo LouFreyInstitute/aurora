@@ -11,9 +11,11 @@ const Header = ({siteTitle}) => (
 			</NavItem>
 		</Nav>
 
-		<Nav fill />
-
 		<Nav>
+			<NavItem Component={Link} to="/blog">
+				Blog
+			</NavItem>
+
 			<NavItem href="https://github.com/loufreyinstitute/aurora">
 				GitHub
 			</NavItem>
