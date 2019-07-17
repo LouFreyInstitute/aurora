@@ -5,9 +5,9 @@ $pre-padding-top: 0.5rem !default;
 
 pre {
   @include block;
-  background-color: #605868;
+  background-color: $color;
   border-radius: 0.125rem;
-  color: white;
+  color: $background-color;
   overflow: auto;
   padding-bottom: $pre-padding-bottom;
   padding-left: $pre-padding-left;
