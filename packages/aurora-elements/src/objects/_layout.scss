@@ -1,3 +1,6 @@
+/**
+ * Layout styles.
+ */
 .o-layout {
   display: flex;
 }
@@ -10,6 +13,10 @@
   align-items: center;
 }
 
+.o-layout.is-aligned-top {
+  align-items: flex-start;
+}
+
 .o-layout.is-horizontal {
   flex-direction: row;
 }
@@ -18,12 +25,11 @@
   flex-direction: column;
 }
 
-  .o-layout-item { }
+/**
+ * Layout item styles.
+ */
+.o-layout-item {}
 
-  .o-layout-item.is-fill {
-    flex: 1;
-  }
-
-.is-one-half {
-  width: 50%;
+.o-layout-item.is-fill {
+  flex: 1;
 }
