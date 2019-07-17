@@ -35,10 +35,18 @@ const Layout = ({children}) => {
 				</main>
 			</div>
 
-			<footer className="o-block">
-				© {new Date().getFullYear()}, Built with
-				{` `}
-				<a href="https://www.gatsbyjs.org">Gatsby</a>
+			<footer className="t-aurora is-dark o-block c-section s-prose u-font-size-">
+				<div className="o-layout">
+					<div>
+						© {new Date().getFullYear()},{' '}
+						<a href="http://loufreyinstitute.org">Lou Frey Institute</a> at the
+						University of Central Florida.
+					</div>
+					<div className="o-layout-item is-fill" />
+					<div>
+						Built with <a href="https://www.gatsbyjs.org">Gatsby</a>.
+					</div>
+				</div>
 			</footer>
 		</div>
 	);
