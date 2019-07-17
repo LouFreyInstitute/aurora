@@ -13,11 +13,11 @@ $button-padding-top: 0.25rem !default;
  */
 .c-button {
   --button-background-color: var(--color);
-  --button-border-color: var(--border-color);
+  --button-border-color: var(--color);
   --button-color: var(--background-color);
 
   @include css-property-fallback("background-color", "--button-background-color", $color);
-  @include css-property-fallback("border-color", "--button-border-color", $border-color);
+  @include css-property-fallback("border-color", "--button-border-color", $color);
   @include css-property-fallback("color", "--button-color", $background-color);
   border-radius: $button-border-radius;
   border-style: solid;
@@ -34,34 +34,61 @@ $button-padding-top: 0.25rem !default;
 }
 
 /**
- * Button color variations
+ * Color variations.
  */
 .c-button.is-accent {
   --button-background-color: var(--background-color-accent);
-  --button-border-color: var(--border-color-accent);
+  --button-border-color: var(--background-color-accent);
   --button-color: var(--color-accent);
 
   @include css-property-fallback("background-color", "--button-background-color", $background-color-accent);
-  @include css-property-fallback("border-color", "--button-border-color", $border-color-accent);
+  @include css-property-fallback("border-color", "--button-border-color", $background-color-accent);
   @include css-property-fallback("color", "--button-color", $color-accent);
  }
 
 .c-button.is-brand {
   --button-background-color: var(--background-color-brand);
-  --button-border-color: var(--border-color-brand);
+  --button-border-color: var(--background-color-brand);
   --button-color: var(--color-brand);
 
   @include css-property-fallback("background-color", "--button-background-color", $background-color-brand);
+  @include css-property-fallback("border-color", "--button-border-color", $background-color-brand);
+  @include css-property-fallback("color", "--button-color", $color-brand);
+}
+
+/**
+ * Hollow variations. These should primarily be used only on parents where the
+ * background color matches (e.g. `is-brand` on `is-brand`) to avoid color
+ * contrast issues.
+ */
+.c-button.is-hollow {
+  --button-background-color: transparent;
+  --button-border-color: var(--border-color);
+  --button-color: var(--color);
+
+  @include css-property-fallback("background-color", "--button-background-color", "transparent");
+  @include css-property-fallback("border-color", "--button-border-color", $border-color);
+  @include css-property-fallback("color", "--button-color", $color);
+}
+
+.c-button.is-accent.is-hollow {
+  --button-border-color: var(--border-color-accent);
+  --button-color: var(--color-accent);
+
+  @include css-property-fallback("border-color", "--button-border-color", $border-color-accent);
+  @include css-property-fallback("color", "--button-color", $color-accent);
+}
+
+.c-button.is-brand.is-hollow {
+  --button-border-color: var(--border-color-brand);
+  --button-color: var(--color-brand);
+
   @include css-property-fallback("border-color", "--button-border-color", $border-color-brand);
   @include css-property-fallback("color", "--button-color", $color-brand);
 }
 
-.c-button.is-hollow {
-  background-color: transparent;
-}
-
 /**
- * Button size variations
+ * Size variations.
  */
 .c-button.is-large {
   font-size: 1.125rem;
