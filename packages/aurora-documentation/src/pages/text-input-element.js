@@ -11,8 +11,47 @@ const TextInputElement = () => (
 			<h1 className="c-heading is-large">Text Input</h1>
 			<p>Form field used for a single line of short text.</p>
 
-			<input className="c-text-input" name="first" type="text" />
-			<input className="c-text-input is-error" name="last" type="text" />
+			<div className="o-grid">
+				<div className="o-grid-column">
+					<label className="c-label" htmlFor="firstName">
+						First Name
+					</label>
+					<input
+						className="c-text-input"
+						id="firstName"
+						name="firstName"
+						type="text"
+					/>
+				</div>
+				<div className="o-grid-column">
+					<label className="c-label" htmlFor="lastName">
+						Last Name
+					</label>
+					<input
+						className="c-text-input is-error"
+						id="lastName"
+						name="lastName"
+						type="text"
+						defaultValue="This is an invalid value."
+					/>
+				</div>
+			</div>
+
+			<label className="c-label" htmlFor="email">
+				Email
+			</label>
+			<input className="c-text-input" id="email" name="email" type="email" />
+
+			<label className="c-label" htmlFor="password">
+				Password
+			</label>
+			<input
+				className="c-text-input is-error"
+				id="password"
+				name="password"
+				type="password"
+				defaultValue="It's a secret!"
+			/>
 		</div>
 	</Layout>
 );

@@ -1,4 +1,8 @@
+/**
+ * Default text input styles.
+ */
 .c-text-input {
+  @include block;
   --text-input-background-color: var(--background-color);
   --text-input-border-color: var(--border-color);
   --text-input-color: var(--color);
@@ -17,6 +21,9 @@
   padding-top: (0.25rem - 0.125rem);
 }
 
+/**
+ * Status styles.
+ */
 .c-text-input.is-error {
   --text-input-background-color: var(--background-color-error);
   --text-input-border-color: var(--border-color-error);
