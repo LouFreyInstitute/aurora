@@ -8,13 +8,15 @@ const ButtonElement = () => (
 		<SEO title="Button" />
 
 		<div className="s-prose">
-			<h1 className="c-heading is-large">
-				Button
+			<div className="o-layout is-horizontal">
+				<h1 className="c-heading is-large u-margin-right">Button</h1>
 				<a
-					className="u-color-brand u-font-size-tinier"
+					className="u-color-brand"
 					href="https://github.com/LouFreyInstitute/aurora/blob/master/packages/aurora-elements/src/components/_button.scss"
-				>{`</>`}</a>
-			</h1>
+				>
+					View Code on GitHub
+				</a>
+			</div>
 
 			<p>Used to interact with page navigation, forms, or other elements.</p>
 
