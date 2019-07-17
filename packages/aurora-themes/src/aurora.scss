@@ -16,6 +16,10 @@
   --background-color-accent: #{$aurora-purple-30};
   --border-color-accent: #{$aurora-purple-70};
   --color-accent: #{$aurora-purple-80};
+  
+  --background-color-error: #f0e0e8;
+  --border-color-error: #F03040;
+  --color-error: #F03040;
 }
 
 /**
@@ -25,4 +29,8 @@
   --background-color: #{$aurora-gray-80};
   --border-color: #{$aurora-gray-50};
   --color: #{$aurora-gray-10};
+  
+  --background-color-error: #4e3038;
+  --border-color-error: #C05060;
+  --color-error: white;
 }

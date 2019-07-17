@@ -27,17 +27,8 @@ function Sidebar() {
 				<NavItem Component={Link} to="/button-element">
 					.c-button
 				</NavItem>
-				<NavItem Component={Link} to="/c-nav">
-					.c-nav
-				</NavItem>
-				<NavItem Component={Link} to="/c-nav-bar">
-					.c-nav-bar
-				</NavItem>
-				<NavItem Component={Link} to="/c-nav-item">
-					.c-nav-item
-				</NavItem>
-				<NavItem Component={Link} to="/layout-object">
-					.o-layout
+				<NavItem Component={Link} to="/text-input-element">
+					.c-text-input
 				</NavItem>
 			</nav>
 

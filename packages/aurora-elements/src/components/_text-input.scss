@@ -1,0 +1,27 @@
+.c-text-input {
+  --text-input-background-color: var(--background-color);
+  --text-input-border-color: var(--border-color);
+  --text-input-color: var(--color);
+  @include css-property-fallback("background-color", "--text-input-background-color", $background-color);
+  @include css-property-fallback("border-color", "--text-input-border-color", $border-color);
+  border-radius: 0.125rem;
+  border-style: solid;
+  border-width: 0.125rem;
+  @include css-property-fallback("color", "--text-input-color", $color);
+  font: inherit;
+  font-family: $font-family-mono;
+  margin: 0;
+  padding-bottom: (0.25rem - 0.125rem);
+  padding-left: (0.5rem - 0.125rem);
+  padding-right: (0.5rem - 0.125rem);
+  padding-top: (0.25rem - 0.125rem);
+}
+
+.c-text-input.is-error {
+  --text-input-background-color: var(--background-color-error);
+  --text-input-border-color: var(--border-color-error);
+  --text-input-color: var(--color-error);
+  @include css-property-fallback("background-color", "--text-input-background-color", $background-color-error);
+  @include css-property-fallback("border-color", "--text-input-border-color", $border-color-error);
+  @include css-property-fallback("color", "--text-input-color", $color-error);
+}

@@ -2,7 +2,7 @@
 
 // Map colors to variable patterns.
 $background-color: white !default;
-$border-color: $aurora-gray-30 !default;
+$border-color: $aurora-gray-40 !default;
 $color: $aurora-gray-70 !default;
 
 $background-color-brand: $aurora-green-20 !default;
@@ -12,3 +12,7 @@ $color-brand: $aurora-green-70 !default;
 $background-color-accent: $aurora-purple-30 !default;
 $border-color-accent: $aurora-purple-60 !default;
 $color-accent: $aurora-purple-80 !default;
+
+$background-color-error: red !default;
+$border-color-error: red !default;
+$color-error: red !default;
