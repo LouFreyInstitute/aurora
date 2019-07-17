@@ -23,9 +23,13 @@ function replaceThemeInClassList(classList, theme, newTheme) {
 }
 
 function useTheme() {
-	const [theme, setTheme] = useState(
-		() => window.localStorage.getItem('theme') || 'Aurora'
-	);
+	const [theme, setTheme] = useState(() => {
+		if (typeof window !== 'undefined') {
+			return window.localStorage.getItem('theme') || 'Aurora';
+		}
+
+		return 'Aurora';
+	});
 
 	useEffect(() => {
 		const oldTheme = window.localStorage.getItem('theme') || 'Aurora';

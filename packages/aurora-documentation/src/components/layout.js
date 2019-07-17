@@ -30,8 +30,6 @@ const Layout = ({children}) => {
 	const [dark, setDarkMode] = useDarkMode();
 	const changeMode = () => setDarkMode(prevMode => !prevMode);
 
-	console.log(dark, typeof dark);
-
 	return (
 		<div className="o-layout is-vertical u-full-height">
 			<Header

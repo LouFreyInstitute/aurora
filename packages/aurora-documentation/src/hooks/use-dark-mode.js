@@ -23,9 +23,14 @@ function toggleDarkModeClassInClasslist(classList, isDark) {
 }
 
 function useDarkMode() {
-	const [dark, setDarkMode] = useState(
-		() => window.localStorage.getItem('dark') === 'true' || false
-	);
+	const [dark, setDarkMode] = useState(() => {
+		if (typeof window !== 'undefined') {
+			// Add a comparison to coerce a Boolean value.
+			return window.localStorage.getItem('dark') === 'true' || false;
+		}
+
+		return false;
+	});
 
 	useEffect(() => {
 		window.localStorage.setItem('dark', dark);
