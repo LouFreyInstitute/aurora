@@ -9,6 +9,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {useStaticQuery, graphql} from 'gatsby';
 
+import useTheme from '../hooks/use-theme';
+import useDarkMode from '../hooks/use-dark-mode';
+
 import Header from './header';
 import Sidebar from './sidebar';
 
@@ -23,9 +26,21 @@ const Layout = ({children}) => {
 		}
 	`);
 
+	const [theme, setTheme] = useTheme();
+	const [dark, setDarkMode] = useDarkMode();
+	const changeMode = () => setDarkMode(prevMode => !prevMode);
+
+	console.log(dark, typeof dark);
+
 	return (
 		<div className="o-layout is-vertical u-full-height">
-			<Header siteTitle={data.site.siteMetadata.title} />
+			<Header
+				changeMode={changeMode}
+				changeTheme={setTheme}
+				dark={dark}
+				siteTitle={data.site.siteMetadata.title}
+				theme={theme}
+			/>
 
 			<div className="o-layout is-horizontal o-layout-item is-fill">
 				<Sidebar />
@@ -35,7 +50,11 @@ const Layout = ({children}) => {
 				</main>
 			</div>
 
-			<footer className="t-aurora is-dark o-block c-section s-prose u-font-size-">
+			<footer
+				className={`t-${theme.toLowerCase()} ${
+					dark ? '' : 'is-dark'
+				} o-block c-section s-prose u-font-size-`}
+			>
 				<div className="o-layout">
 					<div>
 						© {new Date().getFullYear()},{' '}

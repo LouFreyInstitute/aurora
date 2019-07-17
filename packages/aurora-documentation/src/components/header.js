@@ -3,23 +3,47 @@ import {Nav, NavBar, NavItem} from 'aurora-components';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-const Header = ({siteTitle}) => (
-	<NavBar color="brand">
-		<Nav>
-			<NavItem Component="h1" className="c-heading is-tiny">
-				<Link to="/">{siteTitle}</Link>
-			</NavItem>
-		</Nav>
+function Header(props) {
+	const {changeMode, changeTheme, dark, siteTitle, theme} = props;
 
-		<Nav fill />
+	return (
+		<NavBar color="brand">
+			<Nav>
+				<NavItem Component="h1" className="c-heading is-tiny">
+					<Link to="/">{siteTitle}</Link>
+				</NavItem>
+			</Nav>
 
-		<Nav>
-			<NavItem href="https://github.com/loufreyinstitute/aurora">
-				View Code on GitHub
-			</NavItem>
-		</Nav>
-	</NavBar>
-);
+			<Nav fill>
+				<select
+					name="theme"
+					value={theme}
+					onChange={({target}) => changeTheme(target.value)}
+				>
+					<option>Aurora</option>
+					<option>Civics360</option>
+				</select>
+
+				<label htmlFor="dark">
+					<input
+						checked={dark}
+						id="dark"
+						name="dark"
+						type="checkbox"
+						onChange={changeMode}
+					/>
+					Dark
+				</label>
+			</Nav>
+
+			<Nav>
+				<NavItem href="https://github.com/loufreyinstitute/aurora">
+					View Code on GitHub
+				</NavItem>
+			</Nav>
+		</NavBar>
+	);
+}
 
 Header.propTypes = {
 	siteTitle: PropTypes.string
