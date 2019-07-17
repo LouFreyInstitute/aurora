@@ -9,6 +9,10 @@ $grid-spacing-small: 0.5rem;
   margin-left: $grid-spacing * -1;
 }
 
+.o-grid.is-aligned-bottom {
+  align-items: flex-end;
+}
+
 .o-grid.is-large {
   margin-left: $grid-spacing-large * -1;
 }

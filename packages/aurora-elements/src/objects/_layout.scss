@@ -2,7 +2,11 @@
   display: flex;
 }
 
-.o-layout.is-centered {
+.o-layout.is-aligned-bottom {
+  align-items: flex-end;
+}
+
+.o-layout.is-aligned-center {
   align-items: center;
 }
 
