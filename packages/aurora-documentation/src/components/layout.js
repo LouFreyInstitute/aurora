@@ -5,12 +5,12 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from 'react';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import {useStaticQuery, graphql} from 'gatsby';
 
-import useTheme from '../hooks/use-theme';
-import useDarkMode from '../hooks/use-dark-mode';
+// import useTheme from '../hooks/use-theme';
+// import useDarkMode from '../hooks/use-dark-mode';
 
 import Header from './header';
 import Sidebar from './sidebar';
@@ -26,14 +26,22 @@ const Layout = ({children}) => {
 		}
 	`);
 
-	const [theme, setTheme] = useTheme();
-	const [dark, setDarkMode] = useDarkMode();
-	const changeMode = () => setDarkMode(prevMode => !prevMode);
+	// const [theme, setTheme] = useTheme();
+	// const [dark, setDarkMode] = useDarkMode();
+	// const changeMode = () => setDarkMode(prevMode => !prevMode);
+
+	const [theme, setTheme] = useState('Aurora');
+	const [dark, setDark] = useState(false);
+	const toggleDark = () => setDark(prev => !prev);
 
 	return (
-		<div className="o-layout is-vertical u-full-height">
+		<div
+			className={`t-${theme.toLowerCase()} ${
+				dark ? 'is-dark' : ''
+			} o-layout is-vertical u-full-height`}
+		>
 			<Header
-				changeMode={changeMode}
+				changeMode={toggleDark}
 				changeTheme={setTheme}
 				dark={dark}
 				siteTitle={data.site.siteMetadata.title}
@@ -41,7 +49,7 @@ const Layout = ({children}) => {
 			/>
 
 			<div className="o-layout is-horizontal o-layout-item is-fill">
-				<Sidebar />
+				<Sidebar className="u-hide@small" />
 
 				<main className="o-block is-large">
 					<div className="o-container">{children}</div>

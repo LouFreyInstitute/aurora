@@ -1,0 +1,15 @@
+.u-hide {
+  display: none;
+}
+
+@media screen and (min-width: 960px) {
+  .u-hide\@large {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .u-hide\@small {
+    display: none;
+  }
+}

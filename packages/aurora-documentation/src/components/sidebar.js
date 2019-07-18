@@ -2,9 +2,9 @@ import React from 'react';
 import {Link} from 'gatsby';
 import {NavItem} from 'aurora-components';
 
-function Sidebar() {
+function Sidebar(props) {
 	return (
-		<div className="o-block is-large">
+		<div className={`o-block is-large ${props.className}`}>
 			<nav className="o-layout is-vertical u-margin-bottom">
 				<NavItem className="c-heading is-tiny u-margin-none" Component="h4">
 					Components

@@ -20,6 +20,9 @@
   --background-color-error: #f0e0e8;
   --border-color-error: #F03040;
   --color-error: #F03040;
+  
+  background-color: var(--background-color);
+  color: var(--color);
 }
 
 /**
@@ -33,4 +36,7 @@
   --background-color-error: #4e3038;
   --border-color-error: #C05060;
   --color-error: white;
+  
+  background-color: var(--background-color);
+  color: var(--color);
 }
