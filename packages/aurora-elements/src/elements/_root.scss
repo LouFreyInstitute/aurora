@@ -3,16 +3,19 @@
  * theme files we can still set the base level of CSS custom properties here so
  * that the page loads with the default styling.
  */
-:root {
-  --background-color: #{$background-color};
-  --border-color: #{$border-color};
-  --color: #{$color};
-  
-  --background-color-accent: #{$background-color-accent};
-  --border-color-accent: #{$border-color-accent};
-  --color-accent: #{$color-accent};
-  
-  --background-color-brand: #{$background-color-brand};
-  --border-color-brand: #{$border-color-brand};
-  --color-brand: #{$color-brand};
+ 
+@if $enable-css-properties {
+  :root {
+    --background-color: #{$background-color};
+    --border-color: #{$border-color};
+    --color: #{$color};
+    
+    --background-color-accent: #{$background-color-accent};
+    --border-color-accent: #{$border-color-accent};
+    --color-accent: #{$color-accent};
+    
+    --background-color-brand: #{$background-color-brand};
+    --border-color-brand: #{$border-color-brand};
+    --color-brand: #{$color-brand};
+  }
 }
