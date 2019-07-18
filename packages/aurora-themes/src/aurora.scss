@@ -20,9 +20,6 @@
   --background-color-error: #f0e0e8;
   --border-color-error: #F03040;
   --color-error: #F03040;
-  
-  background-color: var(--background-color);
-  color: var(--color);
 }
 
 /**
@@ -36,7 +33,12 @@
   --background-color-error: #4e3038;
   --border-color-error: #C05060;
   --color-error: white;
-  
+}
+
+/**
+ * Sets some properties making it easier to nest themes. Use responsibly!
+ */
+.t-aurora.has-overrides {
   background-color: var(--background-color);
   color: var(--color);
 }

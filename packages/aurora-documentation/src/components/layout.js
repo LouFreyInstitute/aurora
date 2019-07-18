@@ -29,7 +29,7 @@ const Layout = ({children}) => {
 
 	return (
 		<div
-			className={`t-${theme.toLowerCase()} ${
+			className={`t-${theme.toLowerCase()} has-overrides ${
 				dark ? 'is-dark' : ''
 			} o-layout is-vertical u-full-height`}
 		>

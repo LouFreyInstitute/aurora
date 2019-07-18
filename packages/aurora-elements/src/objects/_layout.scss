@@ -28,7 +28,9 @@
 /**
  * Layout item styles.
  */
-.o-layout-item {}
+.o-layout-item {
+  min-width: 0;
+}
 
 .o-layout-item.is-fill {
   flex: 1;

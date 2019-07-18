@@ -16,9 +16,6 @@
   --background-color-accent: #{$civics360-red-60};
   --border-color-accent: #{$civics360-red-20};
   --color-accent: #{$civics360-red-10};
-
-  background-color: var(--background-color);
-  color: var(--color);
 }
 
 /**
@@ -28,7 +25,12 @@
   --background-color: #{$civics360-gray-90};
   --border-color: #{$civics360-gray-50};
   --color: #{$civics360-gray-10};
-  
+}
+
+/**
+ * Sets some properties making it easier to nest themes. Use responsibly!
+ */
+.t-civics360.has-overrides {
   background-color: var(--background-color);
   color: var(--color);
 }
