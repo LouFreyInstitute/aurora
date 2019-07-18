@@ -9,9 +9,6 @@ import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import {useStaticQuery, graphql} from 'gatsby';
 
-// import useTheme from '../hooks/use-theme';
-// import useDarkMode from '../hooks/use-dark-mode';
-
 import Header from './header';
 import Sidebar from './sidebar';
 
@@ -25,10 +22,6 @@ const Layout = ({children}) => {
 			}
 		}
 	`);
-
-	// const [theme, setTheme] = useTheme();
-	// const [dark, setDarkMode] = useDarkMode();
-	// const changeMode = () => setDarkMode(prevMode => !prevMode);
 
 	const [theme, setTheme] = useState('Aurora');
 	const [dark, setDark] = useState(false);

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import {Link} from 'gatsby';
 import {NavItem} from 'aurora-components';
@@ -6,22 +7,16 @@ function Sidebar(props) {
 	return (
 		<div className={`o-block is-large ${props.className}`}>
 			<nav className="o-layout is-vertical u-margin-bottom">
-				<NavItem className="c-heading is-tiny u-margin-none" Component="h4">
+				<NavItem className="c-heading is-tiny u-margin-none" Component="h1">
 					Components
 				</NavItem>
 				<NavItem Component={Link} to="/button-component">
 					Button
 				</NavItem>
-				<NavItem Component={Link} to="/nav">
-					Nav
-				</NavItem>
-				<NavItem Component={Link} to="/nav-bar">
-					NavBar
-				</NavItem>
 			</nav>
 
 			<nav className="o-layout is-vertical u-margin-bottom">
-				<NavItem className="c-heading is-tiny u-margin-none" Component="h4">
+				<NavItem className="c-heading is-tiny u-margin-none" Component="h1">
 					Elements
 				</NavItem>
 				<NavItem Component={Link} to="/button-element">
@@ -31,26 +26,16 @@ function Sidebar(props) {
 					.c-text-input
 				</NavItem>
 			</nav>
-
-			<nav className="o-layout is-vertical">
-				<NavItem className="c-heading is-tiny u-margin-none" Component="h4">
-					Themes
-				</NavItem>
-				<NavItem Component={Link} to="/aurora-theme">
-					Aurora
-				</NavItem>
-				<NavItem Component={Link} to="/civics360-theme">
-					Civics360
-				</NavItem>
-				<NavItem Component={Link} to="/citizen-theme">
-					Citizen
-				</NavItem>
-				<NavItem Component={Link} to="/institute-theme">
-					Institute
-				</NavItem>
-			</nav>
 		</div>
 	);
 }
+
+Sidebar.propTypes = {
+	className: PropTypes.string
+};
+
+Sidebar.defaultProps = {
+	className: ''
+};
 
 export default Sidebar;
