@@ -29,7 +29,7 @@ const Layout = ({children}) => {
 
 	return (
 		<div
-			className={`t-${theme.toLowerCase()} has-overrides ${
+			className={`t-${theme.toLowerCase()} is-root ${
 				dark ? 'is-dark' : ''
 			} o-layout is-vertical u-full-height`}
 		>
@@ -42,7 +42,7 @@ const Layout = ({children}) => {
 			/>
 
 			<div className="o-layout is-horizontal o-layout-item is-fill">
-				<Sidebar className="u-hide@small" />
+				<Sidebar />
 
 				<main className="o-block is-large">
 					<div className="o-container">{children}</div>

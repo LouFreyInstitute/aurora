@@ -1,0 +1,74 @@
+/**
+ * Default styles.
+ */
+.c-notification {
+  --notification-background-color: var(--background-color-ui);
+  --notification-border-color: var(--border-color-ui);
+  --notification-color: var(--color-ui);
+  @include block;
+  @include css-property-fallback("background-color", "--notification-background-color", $background-color-ui);
+  @include css-property-fallback("border-color", "--notification-border-color", $border-color-ui);
+  border-radius: 0.125rem;
+  border-style: solid;
+  border-width: 0.125rem;
+  @include css-property-fallback("color", "--notification-color", $color-ui);
+  padding-bottom: 0.5rem - 0.125rem;
+  padding-left: 1rem - 0.125rem;
+  padding-right: 1rem - 0.125rem;
+  padding-top: 0.5rem - 0.125rem;
+}
+
+.c-notification + .c-notification {
+  margin-top: 1rem * -1;
+}
+
+/**
+ * Color variants.
+ */
+.c-notification.is-error {
+  --notification-background-color: var(--background-color-error);
+  --notification-border-color: var(--border-color-error);
+  --notification-color: var(--color-error);
+  @include css-property-fallback("background-color", "--notification-background-color", $background-color-error);
+  @include css-property-fallback("border-color", "--notification-border-color", $border-color-error);
+  @include css-property-fallback("color", "--notification-color", $color-error);
+}
+
+.c-notification.is-success {
+  --notification-background-color: var(--background-color-success);
+  --notification-border-color: var(--border-color-success);
+  --notification-color: var(--color-success);
+  @include css-property-fallback("background-color", "--notification-background-color", $background-color-success);
+  @include css-property-fallback("border-color", "--notification-border-color", $border-color-success);
+  @include css-property-fallback("color", "--notification-color", $color-success);
+}
+
+.c-notification.is-warning {
+  --notification-background-color: var(--background-color-warning);
+  --notification-border-color: var(--border-color-warning);
+  --notification-color: var(--color-warning);
+  @include css-property-fallback("background-color", "--notification-background-color", $background-color-warning);
+  @include css-property-fallback("border-color", "--notification-border-color", $border-color-warning);
+  @include css-property-fallback("color", "--notification-color", $color-warning);
+}
+
+/**
+ * Size variants.
+ */
+.c-notification.is-large {
+  font-size: 1.25rem;
+  line-height: (1.5 / 1.25);
+  padding-bottom: 0.5rem + 0.5rem - 0.125rem;
+  padding-left: 1rem + 0.5rem - 0.125rem;
+  padding-right: 1rem + 0.5rem - 0.125rem;
+  padding-top: 0.5rem + 0.5rem - 0.125rem;
+}
+
+.c-notification.is-small {
+  font-size: 0.875rem;
+  line-height: (1.5 / 0.875);
+  padding-bottom: 0.5rem - 0.25rem - 0.125rem;
+  padding-left: 1rem - 0.25rem - 0.125rem;
+  padding-right: 1rem - 0.25rem - 0.125rem;
+  padding-top: 0.5rem - 0.25rem - 0.125rem;
+}

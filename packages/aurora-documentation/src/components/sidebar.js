@@ -22,6 +22,9 @@ function Sidebar(props) {
 				<NavItem Component={Link} to="/button-element">
 					.c-button
 				</NavItem>
+				<NavItem Component={Link} to="/notification-element">
+					.c-notification
+				</NavItem>
 				<NavItem Component={Link} to="/text-input-element">
 					.c-text-input
 				</NavItem>

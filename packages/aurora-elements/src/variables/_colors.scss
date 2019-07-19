@@ -1,9 +1,9 @@
 @import "../../node_modules/aurora-palettes/src/aurora";
 
 // Map colors to variable patterns.
-$background-color: white !default;
-$border-color: $aurora-gray-40 !default;
-$color: $aurora-gray-70 !default;
+$background-color: $aurora-gray-10 !default;
+$border-color: $aurora-gray-50 !default;
+$color: $aurora-gray-60 !default;
 
 $background-color-brand: $aurora-green-20 !default;
 $border-color-brand: $aurora-green-50 !default;
@@ -13,6 +13,30 @@ $background-color-accent: $aurora-purple-30 !default;
 $border-color-accent: $aurora-purple-60 !default;
 $color-accent: $aurora-purple-80 !default;
 
-$background-color-error: red !default;
-$border-color-error: red !default;
-$color-error: red !default;
+$background-color-error: #f2d9d9 !default;
+$border-color-error: #c74f4f !default;
+$color-error: #af3838 !default;
+
+$background-color-success: #cce5cc !default;
+$border-color-success: #418541 !default;
+$color-success: #366e36 !default;
+
+$background-color-ui: $aurora-gray-20 !default;
+$border-color-ui: $aurora-gray-60 !default;
+$color-ui: $aurora-gray-70 !default;
+
+$background-color-warning: #eddcca !default;
+$border-color-warning: #a16a34 !default;
+$color-warning: #85572b !default;
+
+// page background
+// page color
+// page action
+
+// ui background
+// ui color
+// ui action
+
+// variant background
+// variant color
+// variant action

@@ -25,7 +25,13 @@ $grid-spacing-small: 0.5rem;
 .o-grid-column {
   min-width: 0;
   padding-left: $grid-spacing;
-  width: 100%;
+}
+
+@media screen and (max-width: 640px) {
+  .o-grid-column {
+    @include block;
+    width: 100%;
+  }
 }
 
 .o-grid.is-large > .o-grid-column {

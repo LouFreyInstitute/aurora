@@ -4,10 +4,12 @@ $pre-padding-right: 0.5rem !default;
 $pre-padding-top: 0.5rem !default;
 
 pre {
+  --pre-background-color: var(--color);
+  --pre-color: var(--background-color);
   @include block;
-  background-color: $color;
+  @include css-property-fallback("background-color", "--pre-background-color", $color);
   border-radius: 0.125rem;
-  color: $background-color;
+  @include css-property-fallback("color", "--pre-color", $background-color);
   overflow: auto;
   padding-bottom: $pre-padding-bottom;
   padding-left: $pre-padding-left;

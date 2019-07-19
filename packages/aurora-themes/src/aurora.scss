@@ -2,24 +2,42 @@
 @import "../node_modules/aurora-palettes/src/aurora";
 
 /**
+ * Aurora Theme
+ * ====
+ * All themes must override the variables seen here. If these variables are not
+ * overridden it may have unexpected effects.
+ */
+
+/**
  * CSS Custom Properties for Aurora theme.
  */
 .t-aurora {
-  --background-color: white;
-  --border-color: #{$aurora-gray-40};
-  --color: #{$aurora-gray-70};
-  
-  --background-color-brand: #{$aurora-green-20};
-  --border-color-brand: #{$aurora-green-60};
-  --color-brand: #{$aurora-green-70};
+  --background-color: #{$aurora-gray-10};
+  --border-color: #{$aurora-gray-50};
+  --color: #{$aurora-gray-80};
   
   --background-color-accent: #{$aurora-purple-30};
   --border-color-accent: #{$aurora-purple-70};
   --color-accent: #{$aurora-purple-80};
   
-  --background-color-error: #f0e0e8;
-  --border-color-error: #F03040;
-  --color-error: #F03040;
+  --background-color-brand: #{$aurora-green-20};
+  --border-color-brand: #{$aurora-green-60};
+  --color-brand: #{$aurora-green-70};
+  
+  --background-color-ui: #{$aurora-gray-20};
+  --border-color-ui: #{$aurora-gray-60};
+  --color-ui: #{$aurora-gray-90};
+  
+  /**
+   * Component Overrides
+   * ----
+   * This is an example of using overrides. The prefix `override` is deliberate
+   * because it will override all nested themes' variables as well. Use very
+   * carefully if you aren't overriding the same variable in every nested theme!
+   */
+  --override-button-border-color: transparent;
+  --override-button-border-color-accent: transparent;
+  --override-button-border-color-brand: transparent;
 }
 
 /**
@@ -27,18 +45,24 @@
  */
 .t-aurora.is-dark {
   --background-color: #{$aurora-gray-80};
-  --border-color: #{$aurora-gray-50};
+  --border-color: #{$aurora-gray-40};
   --color: #{$aurora-gray-10};
-  
-  --background-color-error: #4e3038;
-  --border-color-error: #C05060;
-  --color-error: white;
+
+  --background-color-brand: #{$aurora-green-20};
+  --border-color-brand: #{$aurora-green-60};
+  --color-brand: #{$aurora-green-90};
+
+  --background-color-ui: #{$aurora-gray-70};
+  --border-color-ui: #{$aurora-gray-30};
+  --color-ui: white;
 }
 
 /**
- * Sets some properties making it easier to nest themes. Use responsibly!
+ * Overrides `background-color` and `color` if theme can't be set on the `html`
+ * element. It is recommended to use `.c-section` in conjunction with theme
+ * classes to set these colors (especially with nesting themes).
  */
-.t-aurora.has-overrides {
+.t-aurora.is-root {
   background-color: var(--background-color);
   color: var(--color);
 }

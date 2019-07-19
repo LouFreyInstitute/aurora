@@ -7,7 +7,7 @@ html {
     --html-background-color: var(--background-color);
     --html-color: var(--color);
   }
-  
+
   @include css-property-fallback("background-color", "--html-background-color", $background-color);
   @include css-property-fallback("color", "--html-color", $color);
   font-family: $html-font-family;

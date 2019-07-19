@@ -2,22 +2,25 @@
  * Default text input styles.
  */
 .c-text-input {
-  @include block;
-  --text-input-background-color: var(--background-color);
-  --text-input-border-color: var(--border-color);
-  --text-input-color: var(--color);
-  @include css-property-fallback("background-color", "--text-input-background-color", $background-color);
-  @include css-property-fallback("border-color", "--text-input-border-color", $border-color);
+  --text-input-background-color: var(--background-color-ui);
+  --text-input-border-color: var(--border-color-ui);
+  --text-input-color: var(--color-ui);
+  @include css-property-fallback("background-color", "--text-input-background-color", $background-color-ui);
+  @include css-property-fallback("border-color", "--text-input-border-color", $border-color-ui);
   border-radius: 0.125rem;
   border-style: solid;
   border-width: 0.125rem;
-  @include css-property-fallback("color", "--text-input-color", $color);
+  @include css-property-fallback("color", "--text-input-color", $color-ui);
   font: inherit;
   margin: 0;
-  padding-bottom: (0.25rem - 0.125rem);
-  padding-left: (0.5rem - 0.125rem);
-  padding-right: (0.5rem - 0.125rem);
-  padding-top: (0.25rem - 0.125rem);
+  padding-bottom: 0.5rem - 0.125rem;
+  padding-left: 1rem - 0.125rem;
+  padding-right: 1rem - 0.125rem;
+  padding-top: 0.5rem - 0.125rem;
+  
+  &:not(:last-child) {
+    margin-bottom: 0.5rem;
+  }
 }
 
 /**

@@ -24,16 +24,21 @@ const TextInputElement = () => (
 					/>
 				</div>
 				<div className="o-grid-column">
-					<label className="c-label" htmlFor="lastName">
-						Last Name
-					</label>
-					<input
-						className="c-text-input is-error"
-						id="lastName"
-						name="lastName"
-						type="text"
-						defaultValue="This is an invalid value."
-					/>
+					<div className="o-layout is-vertical c-form-field">
+						<label className="c-label" htmlFor="lastName">
+							Last Name
+						</label>
+						<input
+							className="c-text-input is-error"
+							id="lastName"
+							name="lastName"
+							type="text"
+							defaultValue="This is an invalid value."
+						/>
+						<div className="c-input-helper is-error">
+							Please use letters only.
+						</div>
+					</div>
 				</div>
 			</div>
 

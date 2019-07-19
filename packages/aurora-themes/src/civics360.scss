@@ -5,9 +5,9 @@
  * CSS Custom Properties for Civics360 theme.
  */
 .t-civics360 {
-  --background-color: #{$civics360-gray-10};
-  --border-color: #{$civics360-gray-50};
-  --color: #{$civics360-gray-90};
+  --background-color: white;
+  --border-color: #{$civics360-gray-40};
+  --color: #{$civics360-gray-70};
   
   --background-color-brand: #{$civics360-blue-60};
   --border-color-brand: #{$civics360-blue-20};
@@ -22,15 +22,16 @@
 * CSS Custom Properties for Civics360 theme dark mode.
 */
 .t-civics360.is-dark {
-  --background-color: #{$civics360-gray-90};
-  --border-color: #{$civics360-gray-50};
-  --color: #{$civics360-gray-10};
+  --background-color: #{$civics360-gray-80};
+  --border-color: #{$civics360-gray-40};
+  --color: white;
 }
 
 /**
- * Sets some properties making it easier to nest themes. Use responsibly!
+ * Overrides `background-color` and `color` if theme can't be set on the `html`
+ * element.
  */
-.t-civics360.has-overrides {
+.t-civics360.is-root {
   background-color: var(--background-color);
   color: var(--color);
 }

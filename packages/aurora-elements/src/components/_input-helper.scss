@@ -1,0 +1,9 @@
+.c-input-helper {
+  font-size: 0.875rem;
+  line-height: (1.5 / 0.875);
+}
+
+.c-input-helper.is-error {
+  --input-helper-color: var(--color-error);
+  @include css-property-fallback("color", "--input-helper-color", $color-error);
+}

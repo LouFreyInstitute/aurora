@@ -1,10 +1,12 @@
 $button-border-radius: 0.125rem !default;
 $button-border-width: 0.125rem !default;
 
-$button-padding-bottom: 0.25rem !default;
-$button-padding-left: 0.5rem !default;
-$button-padding-right: 0.5rem !default;
-$button-padding-top: 0.25rem !default;
+$button-padding-bottom: 1.5 - 1rem !default;
+$button-padding-left: 1rem !default;
+$button-padding-right: 1rem !default;
+$button-padding-top: 1.5 - 1rem !default;
+
+$button-size-ratio: 0.25rem !default;
 
 /**
  * These are the standard button styles that all other button states inherit.
@@ -12,13 +14,13 @@ $button-padding-top: 0.25rem !default;
  * between `light` and `dark` modes easier.
  */
 .c-button {
-  --button-background-color: var(--color);
-  --button-border-color: var(--color);
-  --button-color: var(--background-color);
+  --button-background-color: var(--background-color-ui);
+  --button-border-color: var(--override-button-border-color, --border-color-ui);
+  --button-color: var(--color-ui);
 
-  @include css-property-fallback("background-color", "--button-background-color", $color);
-  @include css-property-fallback("border-color", "--button-border-color", $color);
-  @include css-property-fallback("color", "--button-color", $background-color);
+  @include css-property-fallback("background-color", "--button-background-color", $background-color-ui);
+  @include css-property-fallback("border-color", "--button-border-color", $border-color-ui);
+  @include css-property-fallback("color", "--button-color", $color-ui);
   border-radius: $button-border-radius;
   border-style: solid;
   border-width: $button-border-width;
@@ -38,21 +40,19 @@ $button-padding-top: 0.25rem !default;
  */
 .c-button.is-accent {
   --button-background-color: var(--background-color-accent);
-  --button-border-color: var(--background-color-accent);
+  --button-border-color: var(--override-button-border-color-accent, --border-color-accent);
   --button-color: var(--color-accent);
-
   @include css-property-fallback("background-color", "--button-background-color", $background-color-accent);
-  @include css-property-fallback("border-color", "--button-border-color", $background-color-accent);
+  @include css-property-fallback("border-color", "--button-border-color", $border-color-accent);
   @include css-property-fallback("color", "--button-color", $color-accent);
  }
 
 .c-button.is-brand {
   --button-background-color: var(--background-color-brand);
-  --button-border-color: var(--background-color-brand);
+  --button-border-color: var(--override-button-border-color-brand, --border-color-brand);
   --button-color: var(--color-brand);
-
   @include css-property-fallback("background-color", "--button-background-color", $background-color-brand);
-  @include css-property-fallback("border-color", "--button-border-color", $background-color-brand);
+  @include css-property-fallback("border-color", "--button-border-color", $border-color-brand);
   @include css-property-fallback("color", "--button-color", $color-brand);
 }
 
@@ -63,28 +63,23 @@ $button-padding-top: 0.25rem !default;
  */
 .c-button.is-hollow {
   --button-background-color: transparent;
-  --button-border-color: var(--border-color);
-  --button-color: var(--color);
-
+  --button-border-color: var(--border-color-ui);
+  --button-color: inherit;
   @include css-property-fallback("background-color", "--button-background-color", "transparent");
-  @include css-property-fallback("border-color", "--button-border-color", $border-color);
-  @include css-property-fallback("color", "--button-color", $color);
+  @include css-property-fallback("border-color", "--button-border-color", $border-color-ui);
+  @include css-property-fallback("color", "--button-color", $color-ui);
 }
 
 .c-button.is-accent.is-hollow {
-  --button-border-color: var(--border-color-accent);
-  --button-color: var(--color-accent);
+  --button-border-color: var(--background-color-accent);
 
   @include css-property-fallback("border-color", "--button-border-color", $border-color-accent);
-  @include css-property-fallback("color", "--button-color", $color-accent);
 }
 
 .c-button.is-brand.is-hollow {
-  --button-border-color: var(--border-color-brand);
-  --button-color: var(--color-brand);
+  --button-border-color: var(--background-color-brand);
 
   @include css-property-fallback("border-color", "--button-border-color", $border-color-brand);
-  @include css-property-fallback("color", "--button-color", $color-brand);
 }
 
 /**
@@ -93,15 +88,17 @@ $button-padding-top: 0.25rem !default;
 .c-button.is-large {
   font-size: 1.125rem;
   line-height: (1.5 / 1.125);
-  padding-bottom: 0.5rem - $button-border-width;
-  padding-left: 1rem - $button-border-width;
-  padding-right: 1rem - $button-border-width;
-  padding-top: 0.5rem - $button-border-width;
+  padding-bottom: $button-padding-bottom + $button-size-ratio - $button-border-width;
+  padding-left: $button-padding-left + $button-size-ratio - $button-border-width;
+  padding-right: $button-padding-right + $button-size-ratio - $button-border-width;
+  padding-top: $button-padding-top + $button-size-ratio - $button-border-width;
 }
 
 .c-button.is-small {
   font-size: 0.875rem;
-  line-height: (1 / 0.875);
-  padding-left: 0.375rem - $button-border-width;
-  padding-right: 0.375rem - $button-border-width;
+  line-height: (1.5 / 0.875);
+  padding-bottom: $button-padding-bottom - $button-size-ratio - $button-border-width;
+  padding-left: $button-padding-left - $button-size-ratio - $button-border-width;
+  padding-right: $button-padding-right - $button-size-ratio - $button-border-width;
+  padding-top: $button-padding-top - $button-size-ratio - $button-border-width;
 }
