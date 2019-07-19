@@ -2,16 +2,16 @@
  * Default styles.
  */
 .c-notification {
-  --notification-background-color: var(--background-color-ui);
-  --notification-border-color: var(--border-color-ui);
-  --notification-color: var(--color-ui);
+  --notification-background-color: var(--color);
+  --notification-border-color: var(--border-color);
+  --notification-color: var(--background-color);
   @include block;
-  @include css-property-fallback("background-color", "--notification-background-color", $background-color-ui);
-  @include css-property-fallback("border-color", "--notification-border-color", $border-color-ui);
+  @include css-property-fallback("background-color", "--notification-background-color", $color);
+  @include css-property-fallback("border-color", "--notification-border-color", $border-color);
   border-radius: 0.125rem;
   border-style: solid;
   border-width: 0.125rem;
-  @include css-property-fallback("color", "--notification-color", $color-ui);
+  @include css-property-fallback("color", "--notification-color", $background-color);
   padding-bottom: 0.5rem - 0.125rem;
   padding-left: 1rem - 0.125rem;
   padding-right: 1rem - 0.125rem;

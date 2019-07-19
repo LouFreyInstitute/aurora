@@ -2,15 +2,15 @@
  * Default text input styles.
  */
 .c-text-input {
-  --text-input-background-color: var(--background-color-ui);
-  --text-input-border-color: var(--border-color-ui);
-  --text-input-color: var(--color-ui);
-  @include css-property-fallback("background-color", "--text-input-background-color", $background-color-ui);
-  @include css-property-fallback("border-color", "--text-input-border-color", $border-color-ui);
+  --text-input-background-color: transparent;
+  --text-input-border-color: var(--border-color);
+  --text-input-color: var(--color);
+  @include css-property-fallback("background-color", "--text-input-background-color", $color);
+  @include css-property-fallback("border-color", "--text-input-border-color", $border-color);
   border-radius: 0.125rem;
   border-style: solid;
   border-width: 0.125rem;
-  @include css-property-fallback("color", "--text-input-color", $color-ui);
+  @include css-property-fallback("color", "--text-input-color", $background-color);
   font: inherit;
   margin: 0;
   padding-bottom: 0.5rem - 0.125rem;
@@ -23,14 +23,16 @@
   }
 }
 
+.c-text-input[type="password"] {
+  font-family: $font-family-mono;
+}
+
 /**
  * Status styles.
  */
 .c-text-input.is-error {
-  --text-input-background-color: var(--background-color-error);
+  --text-input-background-color: transparent;
   --text-input-border-color: var(--border-color-error);
-  --text-input-color: var(--color-error);
   @include css-property-fallback("background-color", "--text-input-background-color", $background-color-error);
   @include css-property-fallback("border-color", "--text-input-border-color", $border-color-error);
-  @include css-property-fallback("color", "--text-input-color", $color-error);
 }

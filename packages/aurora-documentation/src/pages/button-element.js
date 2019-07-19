@@ -12,8 +12,24 @@ const ButtonElement = () => (
 
 			<p>Used to interact with page navigation, forms, or other elements.</p>
 
+			<h2 className="c-heading is-small">Default</h2>
 			<p>
 				<button className="c-button" type="button">
+					Default
+				</button>
+				{` `}
+				<button className="c-button is-brand" type="button">
+					Brand
+				</button>
+				{` `}
+				<button className="c-button is-accent" type="button">
+					Accent
+				</button>
+			</p>
+
+			<h2 className="c-heading is-small">Large</h2>
+			<p>
+				<button className="c-button is-large" type="button">
 					Default
 				</button>
 				{` `}
@@ -21,83 +37,40 @@ const ButtonElement = () => (
 					Brand
 				</button>
 				{` `}
-				<button className="c-button is-accent is-small" type="button">
-					Accent
-				</button>
-				{` `}
-				<button className="c-button is-hollow" type="button">
-					Default
-				</button>
-				{` `}
-				<button className="c-button is-brand is-hollow is-large" type="button">
-					Brand
-				</button>
-				{` `}
-				<button className="c-button is-accent is-hollow is-small" type="button">
+				<button className="c-button is-accent is-large" type="button">
 					Accent
 				</button>
 			</p>
 
-			<h2 className="c-heading is-small">Classes</h2>
-			<dl>
-				<dt>
-					<code>c-button</code>
-				</dt>
-				<dd>The default setting for buttons without any styling.</dd>
-			</dl>
+			<h2 className="c-heading is-small">Small</h2>
+			<p>
+				<button className="c-button is-small" type="button">
+					Default
+				</button>
+				{` `}
+				<button className="c-button is-brand is-small" type="button">
+					Brand
+				</button>
+				{` `}
+				<button className="c-button is-accent is-small" type="button">
+					Accent
+				</button>
+			</p>
 
-			<h2 className="c-heading is-small">Examples</h2>
-
-			<div className="o-grid">
-				<div className="o-grid-column is-3/4">
-					<h3 className="c-heading is-tiny">Code</h3>
-					<pre>
-						<code>{`<button class="c-button is-brand" type="button">
-  This is my button
-</button>`}</code>
-					</pre>
-				</div>
-				<div className="o-grid-column is-1/4">
-					<h3 className="c-heading is-tiny">Result</h3>
-					<button className="c-button is-brand" type="button">
-						Action Text
-					</button>
-				</div>
-			</div>
-
-			<div className="o-grid">
-				<div className="o-grid-column is-3/4">
-					<h3 className="c-heading is-tiny">Code</h3>
-					<pre>
-						<code>{`<button class="c-button is-light" type="button">
-  This is my button
-</button>`}</code>
-					</pre>
-				</div>
-				<div className="o-grid-column is-1/4">
-					<h3 className="c-heading is-tiny">Result</h3>
-					<button className="c-button is-light" type="button">
-						Action Text
-					</button>
-				</div>
-			</div>
-
-			<div className="o-grid">
-				<div className="o-grid-column is-3/4">
-					<h3 className="c-heading is-tiny">Code</h3>
-					<pre>
-						<code>{`<button class="c-button is-dark" type="button">
-  This is my button
-</button>`}</code>
-					</pre>
-				</div>
-				<div className="o-grid-column is-1/4">
-					<h3 className="c-heading is-tiny">Result</h3>
-					<button className="c-button is-dark" type="button">
-						Action Text
-					</button>
-				</div>
-			</div>
+			<h2 className="c-heading is-small">Hollow</h2>
+			<p>
+				<button className="c-button is-hollow" type="button">
+					Default
+				</button>
+				{` `}
+				<button className="c-button is-brand is-hollow" type="button">
+					Brand
+				</button>
+				{` `}
+				<button className="c-button is-accent is-hollow" type="button">
+					Accent
+				</button>
+			</p>
 		</div>
 	</Layout>
 );

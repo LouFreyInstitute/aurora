@@ -12,49 +12,48 @@
  * CSS Custom Properties for Aurora theme.
  */
 .t-aurora {
-  --background-color: #{$aurora-gray-10};
-  --border-color: #{$aurora-gray-50};
-  --color: #{$aurora-gray-80};
+  /**
+   * Default colors.
+   */
+  --background-color: hsl(220, 12.5%, 95%);
+  --background-color-action: hsl(220, 12.5%, 87.5%);
+  --background-color-disabled: #{$aurora-gray-30};
   
-  --background-color-accent: #{$aurora-purple-30};
-  --border-color-accent: #{$aurora-purple-70};
-  --color-accent: #{$aurora-purple-80};
+  --border-color: hsl(220, 12.5%, 68.75%);
+  --border-color-action: #{$aurora-gray-50};
+  --border-color-disabled: #{$aurora-gray-50};
   
-  --background-color-brand: #{$aurora-green-20};
-  --border-color-brand: #{$aurora-green-60};
-  --color-brand: #{$aurora-green-70};
+  --color: hsl(220, 15%, 25%);
+  --color-action: hsl(220, 15%, 15%);
+  --color-disabled: #{$aurora-gray-80};
   
-  --background-color-ui: #{$aurora-gray-20};
-  --border-color-ui: #{$aurora-gray-60};
-  --color-ui: #{$aurora-gray-90};
+  --separator: hsl(220, 12.5%, 90%);
   
   /**
-   * Component Overrides
-   * ----
-   * This is an example of using overrides. The prefix `override` is deliberate
-   * because it will override all nested themes' variables as well. Use very
-   * carefully if you aren't overriding the same variable in every nested theme!
+   * Accent colors.
    */
-  --override-button-border-color: transparent;
-  --override-button-border-color-accent: transparent;
-  --override-button-border-color-brand: transparent;
+  --background-color-accent: hsl(260, 50%, 75%);
+  --background-color-accent-action: hsl(260, 50%, 75%);
+  --border-color-accent: hsl(260, 75%, 50%);
+  --color-accent: hsl(260, 75%, 25%);
+  
+  /**
+   * Brand colors.
+   */
+  --background-color-brand: hsl(170, 50%, 60%);
+  --background-color-brand-action: hsl(170, 50%, 50%);
+
+  --border-color-brand: hsl(170, 50%, 37.5%);
+  --color-brand: hsl(170, 50%, 12.5%);
 }
 
 /**
  * CSS Custom Properties for Aurora theme in dark mode.
  */
 .t-aurora.is-dark {
-  --background-color: #{$aurora-gray-80};
-  --border-color: #{$aurora-gray-40};
-  --color: #{$aurora-gray-10};
-
-  --background-color-brand: #{$aurora-green-20};
-  --border-color-brand: #{$aurora-green-60};
-  --color-brand: #{$aurora-green-90};
-
-  --background-color-ui: #{$aurora-gray-70};
-  --border-color-ui: #{$aurora-gray-30};
-  --color-ui: white;
+  --background-color: hsl(220, 20%, 15%);
+  --border-color: hsl(220, 20%, 45%);
+  --color: hsl(220, 20%, 90%);
 }
 
 /**
