@@ -1,38 +1,87 @@
-@import "../../node_modules/aurora-palettes/src/aurora";
-
 // Map colors to variable patterns.
-$background-color: $aurora-gray-10 !default;
-$border-color: $aurora-gray-50 !default;
-$color: $aurora-gray-60 !default;
 
-$background-color-brand: $aurora-green-20 !default;
-$border-color-brand: $aurora-green-50 !default;
-$color-brand: $aurora-green-70 !default;
+/**
+ * Background colors.
+ */
 
-$background-color-accent: $aurora-purple-30 !default;
-$border-color-accent: $aurora-purple-60 !default;
-$color-accent: $aurora-purple-80 !default;
+// Base colors.
+$background-color: white !default;
+$background-color-action: #e0e0e0 !default;
 
-$background-color-error: #f2d9d9 !default;
-$border-color-error: #c74f4f !default;
-$color-error: #af3838 !default;
+// Accent colors.
+$background-color-accent: sandybrown !default;
+$background-color-accent-action: $background-color-action !default;
 
-$background-color-success: #cce5cc !default;
-$border-color-success: #418541 !default;
-$color-success: #366e36 !default;
+// Brand colors.
+$background-color-brand: dodgerblue !default;
+$background-color-brand-action: $background-color-action !default;
 
-$background-color-warning: #eddcca !default;
-$border-color-warning: #a16a34 !default;
-$color-warning: #85572b !default;
+// Default element colors.
+$background-color-default: #384048 !default;
 
-// page background
-// page color
-// page action
+// Disabled element colors.
+$background-color-disabled: #e0e0e0 !default;
 
-// ui background
-// ui color
-// ui action
+// Error colors.
+$background-color-error: lightcoral !default;
+$background-color-error-action: $background-color-action !default;
 
-// variant background
-// variant color
-// variant action
+// Success colors.
+$background-color-success: $background-color !default;
+$background-color-success-action: $background-color-action !default;
+
+// Warning colors.
+$background-color-warning: $background-color !default;
+$background-color-warning-action: $background-color-action !default;
+
+/**
+ * Border colors.
+ */
+
+// Default colors.
+$border-color: #101010 !default;
+$border-color-action: $border-color !default;
+$border-color-disabled: $border-color !default;
+
+$border-color-accent: $border-color !default;
+$border-color-accent-action: $border-color !default;
+$border-color-brand: $border-color !default;
+$border-color-brand-action: $border-color !default;
+$border-color-error: #c03030 !default;
+$border-color-error-action: $border-color !default;
+$border-color-success: $border-color !default;
+$border-color-success-action: $border-color !default;
+$border-color-warning: $border-color !default;
+$border-color-warning-action: $border-color !default;
+
+/**
+ * Text colors.
+ */
+
+// Default
+$color: rgba(32, 48, 64, 0.8) !default;
+$color-action: $color !default;
+$color-disabled: $background-color !default;
+
+// Accent
+$color-accent: $color !default;
+$color-accent-action: $color !default;
+
+// Brand
+$color-brand: $color !default;
+$color-brand-action: $color !default;
+
+// Default
+$color-default: rgba(255, 255, 255, 0.8) !default;
+
+// Error
+$color-error: #402020 !default;
+$color-error-action: $color !default;
+
+//Success
+$color-success: $color !default;
+$color-success-action: $color !default;
+
+// Warning
+$color-warning: $color !default;
+$color-warning-action: $color !default;

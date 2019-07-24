@@ -1,14 +1,25 @@
-// $enable-css-properties: false;
+// Enable support for CSS variables. This can be disabled if you don't want to
+// use CSS variables.
+$enable-css-properties: true !default;
 
+// Add CSS variables to `:root`. This can be disabled if you are using nested
+// themes.
+$enable-root-css-properties: false !default;
+
+// Import Sass variables.
+@import 'variables/borders';
 @import 'variables/colors';
 @import 'variables/font-families';
 
+// Import mixins.
 @import 'mixins/block';
 @import 'mixins/css-property-fallback';
 
+// Import globals.
 @import 'globals/box-sizing';
 @import 'globals/root';
 
+// Import elements.
 @import 'elements/a';
 @import 'elements/body';
 @import 'elements/code';
@@ -16,12 +27,16 @@
 @import 'elements/p';
 @import 'elements/pre';
 
+// Import objects.
 @import 'objects/block';
 @import 'objects/container';
 @import 'objects/grid';
 @import 'objects/layout';
 
+// Import components.
 @import 'components/button';
+@import 'components/card';
+@import 'components/footer';
 @import 'components/heading';
 @import 'components/input-helper';
 @import 'components/label';
@@ -32,10 +47,12 @@
 @import 'components/section';
 @import 'components/text-input';
 
+// Import utilities.
 @import 'utilities/color';
 @import 'utilities/display';
 @import 'utilities/font';
 @import 'utilities/sizing';
 @import 'utilities/spacing';
 
+// Import scopes.
 @import 'scopes/prose';

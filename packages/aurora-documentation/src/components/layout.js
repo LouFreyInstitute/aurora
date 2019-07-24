@@ -29,7 +29,7 @@ const Layout = ({children}) => {
 
 	return (
 		<div
-			className={`t-${theme.toLowerCase()} is-root ${
+			className={`t-${theme.toLowerCase()} has-overrides has-funky-borders ${
 				dark ? 'is-dark' : ''
 			} o-layout is-vertical u-full-height`}
 		>
@@ -49,11 +49,7 @@ const Layout = ({children}) => {
 				</main>
 			</div>
 
-			<footer
-				className={`t-${theme.toLowerCase()} ${
-					dark ? '' : 'is-dark'
-				} o-block c-section s-prose u-font-size-`}
-			>
+			<footer className="c-footer s-prose u-font-size-">
 				<div className="o-layout">
 					<div>
 						© {new Date().getFullYear()},{' '}

@@ -1,0 +1,69 @@
+// Import our color palette from the `aurora-palettes` module.
+@import "../../node_modules/aurora-palettes/src/aurora";
+
+/**
+ * Aurora Theme
+ * ________
+ * You can use this theme as the foundation for creating new themes. All
+ * variables used here must be overriden or it will use the parent theme's.
+ * If it is the parent theme then it will use the defaults given to Sass.
+ *
+ * If you don't want to use nested themes you can throw everything into `:root`
+ * and not worry about overriding.
+ */
+
+/**
+ * CSS Custom Properties for Aurora theme.
+ */
+.t-aurora {
+  --html-font-size: 14px;
+  --background-color: #{$aurora-gray-80};
+  --background-color-action: #{$aurora-gray-20};
+  --background-color-brand: #{$aurora-green-30};
+  --background-color-brand-action: #{$aurora-green-40};
+  --background-color-accent: #{$aurora-purple-30};
+  --background-color-accent-action: #{$aurora-purple-40};  
+  --background-color-disabled: #{$aurora-gray-20};
+
+  --border-color: #{$aurora-gray-50};
+  --border-color-action: #{$aurora-gray-60};
+  --border-color-disabled: #{$aurora-gray-70};
+  --border-color-accent: #{$aurora-purple-70};
+  --border-color-brand:  #{$aurora-green-70};
+  
+  --color: #{$aurora-gray-10};
+  --color-action: #{$aurora-gray-90};
+  --color-brand:  #{$aurora-green-80};
+  --color-brand-action:  #{$aurora-green-90};
+  --color-accent: #{$aurora-purple-80};
+  --color-accent-action: #{$aurora-purple-90};
+  --color-disabled: #{$aurora-gray-10};
+  
+  --footer-background-color: #{$aurora-gray-20};
+}
+
+/**
+* CSS Custom Properties for Aurora theme in dark mode.
+*/
+.t-aurora.is-dark {
+  --background-color: #{$aurora-gray-10};
+  --color: #{$aurora-gray-80};
+}
+
+/**
+ * The following is required if you are using nested themes. If your themes
+ * are set on the `html` element you can exclude these variables.
+ */
+@import './button';
+@import './card';
+
+
+/**
+ * Overrides `background-color` and `color` if theme can't be set on the `html`
+ * element. It is recommended to use `.c-section` in conjunction with theme
+ * classes to set these colors (especially with nesting themes) instead.
+ */
+.t-aurora.has-overrides {
+  background-color: var(--color);
+  color: var(--background-color);
+}

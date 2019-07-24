@@ -1,0 +1,60 @@
+/**
+ * Aurora Button Themes
+ * ________
+ * Custom variables for buttons while using the Aurora theme. These are
+ * required if you are using nested themes. If you set your theme on the `html`
+ * element, these aren't necessary.
+ */
+
+.t-aurora {
+  /**
+   * Button backgrounds.
+   */
+  --button-background-color: var(--color);
+  --button-background-color-action: var(--color-action);
+  --button-background-color-accent: var(--background-color-accent);
+  --button-background-color-accent-action: var(--background-color-accent-action);
+  --button-background-color-brand: var(--background-color-brand);
+  --button-background-color-brand-action: var(--background-color-brand-action);
+  --button-background-color-disabled: var(--background-color-disabled);
+  
+  /**
+   * Button border colors.
+   */
+  --button-border-color: var(--background-border-color);
+  --button-border-color-action: var(--background-border-color-action);
+  --button-border-color-accent: var(--border-color-accent);
+  --button-border-color-accent-action: var(--border-color-accent-action);
+  --button-border-color-brand: var(--border-color-brand);
+  --button-border-color-brand-action: var(--border-color-brand-action);
+  --button-border-color-disabled: var(--border-color-disabled);
+  
+  /**
+   * Button text colors.
+   */
+  --button-color: var(--background-color);
+  --button-color-action: var(--background-color-action);
+  --button-color-accent: var(--color-accent);
+  --button-color-accent-action: var(--color-accent-action);
+  --button-color-brand: var(--color-brand);
+  --button-color-brand-action: var(--color-brand-action);
+  --button-color-disabled: var(--color-disabled);
+}
+
+/**
+ * You can customize how buttons appear in `dark` mode.
+ */
+.t-aurora.is-dark {
+  --button-background-color-disabled: #{$aurora-gray-70};
+  --button-color-disabled: #{$aurora-gray-80};
+}
+
+/**
+ * You can also add other variations as you see fit.
+ *
+ * .t-aurora.has-funky-borders {
+ *   --button-border-color: #f030f0;
+ *   --button-border-style: dashed;
+ * }
+ *
+ */

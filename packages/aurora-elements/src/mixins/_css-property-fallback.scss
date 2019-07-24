@@ -1,13 +1,12 @@
 /**
- * You can override this variable to `false` to test fallback values or just
- * disable it completely if it's not needed.
+ * Manually sets a property-value pair fallback for browsers that don't support
+ * CSS custom properties (variables). If `$enable-css-properties` is off then it
+ * omits CSS custom properties entirely.
  */
-$enable-css-properties: true !default;
-
 @mixin css-property-fallback($property-name, $css-property-name, $property-value) {
   #{$property-name}: #{$property-value};
 
   @if $enable-css-properties {
-    #{$property-name}: var(#{$css-property-name});
+    #{$property-name}: var(#{$css-property-name}, #{$property-value});
   }
 }

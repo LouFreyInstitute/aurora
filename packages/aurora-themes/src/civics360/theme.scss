@@ -1,0 +1,65 @@
+// Import our color palette from the `aurora-palettes` module.
+@import "../../node_modules/aurora-palettes/src/civics360";
+
+/**
+ * CSS Custom Properties for Civics360 theme.
+ */
+.t-civics360 {
+  --background-color: #{$civics360-gray-10};
+  --background-color-action: #{$civics360-gray-20};
+  --border-color: #{$civics360-gray-50};
+  --color: #{$civics360-gray-80};
+  --color-action: #{$civics360-gray-90};
+  
+  --background-color-brand: #{$civics360-blue-60};
+  --background-color-brand-action: #{$civics360-blue-70};
+  --border-color-brand: #{$civics360-blue-20};
+  --color-brand: #{$civics360-blue-10};
+  --color-brand-action: #{$civics360-blue-10};
+  
+  --background-color-accent: #{$civics360-red-60};
+  --background-color-accent-action: #{$civics360-red-70};
+  --border-color-accent: #{$civics360-red-20};
+  --color-accent: #{$civics360-red-10};
+  --color-accent-action: #{$civics360-red-10};
+  
+  --card-background-color: white;
+  --card-border-color: rgba(0, 0, 0, 0.5);
+  --card-color: var(--color);
+
+  --card-background-color-brand: var(--background-color-brand);
+  --card-border-color-brand: rgba(0, 0, 0, 0.5);
+  --card-color-brand: var(--color-brand);
+  
+  --card-background-color-accent: var(--background-color-accent);
+  --card-border-color-accent: rgba(0, 0, 0, 0.5);
+  --card-color-accent: var(--color-accent);
+  
+  --card-border-style: solid;
+}
+
+@import "./_button";
+
+/**
+* CSS Custom Properties for Civics360 theme dark mode.
+*/
+.t-civics360.is-dark {
+  --background-color: #{$civics360-gray-80};
+  --border-color: #{$civics360-gray-40};
+  --color: #{$civics360-gray-10};
+  
+  --card-background-color: #{$civics360-gray-70};
+  --card-color: #{white};
+  --card-border-color: rgba(255, 255, 255, 0.5);
+  --card-border-color-accent: rgba(255, 255, 255, 0.5);
+  --card-border-color-brand: rgba(255, 255, 255, 0.5);
+}
+
+/**
+ * Overrides `background-color` and `color` if theme can't be set on the `html`
+ * element.
+ */
+.t-civics360.has-overrides {
+  background-color: var(--background-color);
+  color: var(--color);
+}

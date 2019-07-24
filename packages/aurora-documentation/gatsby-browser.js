@@ -13,5 +13,6 @@ import 'aurora-elements';
 /**
  * Themes that use CSS Custom Properties (variables) should be imported as well.
  */
-import 'aurora-themes/dist/aurora.css';
-import 'aurora-themes/dist/civics360.css';
+import 'aurora-themes/dist/root-theme/theme.css';
+import 'aurora-themes/dist/aurora/theme.css';
+import 'aurora-themes/dist/civics360/theme.css';

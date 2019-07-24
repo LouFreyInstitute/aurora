@@ -1,0 +1,15 @@
+$footer-background-color: $background-color !default;
+$footer-color: $color !default;
+
+@if $enable-css-properties and $enable-root-css-properties {
+  :root {
+    --footer-background-color: var(--background-color);
+    --footer-color: var(--color);
+  }
+}
+
+.c-footer {
+  @include css-property-fallback("background-color", "--footer-background-color", $footer-background-color);
+  @include css-property-fallback("color", "--footer-color", $footer-color);
+  padding: 1rem 1.5rem;
+}

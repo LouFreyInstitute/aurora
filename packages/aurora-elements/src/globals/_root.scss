@@ -2,9 +2,11 @@
  * To prevent a flash of unthemed page or if there is an error loading external
  * theme files we can still set the base level of CSS custom properties here so
  * that the page loads with the default styling.
+ *
+ * Most components also use a Sass variable fallback.
  */
  
-@if $enable-css-properties {
+@if $enable-css-properties and $enable-root-css-properties {
   :root {
     --background-color: #{$background-color};
     --border-color: #{$border-color};

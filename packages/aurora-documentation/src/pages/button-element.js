@@ -18,6 +18,48 @@ const ButtonElement = () => (
 					Default
 				</button>
 				{` `}
+				<button disabled className="c-button" type="button">
+					Disabled
+				</button>
+				{` `}
+				<button className="c-button is-brand" type="button">
+					Brand
+				</button>
+				{` `}
+				<button className="c-button is-accent" type="button">
+					Accent
+				</button>
+			</p>
+
+			<h2 className="c-heading is-small">Aurora Light</h2>
+			<p className="t-aurora">
+				<button className="c-button" type="button">
+					Default
+				</button>
+				{` `}
+				<button disabled className="c-button" type="button">
+					Disabled
+				</button>
+				{` `}
+				<button className="c-button is-brand" type="button">
+					Brand
+				</button>
+				{` `}
+				<button className="c-button is-accent" type="button">
+					Accent
+				</button>
+			</p>
+
+			<h2 className="c-heading is-small">Civics360 Light</h2>
+			<p className="t-civics360">
+				<button className="c-button" type="button">
+					Default
+				</button>
+				{` `}
+				<button disabled className="c-button" type="button">
+					Disabled
+				</button>
+				{` `}
 				<button className="c-button is-brand" type="button">
 					Brand
 				</button>

@@ -1,0 +1,19 @@
+.t-civics360 {
+  --button-background-color: var(--color);
+  --button-background-color-action: var(--color-action);
+  --button-background-color-accent: var(--background-color-accent);
+  --button-background-color-accent-action: var(--background-color-accent-action);
+  --button-background-color-brand: var(--background-color-brand);
+  --button-background-color-brand-action: var(--background-color-brand-action);
+  
+  --button-border-color: transparent;
+  --button-border-color-accent: transparent;
+  --button-border-color-brand: transparent;
+  
+  --button-color: var(--background-color);
+  --button-color-action: var(--background-color-action);
+  --button-color-accent: var(--color-accent);
+  --button-color-accent-action: var(--color-accent-action);
+  --button-color-brand: var(--color-brand);
+  --button-color-brand-action: var(--color-brand-action);
+}
