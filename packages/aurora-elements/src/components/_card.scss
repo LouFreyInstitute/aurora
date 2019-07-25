@@ -79,7 +79,23 @@ $card-color-brand: $color-brand !default;
   @include css-property-fallback("color", "--card-color-brand", $card-color-brand);
 }
 
-.c-card-content {
+.c-card-media {
+  border-top-left-radius: $card-border-radius;
+  border-top-right-radius: $card-border-radius;
+  margin: $card-border-width * -1;
+  margin-bottom: 0;
+  overflow: hidden;
+  padding-top: 10rem + $card-border-width;
+  position: relative;
+}
+
+.c-card-media > img {
+  position: absolute;
+  top: -25%;
+  left: -25%;
+}
+
+.c-card-body {
   padding-bottom: 0.5rem - 0.125rem;
   padding-left: 1rem - 0.125rem;
   padding-right: 1rem - 0.125rem;

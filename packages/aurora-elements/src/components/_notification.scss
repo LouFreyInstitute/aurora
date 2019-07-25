@@ -1,60 +1,105 @@
-/**
- * Default styles.
- */
+// Notification
+
+// Notification variables.
+$notification-background-color: $background-color-default !default;
+$notification-border-color: $border-color !default;
+$notification-color: $color-default !default;
+
+// Notification CSS properties.
+@if $enable-css-properties and $enable-root-css-properties {
+  :root {
+    --notification-background-color: var(--background-color-default);
+    --notification-border-color: var(--border-color-default);
+    --notification-color: var(--color-default);
+  }
+}
+
+// Notification styles.
 .c-notification {
-  --notification-background-color: var(--color);
-  --notification-border-color: var(--border-color);
-  --notification-color: var(--background-color);
   @include block;
-  @include css-property-fallback("background-color", "--notification-background-color", $color);
-  @include css-property-fallback("border-color", "--notification-border-color", $border-color);
+  @include css-property-fallback("background-color", "--notification-background-color", $notification-background-color);
+  @include css-property-fallback("border-color", "--notification-border-color", $notification-border-color);
   border-radius: 0.125rem;
   border-style: solid;
   border-width: 0.125rem;
-  @include css-property-fallback("color", "--notification-color", $background-color);
+  @include css-property-fallback("color", "--notification-color", $notification-color);
   padding-bottom: 0.5rem - 0.125rem;
   padding-left: 1rem - 0.125rem;
   padding-right: 1rem - 0.125rem;
   padding-top: 0.5rem - 0.125rem;
 }
 
+// Space consecutive notifications closer together.
 .c-notification + .c-notification {
   margin-top: 1rem * -1;
 }
 
-/**
- * Color variants.
- */
+// Color variants.
+
+// Error variables.
+$notification-background-color-error: $background-color-error !default;
+$notification-border-color-error: transparent !default;
+$notification-color-error: $color-error !default;
+
+// Error CSS properties.
+@if $enable-css-properties and $enable-root-css-properties {
+  :root {
+    --notification-background-color-error: var(--background-color-error);
+    --notification-border-color-error: transparent;
+    --notification-color-error: var(--color-error);
+  }
+}
+
+// Error styles.
 .c-notification.is-error {
-  --notification-background-color: var(--background-color-error);
-  --notification-border-color: var(--border-color-error);
-  --notification-color: var(--color-error);
-  @include css-property-fallback("background-color", "--notification-background-color", $background-color-error);
-  @include css-property-fallback("border-color", "--notification-border-color", $border-color-error);
-  @include css-property-fallback("color", "--notification-color", $color-error);
+  @include css-property-fallback("background-color", "--notification-background-color-error", $notification-background-color-error);
+  @include css-property-fallback("border-color", "--notification-border-color-error", $notification-border-color-error);
+  @include css-property-fallback("color", "--notification-color-error", $notification-color-error);
 }
 
+// Success variables.
+$notification-background-color-success: $background-color-success !default;
+$notification-border-color-success: transparent !default;
+$notification-color-success: $color-success !default;
+
+// Success CSS properties.
+@if $enable-css-properties and $enable-root-css-properties {
+  :root {
+    --notification-background-color-success: var(--background-color-success);
+    --notification-border-color-success: transparent;
+    --notification-color-success: var(--color-success);
+  }
+}
+
+// Success styles.
 .c-notification.is-success {
-  --notification-background-color: var(--background-color-success);
-  --notification-border-color: var(--border-color-success);
-  --notification-color: var(--color-success);
-  @include css-property-fallback("background-color", "--notification-background-color", $background-color-success);
-  @include css-property-fallback("border-color", "--notification-border-color", $border-color-success);
-  @include css-property-fallback("color", "--notification-color", $color-success);
+  @include css-property-fallback("background-color", "--notification-background-color-success", $notification-background-color-success);
+  @include css-property-fallback("border-color", "--notification-border-color-success", $notification-border-color-success);
+  @include css-property-fallback("color", "--notification-color-success", $notification-color-success);
 }
 
+// Warning variables.
+$notification-background-color-warning: $background-color-warning !default;
+$notification-border-color-warning: transparent !default;
+$notification-color-warning: $color-warning !default;
+
+// Warning CSS properties.
+@if $enable-css-properties and $enable-root-css-properties {
+  :root {
+    --notification-background-color-warning: var(--background-color-warning);
+    --notification-border-color-warning: transparent;
+    --notification-color-warning: var(--color-warning);
+  }
+}
+
+// Warning styles.
 .c-notification.is-warning {
-  --notification-background-color: var(--background-color-warning);
-  --notification-border-color: var(--border-color-warning);
-  --notification-color: var(--color-warning);
-  @include css-property-fallback("background-color", "--notification-background-color", $background-color-warning);
-  @include css-property-fallback("border-color", "--notification-border-color", $border-color-warning);
-  @include css-property-fallback("color", "--notification-color", $color-warning);
+  @include css-property-fallback("background-color", "--notification-background-color-warning", $notification-background-color-warning);
+  @include css-property-fallback("border-color", "--notification-border-color-warning", $notification-border-color-warning);
+  @include css-property-fallback("color", "--notification-color-warning", $notification-color-warning);
 }
 
-/**
- * Size variants.
- */
+// Size variants.
 .c-notification.is-large {
   font-size: 1.25rem;
   line-height: (1.5 / 1.25);

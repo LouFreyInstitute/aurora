@@ -1,52 +1,32 @@
 // Map colors to variable patterns.
 
-/**
- * Background colors.
- */
-
-// Base colors.
+// Background colors.
 $background-color: white !default;
 $background-color-action: #e0e0e0 !default;
-
-// Accent colors.
 $background-color-accent: sandybrown !default;
 $background-color-accent-action: $background-color-action !default;
-
-// Brand colors.
 $background-color-brand: dodgerblue !default;
 $background-color-brand-action: $background-color-action !default;
-
-// Default element colors.
 $background-color-default: #384048 !default;
-
-// Disabled element colors.
+$background-color-default-action: #283038 !default;
 $background-color-disabled: #e0e0e0 !default;
+$background-color-error: salmon !default;
+$background-color-error-action: $background-color-error !default;
+$background-color-success: lightgreen !default;
+$background-color-success-action: $background-color-success !default;
+$background-color-warning: navajowhite !default;
+$background-color-warning-action: $background-color-warning !default;
 
-// Error colors.
-$background-color-error: lightcoral !default;
-$background-color-error-action: $background-color-action !default;
-
-// Success colors.
-$background-color-success: $background-color !default;
-$background-color-success-action: $background-color-action !default;
-
-// Warning colors.
-$background-color-warning: $background-color !default;
-$background-color-warning-action: $background-color-action !default;
-
-/**
- * Border colors.
- */
-
-// Default colors.
+// Border colors.
 $border-color: #101010 !default;
 $border-color-action: $border-color !default;
-$border-color-disabled: $border-color !default;
-
 $border-color-accent: $border-color !default;
 $border-color-accent-action: $border-color !default;
 $border-color-brand: $border-color !default;
 $border-color-brand-action: $border-color !default;
+$border-color-default: $border-color !default;
+$border-color-default-action: $border-color !default;
+$border-color-disabled: $border-color !default;
 $border-color-error: #c03030 !default;
 $border-color-error-action: $border-color !default;
 $border-color-success: $border-color !default;
@@ -54,34 +34,71 @@ $border-color-success-action: $border-color !default;
 $border-color-warning: $border-color !default;
 $border-color-warning-action: $border-color !default;
 
-/**
- * Text colors.
- */
-
-// Default
-$color: rgba(32, 48, 64, 0.8) !default;
+// Text colors.
+$color: rgba(32, 32, 64, 0.8) !default;
 $color-action: $color !default;
-$color-disabled: $background-color !default;
-
-// Accent
 $color-accent: $color !default;
 $color-accent-action: $color !default;
-
-// Brand
 $color-brand: $color !default;
 $color-brand-action: $color !default;
-
-// Default
 $color-default: rgba(255, 255, 255, 0.8) !default;
+$color-default-action: rgba(255, 255, 255, 0.9) !default;
+$color-disabled: $background-color !default;
+$color-error: rgba(64, 32, 32, 0.8) !default;
+$color-error-action: $color-error !default;
+$color-success: rgba(32, 64, 32, 0.8) !default;
+$color-success-action: $color-success !default;
+$color-warning: rgba(64, 32, 32, 0.8) !default;
+$color-warning-action: $color-warning !default;
 
-// Error
-$color-error: #402020 !default;
-$color-error-action: $color !default;
+@if $enable-css-properties and $enable-root-css-properties {
+  :root {
+    --background-color: #{$background-color};
+    --background-color-action: #{$background-color-action};
+    --background-color-accent: #{$background-color-accent};
+    --background-color-accent-action: #{$background-color-accent-action};
+    --background-color-brand: #{$background-color-brand};
+    --background-color-brand-action: #{$background-color-brand-action};
+    --background-color-default: #{$background-color-default};
+    --background-color-default-action: #{$background-color-default-action};
+    --background-color-disabled: #{$background-color-disabled};
+    --background-color-error: #{$background-color-error};
+    --background-color-error-action: #{$background-color-error-action};
+    --background-color-success: #{$background-color-success};
+    --background-color-success-action: #{$background-color-success-action};
+    --background-color-warning: #{$background-color-warning};
+    --background-color-warning-action: #{$background-color-warning-action};
 
-//Success
-$color-success: $color !default;
-$color-success-action: $color !default;
+    --border-color: #{$border-color};
+    --border-color-action: #{$border-color-action};
+    --border-color-accent: #{$border-color-accent};
+    --border-color-accent-action: #{$border-color-accent-action};
+    --border-color-brand: #{$border-color-brand};
+    --border-color-brand-action: #{$border-color-brand-action};
+    --border-color-default: #{$border-color-default};
+    --border-color-default-action: #{$border-color-default-action};
+    --border-color-disabled: #{$border-color-disabled};
+    --border-color-error: #{$border-color-error};
+    --border-color-error-action: #{$border-color-error-action};
+    --border-color-success: #{$border-color-success};
+    --border-color-success-action: #{$border-color-success-action};
+    --border-color-warning: #{$border-color-warning};
+    --border-color-warning-action: #{$border-color-warning-action};
 
-// Warning
-$color-warning: $color !default;
-$color-warning-action: $color !default;
+    --color: #{$color};
+    --color-action: #{$color-action};
+    --color-accent: #{$color-accent};
+    --color-accent-action: #{$color-accent-action};
+    --color-brand: #{$color-brand};
+    --color-brand-action: #{$color-brand-action};
+    --color-default: #{$color-default};
+    --color-default-action: #{$color-default-action};
+    --color-disabled: #{$color-disabled};
+    --color-error: #{$color-error};
+    --color-error-action: #{$color-error-action};
+    --color-success: #{$color-success};
+    --color-success-action: #{$color-success-action};
+    --color-warning: #{$color-warning};
+    --color-warning-action: #{$color-warning-action};
+  }
+}

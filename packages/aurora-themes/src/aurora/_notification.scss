@@ -1,0 +1,13 @@
+// Aurora Notification Variables
+
+.t-aurora {
+  --notification-background-color: var(--background-color-default);
+  --notification-background-color-error: var(--background-color-error);
+  --notification-background-color-success: var(--background-color-success);
+  --notification-background-color-warning: var(--background-color-warning);
+  
+  --notification-color: var(--color-default);
+  --notification-color-error: var(--color-error);
+  --notification-color-success: var(--color-success);
+  --notification-color-warning: var(--color-warning);
+}
