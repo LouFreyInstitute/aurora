@@ -38,7 +38,8 @@
   --card-border-style: solid;
 }
 
-@import "./_button";
+@import "button";
+@import "tag";
 
 /**
 * CSS Custom Properties for Civics360 theme dark mode.

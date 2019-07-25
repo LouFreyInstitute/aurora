@@ -1,3 +1,13 @@
+// Font Size Variables
 $font-size: 1rem !default;
 $font-size-large: 1.125rem !default;
 $font-size-small: 0.875rem !default;
+
+// Add to :root if enabled.
+@if $enable-css-properties and $enable-root-css-properties {
+  :root {
+    --font-size: #{$font-size};
+    --font-size-large: #{$font-size-large};
+    --font-size-small: #{$font-size-small};
+  }
+}

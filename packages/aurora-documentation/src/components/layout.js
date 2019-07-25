@@ -49,7 +49,11 @@ const Layout = ({children}) => {
 				</main>
 			</div>
 
-			<footer className="c-footer s-prose u-font-size-">
+			<footer
+				className={`t-${theme.toLowerCase()} ${
+					dark ? '' : 'is-dark'
+				} c-footer c-section s-prose u-font-size-`}
+			>
 				<div className="o-layout">
 					<div>
 						© {new Date().getFullYear()},{' '}

@@ -35,14 +35,21 @@
   --color-accent-action: #{$aurora-purple-90};
   --color-default: #{$aurora-gray-20};
   --color-disabled: #{$aurora-gray-10};
+  
+  --font-size: 20px;
 }
 
 // CSS Custom Properties for Aurora theme in dark mode.
 .t-aurora.is-dark {
+  // Background colors.
   --background-color: #{$aurora-gray-80};
-  --color: #{$aurora-gray-10};
   --background-color-default: #{$aurora-gray-20};
+  --background-color-disabled: #{$aurora-gray-70};
+  
+  // Text colors.
+  --color: #{$aurora-gray-10};
   --color-default: #{$aurora-gray-90};
+  --color-disabled: #{$aurora-gray-80};
 }
 
 // If you are using nested themes it is recommended to add a further level of
@@ -56,10 +63,13 @@
 // and typography variables alone.
 
 // Import custom button CSS properties.
-@import './button';
+@import 'button';
 
 // Import custom card CSS properties.
-@import './card';
+@import 'card';
+
+// Import custom tag CSS properties.
+@import 'tag';
 
 
 // Overrides `background-color` and `color` if theme can't be set on the `html`
