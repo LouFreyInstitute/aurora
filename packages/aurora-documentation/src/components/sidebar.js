@@ -28,6 +28,14 @@ function Sidebar(props) {
 				<NavItem Component={Link} to="/notification-element">
 					.c-notification
 				</NavItem>
+				<NavItem Component={Link} to="/tag-element">
+					<div className="o-layout">
+						<div className="o-layout-item is-fill">.c-tag</div>
+						<div>
+							<span className="tag is-brand">New</span>
+						</div>
+					</div>
+				</NavItem>
 				<NavItem Component={Link} to="/text-input-element">
 					.c-text-input
 				</NavItem>

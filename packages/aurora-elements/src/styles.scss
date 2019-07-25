@@ -4,12 +4,13 @@ $enable-css-properties: true !default;
 
 // Add CSS variables to `:root`. This can be disabled if you are using nested
 // themes.
-$enable-root-css-properties: false !default;
+$enable-root-css-properties: true !default;
 
 // Import Sass variables.
 @import 'variables/borders';
 @import 'variables/colors';
 @import 'variables/font-families';
+@import 'variables/font-sizes';
 
 // Import mixins.
 @import 'mixins/block';
@@ -45,6 +46,7 @@ $enable-root-css-properties: false !default;
 @import 'components/nav-item';
 @import 'components/notification';
 @import 'components/section';
+@import 'components/tag';
 @import 'components/text-input';
 
 // Import utilities.

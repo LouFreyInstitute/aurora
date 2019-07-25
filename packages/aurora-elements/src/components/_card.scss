@@ -9,12 +9,12 @@ $card-color: $color-default !default;
 // Card CSS properties.
 @if $enable-css-properties and $enable-root-css-properties {
   :root {
-    --card-background-color: var(--background-color);
+    --card-background-color: var(--background-color-default);
     --card-border-color: var(--border-color);
     --card-border-radius: var(--border-radius);
     --card-border-style: var(--border-style);
     --card-border-width: var(--border-width);
-    --card-color: var(--color);
+    --card-color: var(--color-default);
   }
 }
 
@@ -31,7 +31,11 @@ $card-color: $color-default !default;
   height: 100%;
 }
 
-// Button Color Variants
+//   .-.-.   .-.-.   .-.-.   .-.-.   .-.-.   .-.-.   .-.-.   .-.-.   .-.-.   .-.
+//  / / \ \ / / \ \ / / \ \ / / \ \ / / \ \ / / \ \ / / \ \ / / \ \ / / \ \ / /
+// `-'   `-`-'   `-`-'   `-`-'   `-`-'   `-`-'   `-`-'   `-`-'   `-`-'   `-`-'
+
+// Card Color Variants
 
 // Accent variables.
 $card-background-color-accent: $background-color-accent !default;

@@ -15,7 +15,7 @@
   "main": "dist/styles.css",
   "name": "aurora-elements",
   "scripts": {
-    "start": "sass src/styles.scss dist/styles.css"
+    "start": "sass src/:dist/"
   },
   "version": "0.0.0"
 }

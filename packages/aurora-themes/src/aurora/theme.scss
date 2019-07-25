@@ -1,28 +1,24 @@
 // Import our color palette from the `aurora-palettes` module.
 @import "../../node_modules/aurora-palettes/src/aurora";
 
-/**
- * Aurora Theme
- * ________
- * You can use this theme as the foundation for creating new themes. All
- * variables used here must be overriden or it will use the parent theme's.
- * If it is the parent theme then it will use the defaults given to Sass.
- *
- * If you don't want to use nested themes you can throw everything into `:root`
- * and not worry about overriding.
- */
+// Aurora Theme
+//
+// You can use this theme as the foundation for creating new themes. All
+// variables used here must be overriden or it will use the parent theme's.
+// If it is the parent theme then it will use the defaults given to Sass.
+//
+// If you don't want to use nested themes you can throw everything into `:root`
+// and not worry about overriding.
 
-/**
- * CSS Custom Properties for Aurora theme.
- */
+// CSS Custom Properties for Aurora theme.
 .t-aurora {
-  --html-font-size: 14px;
-  --background-color: #{$aurora-gray-80};
+  --background-color: #{$aurora-gray-10};
   --background-color-action: #{$aurora-gray-20};
   --background-color-brand: #{$aurora-green-30};
   --background-color-brand-action: #{$aurora-green-40};
   --background-color-accent: #{$aurora-purple-30};
   --background-color-accent-action: #{$aurora-purple-40};  
+  --background-color-default: #{$aurora-gray-90};
   --background-color-disabled: #{$aurora-gray-20};
 
   --border-color: #{$aurora-gray-50};
@@ -31,39 +27,45 @@
   --border-color-accent: #{$aurora-purple-70};
   --border-color-brand:  #{$aurora-green-70};
   
-  --color: #{$aurora-gray-10};
-  --color-action: #{$aurora-gray-90};
+  --color: #{$aurora-gray-80};
+  --color-action: #{$aurora-gray-80};
   --color-brand:  #{$aurora-green-80};
   --color-brand-action:  #{$aurora-green-90};
   --color-accent: #{$aurora-purple-80};
   --color-accent-action: #{$aurora-purple-90};
+  --color-default: #{$aurora-gray-20};
   --color-disabled: #{$aurora-gray-10};
-  
-  --footer-background-color: #{$aurora-gray-20};
 }
 
-/**
-* CSS Custom Properties for Aurora theme in dark mode.
-*/
+// CSS Custom Properties for Aurora theme in dark mode.
 .t-aurora.is-dark {
-  --background-color: #{$aurora-gray-10};
-  --color: #{$aurora-gray-80};
+  --background-color: #{$aurora-gray-80};
+  --color: #{$aurora-gray-10};
+  --background-color-default: #{$aurora-gray-20};
+  --color-default: #{$aurora-gray-90};
 }
 
-/**
- * The following is required if you are using nested themes. If your themes
- * are set on the `html` element you can exclude these variables.
- */
+// If you are using nested themes it is recommended to add a further level of
+// CSS properties to prevent unwanted inheritance. These can be broken up into
+// separate files (see below) or defined in a single file. You can even use
+// plain CSS.
+//
+// An easy rule to follow is that any CSS property that is set should be defined
+// in all other themes as well to prevent overriding each other when nested. As
+// such you will usually only override colors and can generally leave spacing
+// and typography variables alone.
+
+// Import custom button CSS properties.
 @import './button';
+
+// Import custom card CSS properties.
 @import './card';
 
 
-/**
- * Overrides `background-color` and `color` if theme can't be set on the `html`
- * element. It is recommended to use `.c-section` in conjunction with theme
- * classes to set these colors (especially with nesting themes) instead.
- */
+// Overrides `background-color` and `color` if theme can't be set on the `html`
+// element. It is recommended to use `.c-section` in conjunction with theme
+// classes to set these colors (especially with nesting themes) instead.
 .t-aurora.has-overrides {
-  background-color: var(--color);
-  color: var(--background-color);
+  background-color: var(--background-color);
+  color: var(--color);
 }

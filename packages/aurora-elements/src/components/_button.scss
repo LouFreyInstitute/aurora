@@ -1,75 +1,59 @@
-$button-background-color: $background-color-default !default;
-$button-background-color-action: $color-action !default;
-$button-background-color-disabled: $background-color-disabled !default;
-$button-background-color-accent: $background-color-accent !default;
-$button-background-color-accent-action: $background-color-accent-action !default;
-$button-background-color-brand: $background-color-brand !default;
-$button-background-color-brand-action: $background-color-brand-action !default;
+//  ____        _   _              
+// | __ ) _   _| |_| |_ ___  _ __  
+// |  _ \| | | | __| __/ _ \| '_ \ 
+// | |_) | |_| | |_| || (_) | | | |
+// |____/ \__,_|\__|\__\___/|_| |_|
+//
 
+// Button variables.
+$button-background-color: $background-color-default !default;
+$button-background-color-action: $background-color-default !default;
 $button-border-color: transparent !default;
 $button-border-color-action: transparent !default;
-$button-border-color-accent: transparent !default;
-$button-border-color-accent-action: transparent !default;
-$button-border-color-brand: transparent !default;
-$button-border-color-brand-action: transparent !default;
-
 $button-color: $color-default !default;
 $button-color-action: $background-color-action !default;
-$button-color-disabled: $color-disabled !default;
-$button-color-accent: $color-accent !default;
-$button-color-accent-action: $color-accent-action !default;
-$button-color-brand: $color-brand !default;
-$button-color-brand-action: $color-brand-action !default;
 
-$button-hollow-background-color: transparent !default;
-$button-hollow-border-color: $border-color !default;
-$button-hollow-color: inherit;
+$button-border-radius: $border-radius !default;
+$button-border-style: $border-style !default;
+$button-border-width: $border-width !default;
 
-$button-hollow-border-color-accent: $button-background-color-accent !default;
-$button-hollow-border-color-brand: $button-background-color-brand !default;
+$button-padding-bottom: 0.5rem - $button-border-width !default;
+$button-padding-left: 1rem - $button-border-width !default;
+$button-padding-right: 1rem - $button-border-width !default;
+$button-padding-top: 0.5rem - $button-border-width !default;
 
-$button-border-radius: 0.125rem !default;
-$button-border-width: 0.125rem !default;
-
-$button-padding-bottom: 1.5 - 1rem !default;
-$button-padding-left: 1rem !default;
-$button-padding-right: 1rem !default;
-$button-padding-top: 1.5 - 1rem !default;
-
-$button-size-ratio: 0.25rem !default;
-
-$button-border-style: solid;
 
 @if $enable-css-properties and $enable-root-css-properties {
   :root {
-    --button-background-color: var(--color);
+    --button-background-color: var(--background-color-default);
     --button-background-color-action: var(--color-action);
     --button-border-color: var(--background-border-color);
     --button-border-color-action: var(--background-border-color-action);
-    --button-color: var(--background-color);
+    --button-border-radius: var(--border-radius);
+    --button-border-style: var(--border-style);
+    --button-border-width: var(--border-width);
+    --button-color: var(--color-default);
     --button-color-action: var(--background-color-action);
   }
 }
 
-/**
- * These are the standard button styles that all other button states inherit.
- * By default `background-color` and `color` are inverted to make toggling dark
- * mode easier.
- */
+// These are the standard button styles that all other button states inherit.
+// By default `background-color` and `color` are inverted to make toggling dark
+// mode easier.
 .c-button {
   @include css-property-fallback("background-color", "--button-background-color", $button-background-color);
   @include css-property-fallback("border-color", "--button-border-color", $button-border-color);
-  @include css-property-fallback("color", "--button-color", $button-color);
-  border-radius: $button-border-radius;
+  @include css-property-fallback("border-radius", "--button-border-radius", $button-border-radius);
   @include css-property-fallback("border-style", "--button-border-style", $button-border-style);
-  border-width: $button-border-width;
+  @include css-property-fallback("border-width", "--button-border-width", $button-border-width);
+  @include css-property-fallback("color", "--button-color", $button-color);
   cursor: pointer;
   font: inherit;
   margin: 0;
-  padding-bottom: $button-padding-bottom - $button-border-width;
-  padding-left: $button-padding-left - $button-border-width;
-  padding-right: $button-padding-right - $button-border-width;
-  padding-top: $button-padding-top - $button-border-width;
+  padding-bottom: $button-padding-bottom;
+  padding-left: $button-padding-left;
+  padding-right: $button-padding-right;
+  padding-top: $button-padding-top;
   vertical-align: middle;
   white-space: nowrap;
   
@@ -80,28 +64,29 @@ $button-border-style: solid;
   }
 }
 
-/**
- * Disabled button state. Do not use with other color variations.
- */
-@if $enable-css-properties and $enable-root-css-properties {
-  :root {
-    --button-background-color-disabled: var(--background-color-disabled);
-    --button-border-color-disabled: var(--border-color-disabled);
-    --button-color-disabled: var(--color-disabled);
-  }
+// Displays button at full width.
+.c-button.is-block {
+  display: block;
+  text-align: center;
+  width: 100%;
 }
 
-.c-button[disabled],
-.c-button.is-disabled {
-  @include css-property-fallback("background-color", "--button-background-color-disabled", $button-background-color-disabled);
-  @include css-property-fallback("color", "--button-color-disabled", $button-color-disabled);
-  cursor: not-allowed;
-}
+//    ____      _                              _       _   _                   
+//   / ___|___ | | ___  _ __  __   ____ _ _ __(_) __ _| |_(_) ___  _ __  ___   
+//  | |   / _ \| |/ _ \| '__| \ \ / / _` | '__| |/ _` | __| |/ _ \| '_ \/ __|  
+//  | |__| (_) | | (_) | |     \ V / (_| | |  | | (_| | |_| | (_) | | | \__ \_ 
+//   \____\___/|_|\___/|_|      \_/ \__,_|_|  |_|\__,_|\__|_|\___/|_| |_|___(_)
+// 
 
-/**
- * Color variations.
- */
- 
+// Accent variables.
+$button-background-color-accent: $background-color-accent !default;
+$button-background-color-accent-action: $background-color-accent-action !default;
+$button-border-color-accent: transparent !default;
+$button-border-color-accent-action: transparent !default;
+$button-color-accent: $color-accent !default;
+$button-color-accent-action: $color-accent-action !default;
+
+// Accent CSS properties.
 @if $enable-css-properties and $enable-root-css-properties {
   :root {
     --button-background-color-accent: var(--background-color-accent);
@@ -113,6 +98,7 @@ $button-border-style: solid;
   }
 }
 
+// Accent styles.
 .c-button.is-accent {
   @include css-property-fallback("background-color", "--button-background-color-accent", $button-background-color-accent);
   @include css-property-fallback("border-color", "--button-border-color-accent", $button-border-color-accent);
@@ -124,18 +110,28 @@ $button-border-style: solid;
     @include css-property-fallback("color", "--button-color-accent-action", $button-color-accent-action);
   }
 }
- 
- @if $enable-css-properties and $enable-root-css-properties {
-   :root {
-     --button-background-color-brand: var(--background-color-brand);
-     --button-background-color-brand-action: var(--background-color-brand-action);
-     --button-border-color-brand: var(--border-color-brand);
-     --button-border-color-brand-action: var(--border-color-brand-action);
-     --button-color-brand: var(--color-brand);
-     --button-color-brand-action: var(--color-brand-action);
-   }
- }
 
+// Brand variables.
+$button-background-color-brand: $background-color-brand !default;
+$button-background-color-brand-action: $background-color-brand-action !default;
+$button-border-color-brand: transparent !default;
+$button-border-color-brand-action: transparent !default;
+$button-color-brand: $color-brand !default;
+$button-color-brand-action: $color-brand-action !default;
+
+// Brand CSS properties.
+@if $enable-css-properties and $enable-root-css-properties {
+  :root {
+    --button-background-color-brand: var(--background-color-brand);
+    --button-background-color-brand-action: var(--background-color-brand-action);
+    --button-border-color-brand: var(--border-color-brand);
+    --button-border-color-brand-action: var(--border-color-brand-action);
+    --button-color-brand: var(--color-brand);
+    --button-color-brand-action: var(--color-brand-action);
+  }
+}
+
+// Brand styles.
 .c-button.is-brand {
   @include css-property-fallback("background-color", "--button-background-color-brand", $button-background-color-brand);
   @include css-property-fallback("border-color", "--button-border-color-brand", $button-border-color-brand);
@@ -148,16 +144,45 @@ $button-border-style: solid;
   }
 }
 
-/**
- * Button Sizes
- * ________
- * These override padding, font-size, and line-height. If you modify these or
- * the `html` `font-size` property it is important to keep vertical rhythm
- * consistent.
- */
+// Disabled variables.
+$button-background-color-disabled: $background-color-disabled !default;
+$button-color-disabled: $color-disabled !default;
+
+// Disabled CSS properties.
+@if $enable-css-properties and $enable-root-css-properties {
+  :root {
+    --button-background-color-disabled: var(--background-color-disabled);
+    --button-border-color-disabled: var(--border-color-disabled);
+    --button-color-disabled: var(--color-disabled);
+  }
+}
+
+// Disabled styles.
+.c-button[disabled],
+.c-button.is-disabled {
+  @include css-property-fallback("background-color", "--button-background-color-disabled", $button-background-color-disabled);
+  @include css-property-fallback("color", "--button-color-disabled", $button-color-disabled);
+  cursor: not-allowed;
+  
+  &:focus,
+  &:hover {
+    @include css-property-fallback("background-color", "--button-background-color-disabled", $button-background-color-disabled);
+    @include css-property-fallback("color", "--button-color-disabled", $button-color-disabled);
+  }
+}
+
+//  ____        _   _                ____  _              
+// | __ ) _   _| |_| |_ ___  _ __   / ___|(_)_______  ___ 
+// |  _ \| | | | __| __/ _ \| '_ \  \___ \| |_  / _ \/ __|
+// | |_) | |_| | |_| || (_) | | | |  ___) | |/ /  __/\__ \
+// |____/ \__,_|\__|\__\___/|_| |_| |____/|_/___\___||___/
+//
+// These override padding, font-size, and line-height. If you modify these or
+// the `html` `font-size` property it is important to keep vertical rhythm
+// consistent.
 
 // Large button variables.
-$button-font-size-large: 1.125rem;
+$button-font-size-large: $font-size-large;
 $button-line-height-large: (1.5 / 1.125);
 $button-padding-bottom-large: 0.75rem - 0.125rem;
 $button-padding-left-large: 1.25rem - 0.125rem;
@@ -167,9 +192,9 @@ $button-padding-top-large: 0.75rem - 0.125rem;
 // Large button CSS properties.
 @if $enable-css-properties and $enable-root-css-properties {
   :root {
-    --button-font-size-large: 1.125rem;
-    --button-line-height-large: #{(1.5 / 1.125)};
-    --button-padding-bottom-large: 0.75rem;
+    --button-font-size-large: var(--font-size-large);
+    --button-line-height-large: calc(var(--line-height) / var(--font-size-large));
+    --button-padding-bottom-large: calc(#{$button-padding-bottom-large} - var(--button-border-width));
     --button-padding-left-large: 1.25rem;
     --button-padding-right-large: 1.25rem;
     --button-padding-top-large: 0.75rem;
@@ -187,7 +212,7 @@ $button-padding-top-large: 0.75rem - 0.125rem;
 }
 
 // Small button variables.
-$button-font-size-small: 0.875rem;
+$button-font-size-small: $font-size-small;
 $button-line-height-small: (1.5 / 0.875);
 $button-padding-bottom-small: 0.25rem;
 $button-padding-left-small: 0.75rem;

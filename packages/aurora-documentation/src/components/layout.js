@@ -29,9 +29,9 @@ const Layout = ({children}) => {
 
 	return (
 		<div
-			className={`t-${theme.toLowerCase()} has-overrides has-funky-borders ${
+			className={`t-${theme.toLowerCase()} ${
 				dark ? 'is-dark' : ''
-			} o-layout is-vertical u-full-height`}
+			} o-layout is-vertical u-full-height c-section`}
 		>
 			<Header
 				changeMode={toggleDark}

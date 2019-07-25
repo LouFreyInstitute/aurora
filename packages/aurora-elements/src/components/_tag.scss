@@ -1,0 +1,68 @@
+//  _____
+// |_   _|_ _  __ _ 
+//   | |/ _` |/ _` |
+//   | | (_| | (_| |
+//   |_|\__,_|\__, |
+//            |___/
+
+// Tag variables.
+$tag-background-color: $background-color-default !default;
+$tag-color: $color-default !default;
+
+// Tag CSS properties.
+@if $enable-css-properties and $enable-root-css-properties {
+  :root {
+    --tag-background-color: var(--background-color-default);
+    --tag-color: var(--color-default);
+  }
+}
+
+// Tag styles.
+.tag {
+  @include css-property-fallback("background-color", "--tag-background-color", $tag-background-color);
+  border-radius: 0.125rem;
+  @include css-property-fallback("color", "--tag-color", $tag-color);
+  // display: inline-block;
+  font-size: 0.75em;
+  padding: 0.125em 0.25em;
+  position: relative;
+  top: -0.125em;
+}
+
+// Tag color variations.
+
+// Accent variables.
+$tag-background-color-accent: $background-color-accent !default;
+$tag-color-accent: $color-accent !default;
+
+// Accent CSS properties.
+@if $enable-css-properties and $enable-root-css-properties {
+  :root {
+    --tag-background-color-accent: var(--background-color-accent);
+    --tag-color-accent: var(--color-accent);
+  }
+}
+
+// Accent styles.
+.tag.is-accent {
+  @include css-property-fallback("background-color", "--tag-background-color-accent", $tag-background-color-accent);
+  @include css-property-fallback("color", "--tag-color-accent", $tag-color-accent);
+}
+
+// Brand variables.
+$tag-background-color-brand: $background-color-brand !default;
+$tag-color-brand: $color-brand !default;
+
+// Brand CSS properties.
+@if $enable-css-properties and $enable-root-css-properties {
+  :root {
+    --tag-background-color-brand: var(--background-color-brand);
+    --tag-color-brand: var(--color-brand);
+  }
+}
+
+// Brand styles.
+.tag.is-brand {
+  @include css-property-fallback("background-color", "--tag-background-color-brand", $tag-background-color-brand);
+  @include css-property-fallback("color", "--tag-color-brand", $tag-color-brand);
+}

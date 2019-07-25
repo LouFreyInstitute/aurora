@@ -1,3 +1,18 @@
+//  ____                _           
+// | __ )  ___  _ __ __| | ___ _ __ 
+// |  _ \ / _ \| '__/ _` |/ _ \ '__|
+// | |_) | (_) | | | (_| |  __/ |   
+// |____/ \___/|_|  \__,_|\___|_|   
+//
+
 $border-radius: 0.125rem;
 $border-style: solid;
 $border-width: 0.125rem;
+
+@if $enable-css-properties and $enable-root-css-properties {
+  :root {
+    --border-radius: #{$border-radius};
+    --border-style: #{$border-style};
+    --border-width: #{$border-width};
+  }
+}
