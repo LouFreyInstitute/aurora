@@ -1,8 +1,10 @@
 {
   "packages": [
+    "packages/aurora-avatars",
     "packages/aurora-components",
     "packages/aurora-elements",
     "packages/aurora-documentation",
+    "packages/aurora-hooks",
     "packages/aurora-icons",
     "packages/aurora-palettes",
     "packages/aurora-themes"
