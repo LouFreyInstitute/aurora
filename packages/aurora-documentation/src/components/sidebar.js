@@ -36,8 +36,8 @@ function Sidebar(props) {
 						</div>
 					</div>
 				</NavItem>
-				<NavItem Component={Link} to="/text-input-element">
-					.c-text-input
+				<NavItem Component={Link} to="/input-element">
+					.input
 				</NavItem>
 			</nav>
 		</div>

@@ -23,7 +23,15 @@ const CardElement = () => (
 								width="300px"
 							/>
 						</div>
-						<div className="c-card-body">This is a card.</div>
+						<div className="c-card-body">
+							<p className="u-margin-bottom-">This is a card.</p>
+							<button
+								className="c-button is-inverted is-small u-margin-bottom-"
+								type="button"
+							>
+								Action
+							</button>
+						</div>
 					</div>
 				</div>
 

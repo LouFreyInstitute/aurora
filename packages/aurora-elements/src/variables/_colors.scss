@@ -10,11 +10,13 @@ $background-color-brand-action: $background-color-action !default;
 $background-color-default: #384048 !default;
 $background-color-default-action: #283038 !default;
 $background-color-disabled: #e0e0e0 !default;
-$background-color-error: salmon !default;
+$background-color-error: rgb(255, 109, 130) !default;
 $background-color-error-action: $background-color-error !default;
-$background-color-success: lightgreen !default;
+$background-color-info: rgb(132, 172, 243) !default;
+$background-color-info-action: $background-color-info !default;
+$background-color-success: rgb(106, 210, 150) !default;
 $background-color-success-action: $background-color-success !default;
-$background-color-warning: navajowhite !default;
+$background-color-warning: rgb(255, 183, 136) !default;
 $background-color-warning-action: $background-color-warning !default;
 
 // Border colors.
@@ -27,7 +29,7 @@ $border-color-brand-action: $border-color !default;
 $border-color-default: $border-color !default;
 $border-color-default-action: $border-color !default;
 $border-color-disabled: $border-color !default;
-$border-color-error: #c03030 !default;
+$border-color-error: rgb(255, 109, 130) !default;
 $border-color-error-action: $border-color !default;
 $border-color-success: $border-color !default;
 $border-color-success-action: $border-color !default;

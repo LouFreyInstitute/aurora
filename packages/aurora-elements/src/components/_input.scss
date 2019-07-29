@@ -1,0 +1,111 @@
+// General styles.
+
+// Default variables.
+$input-border-radius: $border-radius !default;
+$input-border-style: $border-style !default;
+$input-border-width: $border-width !default;
+
+// CSS variables.
+@if $enable-css-properties and $enable-root-css-properties {
+  :root {
+    --input-border-radius: #{$border-radius};
+    --input-border-style: #{$border-style};
+    --input-border-width: #{$border-width};
+  }
+}
+
+// Default styles.
+.input {
+  @include css-property-fallback("border-radius", "--input-border-radius", $input-border-radius);
+  @include css-property-fallback("border-style", "--input-border-style", $input-border-style);
+  @include css-property-fallback("border-width", "--input-border-width", $input-border-width);
+  font: inherit;
+  margin: 0;
+}
+
+// Add spacing between .input and .input-helper
+.input:not(:last-child) {
+  margin-bottom: $spacing-small;
+}
+
+// Color variations.
+
+// Default variables.
+$input-background-color: $background-color-default !default;
+$input-border-color: transparent !default;
+$input-color: $color-default !default;
+
+// CSS variables.
+@if $enable-css-properties and $enable-root-css-properties {
+  :root {
+    --input-background-color: var(--background-color-default);
+    --input-border-color: transparent;
+    --input-color: var(--color-default);
+  }
+}
+
+// Default styles.
+.input {
+  @include css-property-fallback("background-color", "--input-background-color", $input-background-color);
+  @include css-property-fallback("border-color", "--input-border-color", $input-border-color);
+  @include css-property-fallback("color", "--input-color", $input-color);
+}
+
+.input.is-inverted {
+  @include css-property-fallback("background-color", "--input-color", $input-color);
+  @include css-property-fallback("border-color", "--input-border-color", $input-border-color);
+  @include css-property-fallback("color", "--input-background-color", $input-background-color);
+}
+
+// Error variables.
+$input-background-color-error: $background-color-error !default;
+$input-border-color-error: transparent !default;
+$input-color-error: $color-error !default;
+
+// CSS variables.
+@if $enable-css-properties and $enable-root-css-properties {
+  :root {
+    --input-background-color-error: var(--background-color-error);
+    --input-border-color-error: transparent;
+    --input-color-error: var(--color-error);
+  }
+}
+
+// Error styles.
+.input.is-error {
+  @include css-property-fallback("background-color", "--input-background-color-error", $input-background-color-error);
+  @include css-property-fallback("border-color", "--input-border-color-error", $input-border-color-error);
+  @include css-property-fallback("color", "--input-color-error", $input-color-error);
+}
+
+.input.is-error.is-inverted {
+  @include css-property-fallback("background-color", "--input-color-error", $input-color-error);
+  @include css-property-fallback("border-color", "--input-border-color-error", $input-border-color-error);
+  @include css-property-fallback("color", "--input-background-color-error", $input-background-color-error);
+}
+
+// Size variations.
+
+// Default variables.
+$input-padding-bottom: $spacing-small - $button-border-width !default;
+$input-padding-left: $spacing - $button-border-width !default;
+$input-padding-right: $spacing - $button-border-width !default;
+$input-padding-top: $spacing-small - $button-border-width !default;
+
+// CSS variables.
+@if $enable-css-properties and $enable-root-css-properties {
+  :root {
+    --input-padding-bottom: calc(var(--spacing-small) - var(--input-border-width));
+    --input-padding-left: calc(var(--spacing) - var(--input-border-width));
+    --input-padding-right: calc(var(--spacing) - var(--input-border-width));
+    --input-padding-top: calc(var(--spacing-small) - var(--input-border-width));
+  }
+}
+
+// Default styles.
+.input {
+  @include css-property-fallback("padding-bottom", "--input-padding-bottom", $input-padding-bottom);
+  @include css-property-fallback("padding-left", "--input-padding-left", $input-padding-left);
+  @include css-property-fallback("padding-right", "--input-padding-right", $input-padding-right);
+  @include css-property-fallback("padding-top", "--input-padding-top", $input-padding-top);
+}

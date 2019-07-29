@@ -25,14 +25,18 @@ const TagElement = () => (
 			</p>
 
 			<h2 className="c-heading is-small">Menus</h2>
-			<ul>
-				<li>
+			<ul className="menu">
+				<li className="list-item">
 					<span>Menu Item</span> <span className="tag">Tag</span>
 				</li>
-				<li>
+				<li className="list-item">
+					<span>Menu Item</span>{' '}
+					<span className="tag is-inverted">Inverted</span>
+				</li>
+				<li className="list-item">
 					Menu Item <span className="tag is-brand">Brand</span>
 				</li>
-				<li>
+				<li className="list-item">
 					Menu Item <span className="tag is-accent">Accent</span>
 				</li>
 			</ul>

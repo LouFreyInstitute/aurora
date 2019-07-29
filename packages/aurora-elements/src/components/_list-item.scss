@@ -1,0 +1,12 @@
+.list-item {
+  cursor: pointer;
+  padding: $spacing-small $spacing;
+}
+
+.list-item:hover {
+  background-color: var(--background-color-default-action);
+}
+
+.list-item:not(:last-child) {
+  border-bottom: 0.125rem solid var(--menu-border-color);
+}

@@ -18,6 +18,10 @@ const ButtonElement = () => (
 					Default
 				</button>
 				{` `}
+				<button className="c-button is-inverted" type="button">
+					Inverted
+				</button>
+				{` `}
 				<button disabled className="c-button" type="button">
 					Disabled
 				</button>

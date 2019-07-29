@@ -1,0 +1,26 @@
+// ..######..########.....###.....######..####.##....##..######..
+// .##....##.##.....##...##.##...##....##..##..###...##.##....##.
+// .##.......##.....##..##...##..##........##..####..##.##.......
+// ..######..########..##.....##.##........##..##.##.##.##...####
+// .......##.##........#########.##........##..##..####.##....##.
+// .##....##.##........##.....##.##....##..##..##...###.##....##.
+// ..######..##........##.....##..######..####.##....##..######..
+//
+// These variables set margins and padding across the theme. Most components
+// will have custom padding and margins to override these.
+
+$spacing: 1rem !default;
+$spacing-tiny: $spacing * 0.25 !default;
+$spacing-small: $spacing * 0.5 !default;
+$spacing-large: $spacing * 1.5 !default;
+$spacing-huge: $spacing * 2 !default;
+
+@if $enable-css-properties and $enable-root-css-properties {
+  :root {
+    --spacing: #{$spacing};
+    --spacing-tiny: #{$spacing-tiny};
+    --spacing-small: #{$spacing-small};
+    --spacing-large: #{$spacing-large};
+    --spacing-huge: #{$spacing-huge};
+  }
+}

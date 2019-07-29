@@ -7,7 +7,7 @@
 .t-aurora {
   // Button background colors.
   --button-background-color: var(--background-color-default);
-  --button-background-color-action: var(--color-action);
+  --button-background-color-action: var(--background-color-default-action);
   --button-background-color-accent: var(--background-color-accent);
   --button-background-color-accent-action: var(--background-color-accent-action);
   --button-background-color-brand: var(--background-color-brand);
@@ -25,7 +25,7 @@
   
   // Button text colors.
   --button-color: var(--color-default);
-  --button-color-action: var(--background-color-action);
+  --button-color-action: var(--color-default-action);
   --button-color-accent: var(--color-accent);
   --button-color-accent-action: var(--color-accent-action);
   --button-color-brand: var(--color-brand);

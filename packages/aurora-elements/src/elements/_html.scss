@@ -1,13 +1,13 @@
-$html-background-color: $color !default;
-$html-color: $background-color !default;
+$html-background-color: $background-color !default;
+$html-color: $color !default;
 $html-font-family: $font-family-sans !default;
 $html-font-size: $font-size !default;
 $html-line-height: 1.5 !default;
 
 @if $enable-css-properties and $enable-root-css-properties {
   :root {
-    --html-background-color: var(--color);
-    --html-color: var(--background-color);
+    --html-background-color: var(--background-color);
+    --html-color: var(--color);
     --html-font-size: var(--font-size);
     --html-line-height: 1.5;
   }

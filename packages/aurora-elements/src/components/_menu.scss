@@ -1,0 +1,38 @@
+// Remove default list styling.
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+// Default variables.
+$menu-background-color: $background-color-default !default;
+$menu-border-color: $border-color-default !default;
+$menu-border-radius: $border-radius !default;
+$menu-border-style: $border-style !default;
+$menu-border-width: $border-width !default;
+$menu-color: $color-default !default;
+
+// CSS variables.
+@if $enable-css-properties and $enable-root-css-properties {
+  :root {
+    --menu-background-color: var(--background-color-default);
+    --menu-border-color: var(--border-color-default);
+    --menu-border-radius: var(--border-radius);
+    --menu-border-style: var(--border-style);
+    --menu-border-width: var(--border-width);
+    --menu-color: var(--color-default);
+  }
+}
+
+// Default styles.
+.menu {
+  @include css-property-fallback("background-color", "--menu-background-color", $menu-background-color);
+  @include css-property-fallback("border-color", "--menu-border-color", $menu-border-color);
+  @include css-property-fallback("border-radius", "--menu-border-radius", $menu-border-radius);
+  @include css-property-fallback("border-style", "--menu-border-style", $menu-border-style);
+  @include css-property-fallback("border-width", "--menu-border-width", $menu-border-width);
+  @include css-property-fallback("color", "--menu-color", $menu-color);
+  padding-bottom: $spacing-small - $menu-border-width;
+  padding-top: $spacing-small - $menu-border-width;
+}

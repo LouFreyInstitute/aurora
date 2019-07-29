@@ -1,8 +1,10 @@
-//    ###           #   #
-//    #  #         ### ###
-//    ####  #   #  #   #   ###  # ##
-//    #   # #   #  #   #  #   # #   #
-//    ####   ### #  #   #  ###  #    #
+// .########..##.....##.########.########..#######..##....##
+// .##.....##.##.....##....##.......##....##.....##.###...##
+// .##.....##.##.....##....##.......##....##.....##.####..##
+// .########..##.....##....##.......##....##.....##.##.##.##
+// .##.....##.##.....##....##.......##....##.....##.##..####
+// .##.....##.##.....##....##.......##....##.....##.##...###
+// .########...#######.....##.......##.....#######..##....##
 
 // Button variables.
 $button-background-color: $background-color-default !default;
@@ -25,14 +27,18 @@ $button-padding-top: 0.5rem - $button-border-width !default;
 @if $enable-css-properties and $enable-root-css-properties {
   :root {
     --button-background-color: var(--background-color-default);
-    --button-background-color-action: var(--color-action);
-    --button-border-color: var(--background-border-color);
-    --button-border-color-action: var(--background-border-color-action);
+    --button-background-color-action: var(--background-color-default-action);
+    --button-border-color: var(--border-color-default);
+    --button-border-color-action: var(--border-color-default-action);
     --button-border-radius: var(--border-radius);
     --button-border-style: var(--border-style);
     --button-border-width: var(--border-width);
     --button-color: var(--color-default);
     --button-color-action: var(--background-color-action);
+    --button-padding-bottom: calc(var(--spacing-small) - var(--button-border-width));
+    --button-padding-left: calc(var(--spacing) - var(--button-border-width));
+    --button-padding-right: calc(var(--spacing) - var(--button-border-width));
+    --button-padding-top: calc(var(--spacing-small) - var(--button-border-width));
   }
 }
 
@@ -47,12 +53,13 @@ $button-padding-top: 0.5rem - $button-border-width !default;
   @include css-property-fallback("border-width", "--button-border-width", $button-border-width);
   @include css-property-fallback("color", "--button-color", $button-color);
   cursor: pointer;
+  display: inline-block;
   font: inherit;
   margin: 0;
-  padding-bottom: $button-padding-bottom;
-  padding-left: $button-padding-left;
-  padding-right: $button-padding-right;
-  padding-top: $button-padding-top;
+  @include css-property-fallback("padding-bottom", "--button-padding-bottom", $button-padding-bottom);
+  @include css-property-fallback("padding-left", "--button-padding-left", $button-padding-left);
+  @include css-property-fallback("padding-right", "--button-padding-right", $button-padding-right);
+  @include css-property-fallback("padding-top", "--button-padding-top", $button-padding-top);
   vertical-align: middle;
   white-space: nowrap;
   
@@ -75,7 +82,20 @@ $button-padding-top: 0.5rem - $button-border-width !default;
 //  | |   / _ \| |/ _ \| '__| \ \ / / _` | '__| |/ _` | __| |/ _ \| '_ \/ __|  
 //  | |__| (_) | | (_) | |     \ V / (_| | |  | | (_| | |_| | (_) | | | \__ \_ 
 //   \____\___/|_|\___/|_|      \_/ \__,_|_|  |_|\__,_|\__|_|\___/|_| |_|___(_)
-// 
+//
+
+// Invert styles.
+.c-button.is-inverted {
+  @include css-property-fallback("background-color", "--button-color", $button-color);
+  @include css-property-fallback("border-color", "--button-border-color-invert", $button-border-color);
+  @include css-property-fallback("color", "--button-background-color", $button-background-color);
+  
+  &:focus,
+  &:hover {
+    @include css-property-fallback("background-color", "--button-color-action", $button-color-action);
+    @include css-property-fallback("color", "--button-background-color-action", $button-background-color-action);
+  }
+}
 
 // Accent variables.
 $button-background-color-accent: $background-color-accent !default;
@@ -143,6 +163,42 @@ $button-color-brand-action: $color-brand-action !default;
   }
 }
 
+// Hollow styles.
+.c-button.is-hollow {
+  background-color: transparent;
+  @include css-property-fallback("border-color", "--button-background-color", $button-background-color);
+  color: inherit;
+  
+  &:focus,
+  &:hover {
+    @include css-property-fallback("border-color", "--button-background-color-action", $button-background-color-action);
+  }
+}
+
+// Accent hollow styles.
+.c-button.is-accent.is-hollow {
+  background-color: transparent;
+  @include css-property-fallback("border-color", "--button-background-color-accent", $button-background-color-accent);
+  color: inherit;
+
+  &:focus,
+  &:hover {
+    @include css-property-fallback("border-color", "--button-background-color-accent-action", $button-background-color-accent-action);
+  }
+}
+
+// Brand hollow styles.
+.c-button.is-brand.is-hollow {
+  background-color: transparent;
+  @include css-property-fallback("border-color", "--button-background-color-brand", $button-background-color-brand);
+  color: inherit;
+  
+  &:focus,
+  &:hover {
+    @include css-property-fallback("border-color", "--button-background-color-brand-action", $button-background-color-brand-action);
+  }
+}
+
 // Disabled variables.
 $button-background-color-disabled: $background-color-disabled !default;
 $button-color-disabled: $color-disabled !default;
@@ -193,10 +249,10 @@ $button-padding-top-large: 0.75rem - 0.125rem;
   :root {
     --button-font-size-large: var(--font-size-large);
     --button-line-height-large: calc(var(--line-height) / var(--font-size-large));
-    --button-padding-bottom-large: calc(#{$button-padding-bottom-large} - var(--button-border-width));
-    --button-padding-left-large: 1.25rem;
-    --button-padding-right-large: 1.25rem;
-    --button-padding-top-large: 0.75rem;
+    --button-padding-bottom-large: calc(var(--spacing) - var(--button-border-width));
+    --button-padding-left-large: calc(var(--spacing-large) - var(--button-border-width));
+    --button-padding-right-large: calc(var(--spacing-large) - var(--button-border-width));
+    --button-padding-top-large: calc(var(--spacing) - var(--button-border-width));
   }
 }
 
@@ -213,18 +269,18 @@ $button-padding-top-large: 0.75rem - 0.125rem;
 // Small button variables.
 $button-font-size-small: $font-size-small;
 $button-line-height-small: (1.5 / 0.875);
-$button-padding-bottom-small: 0.25rem;
-$button-padding-left-small: 0.75rem;
-$button-padding-right-small: 0.75rem;
-$button-padding-top-small: 0.25rem;
+$button-padding-bottom-small: 0.25rem - $button-border-width;
+$button-padding-left-small: 0.75rem - $button-border-width;
+$button-padding-right-small: 0.75rem - $button-border-width;
+$button-padding-top-small: 0.25rem - $button-border-width;
 
 // Small button CSS properties.
 @if $enable-css-properties and $enable-root-css-properties {
   :root {
-    --button-padding-bottom-small: 0.25rem;
-    --button-padding-left-small: 0.75rem;
-    --button-padding-right-small: 0.75rem;
-    --button-padding-top-small: 0.25rem;
+    --button-padding-bottom-small: calc(var(--spacing-tiny) - var(--button-border-width));
+    --button-padding-left-small:calc(var(--spacing-small) - var(--button-border-width));
+    --button-padding-right-small: calc(var(--spacing-small) - var(--button-border-width));
+    --button-padding-top-small: calc(var(--spacing-tiny) - var(--button-border-width));
   }
 }
 
