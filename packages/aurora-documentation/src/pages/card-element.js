@@ -66,6 +66,63 @@ const CardElement = () => (
 				</div>
 			</div>
 
+			<h2 className="c-heading is-small">Inverted</h2>
+			<div className="o-grid">
+				<div className="o-grid-column is-fill">
+					<div className="o-layout is-vertical c-card is-inverted">
+						<div className="c-card-media">
+							<img
+								alt="Kitten"
+								height="300px"
+								src="https://placekitten.com/300/300"
+								width="300px"
+							/>
+						</div>
+						<div className="c-card-body">
+							<p className="u-margin-bottom-">This is an inverted card.</p>
+							<button
+								className="c-button is-small u-margin-bottom-"
+								type="button"
+							>
+								Action
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<div className="o-grid-column is-fill">
+					<div className="o-layout is-vertical c-card is-brand is-inverted">
+						<div className="c-card-media">
+							<img
+								alt="Kitten"
+								height="300px"
+								src="https://placekitten.com/310/300"
+								width="300px"
+							/>
+						</div>
+						<div className="c-card-body">
+							This is an inverted card with brand colors.
+						</div>
+					</div>
+				</div>
+
+				<div className="o-grid-column is-fill">
+					<div className="o-layout is-vertical c-card is-accent is-inverted">
+						<div className="c-card-media">
+							<img
+								alt="Kitten"
+								height="300px"
+								src="https://placekitten.com/320/300"
+								width="300px"
+							/>
+						</div>
+						<div className="c-card-body">
+							This is an inverted card with accent colors.
+						</div>
+					</div>
+				</div>
+			</div>
+
 			<h2 className="c-heading is-small">Aurora Light</h2>
 			<div className="t-aurora o-grid">
 				<div className="o-grid-column is-fill">

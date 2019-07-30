@@ -11,7 +11,7 @@ const InputElement = () => (
 			<h1 className="c-heading is-large">Input</h1>
 			<p>Form field used for a single line of short text.</p>
 
-			<div className="o-block is-large c-card">
+			<div className="o-block is-large c-card is-inverted">
 				<div className="o-grid">
 					<div className="o-grid-column">
 						<div className="field">

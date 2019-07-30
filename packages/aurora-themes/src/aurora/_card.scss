@@ -6,7 +6,7 @@
 
 .t-aurora {
   // Card background colors.
-  --card-background-color: var(--background-color-default);
+  --card-background-color: var(--background-color);
   --card-background-color-accent: var(--background-color-accent);
   --card-background-color-brand: var(--background-color-brand);
   
@@ -16,7 +16,7 @@
   --card-border-color-brand: transparent;
   
   // Card text colors.
-  --card-color: var(--color-default);
+  --card-color: var(--color);
   --card-color-accent: var(--color-accent);
   --card-color-brand: var(--color-brand);
 }

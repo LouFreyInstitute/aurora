@@ -31,9 +31,10 @@ $card-color: $color-default !default;
   height: 100%;
 }
 
-//   .-.-.   .-.-.   .-.-.   .-.-.   .-.-.   .-.-.   .-.-.   .-.-.   .-.-.   .-.
-//  / / \ \ / / \ \ / / \ \ / / \ \ / / \ \ / / \ \ / / \ \ / / \ \ / / \ \ / /
-// `-'   `-`-'   `-`-'   `-`-'   `-`-'   `-`-'   `-`-'   `-`-'   `-`-'   `-`-'
+.c-card.is-inverted {
+  @include css-property-fallback("background-color", "--card-color", $card-color);
+  @include css-property-fallback("color", "--card-background-color", $card-background-color);
+}
 
 // Card Color Variants
 
@@ -58,6 +59,12 @@ $card-color-accent: $color-accent !default;
   @include css-property-fallback("color", "--card-color-accent", $card-color-accent);
 }
 
+// Accent inverted.
+.c-card.is-accent.is-inverted {
+  @include css-property-fallback("background-color", "--card-color-accent", $card-color-accent);
+  @include css-property-fallback("color", "--card-background-color-accent", $card-background-color-accent);
+}
+
 // Brand variables.
 $card-background-color-brand: $background-color-brand !default;
 $card-border-color-brand: transparent !default;
@@ -77,6 +84,12 @@ $card-color-brand: $color-brand !default;
   @include css-property-fallback("background-color", "--card-background-color-brand", $card-background-color-brand);
   @include css-property-fallback("border-color", "--card-border-color-brand", $card-border-color-brand);
   @include css-property-fallback("color", "--card-color-brand", $card-color-brand);
+}
+
+// Accent inverted.
+.c-card.is-brand.is-inverted {
+  @include css-property-fallback("background-color", "--card-color-brand", $card-color-brand);
+  @include css-property-fallback("color", "--card-background-color-brand", $card-background-color-brand);
 }
 
 .c-card-media {

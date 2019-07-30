@@ -1,20 +1,71 @@
-.c-section {
-  --section-background-color: var(--background-color);
-  --section-color: var(--color);
-  @include css-property-fallback("background-color", "--section-background-color", $background-color);
-  @include css-property-fallback("color", "--section-color", $color);
+//   ████████                   ██   ██                  
+//  ██░░░░░░                   ░██  ░░                   
+// ░██         █████   █████  ██████ ██  ██████  ███████ 
+// ░█████████ ██░░░██ ██░░░██░░░██░ ░██ ██░░░░██░░██░░░██
+// ░░░░░░░░██░███████░██  ░░   ░██  ░██░██   ░██ ░██  ░██
+//        ░██░██░░░░ ░██   ██  ░██  ░██░██   ░██ ░██  ░██
+//  ████████ ░░██████░░█████   ░░██ ░██░░██████  ███  ░██
+// ░░░░░░░░   ░░░░░░  ░░░░░     ░░  ░░  ░░░░░░  ░░░   ░░ 
+//
+// A container that differentiates itself through `background-color` and `color`
+// properties. This may be useful to use in conjunction with `o-block` for
+// additional padding.
+
+// Default variables.
+$section-background-color: $background-color !default;
+$section-color: $color !default;
+
+// CSS variables.
+@if $enable-css-properties and $enable-root-css-properties {
+  :root {
+    --section-background-color: var(--background-color);
+    --section-color: var(--color);
+  }
 }
 
-.c-section.is-accent {
-  --section-background-color: var(--background-color-accent);
-  --section-color: var(--color-accent);
-  @include css-property-fallback("background-color", "--section-background-color", $background-color-accent);
-  @include css-property-fallback("color", "--section-color", $color-accent);
+// Default styles.
+.section {
+  @include css-property-fallback("background-color", "--section-background-color", $section-background-color);
+  @include css-property-fallback("color", "--section-color", $section-color);
 }
 
-.c-section.is-brand {
-  --section-background-color: var(--background-color-brand);
-  --section-color: var(--color-brand);
-  @include css-property-fallback("background-color", "--section-background-color", $background-color-brand);
-  @include css-property-fallback("color", "--section-color", $color-brand);
+.section.is-inverted {
+  @include css-property-fallback("background-color", "--section-color", $section-color);
+  @include css-property-fallback("color", "--section-background-color", $section-background-color);
+}
+
+// Accent variables.
+$section-background-color-accent: $background-color-accent !default;
+$section-color-accent: $color-accent !default;
+
+// Accent CSS variables.
+@if $enable-css-properties and $enable-root-css-properties {
+  :root {
+    --section-background-color-accent: var(--background-color-accent);
+    --section-color-accent: var(--color-accent);
+  }
+}
+
+// Accent styles.
+.section.is-accent {
+  @include css-property-fallback("background-color", "--section-background-color-accent", $section-background-color-accent);
+  @include css-property-fallback("color", "--section-color-accent", $section-color-accent);
+}
+
+// Brand variables.
+$section-background-color-brand: $background-color-brand !default;
+$section-color-brand: $color-brand !default;
+
+// Brand CSS variables.
+@if $enable-css-properties and $enable-root-css-properties {
+  :root {
+    --section-background-color-brand: var(--background-color-brand);
+    --section-color-brand: var(--color-brand);
+  }
+}
+
+// Brand styles.
+.section.is-brand {
+  @include css-property-fallback("background-color", "--section-background-color-brand", $section-background-color-brand);
+  @include css-property-fallback("color", "--section-color-brand", $section-color-brand);
 }

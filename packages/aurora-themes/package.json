@@ -7,7 +7,8 @@
   "main": "src/aurora.scss",
   "name": "aurora-themes",
   "scripts": {
-    "start": "sass src/:dist/"
+    "build": "sass --style compressed src/:dist/",
+    "start": "sass src/:dist/ --watch"
   },
   "version": "0.0.0",
   "devDependencies": {

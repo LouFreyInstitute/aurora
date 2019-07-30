@@ -1,12 +1,12 @@
 .o-block {
   min-width: 0;
-  padding: 1rem;
+  padding: $spacing;
 }
 
 .o-block.is-large {
-  padding: 2rem;
+  padding: $spacing-large;
 }
 
 .o-block.is-small {
-  padding: 0.5rem;
+  padding: $spacing-small;
 }

@@ -31,7 +31,7 @@ const Layout = ({children}) => {
 		<div
 			className={`t-${theme.toLowerCase()} ${
 				dark ? 'is-dark' : ''
-			} o-layout is-vertical u-full-height c-section`}
+			} o-layout is-vertical u-full-height section`}
 		>
 			<Header
 				changeMode={toggleDark}
@@ -49,11 +49,7 @@ const Layout = ({children}) => {
 				</main>
 			</div>
 
-			<footer
-				className={`t-${theme.toLowerCase()} ${
-					dark ? '' : 'is-dark'
-				} c-footer c-section s-prose u-font-size-`}
-			>
+			<footer className="o-block section is-inverted u-font-size-">
 				<div className="o-layout">
 					<div>
 						© {new Date().getFullYear()},{' '}
