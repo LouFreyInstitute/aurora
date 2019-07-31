@@ -9,6 +9,7 @@ import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import {useStaticQuery, graphql} from 'gatsby';
 
+import ThemeContext from './theme-context';
 import Header from './header';
 import Sidebar from './sidebar';
 
@@ -28,41 +29,43 @@ const Layout = ({children}) => {
 	const toggleDark = () => setDark(prev => !prev);
 
 	return (
-		<div
-			className={`t-${theme.toLowerCase()} ${
-				dark ? 'is-dark' : ''
-			} o-layout is-vertical u-full-height section`}
-		>
-			<Header
-				changeMode={toggleDark}
-				changeTheme={setTheme}
-				dark={dark}
-				siteTitle={data.site.siteMetadata.title}
-				theme={theme}
-			/>
+		<ThemeContext.Provider value={theme}>
+			<div
+				className={`t-${theme.toLowerCase()} ${
+					dark ? 'is-dark' : ''
+				} o-layout is-vertical u-full-height section`}
+			>
+				<Header
+					changeMode={toggleDark}
+					changeTheme={setTheme}
+					dark={dark}
+					siteTitle={data.site.siteMetadata.title}
+					theme={theme}
+				/>
 
-			<div className="o-layout is-horizontal o-layout-item is-fill">
-				<Sidebar />
+				<div className="o-layout is-horizontal o-layout-item is-fill">
+					<Sidebar />
 
-				<main className="o-block is-large">
-					<div className="o-container">{children}</div>
-				</main>
-			</div>
-
-			<footer className="o-block section is-inverted u-font-size-">
-				<div className="o-layout">
-					<div>
-						© {new Date().getFullYear()},{' '}
-						<a href="http://loufreyinstitute.org">Lou Frey Institute</a> at the
-						University of Central Florida.
-					</div>
-					<div className="o-layout-item is-fill" />
-					<div>
-						Built with <a href="https://www.gatsbyjs.org">Gatsby</a>.
-					</div>
+					<main className="o-block is-large">
+						<div className="o-container">{children}</div>
+					</main>
 				</div>
-			</footer>
-		</div>
+
+				<footer className="o-block section is-inverted u-font-size-">
+					<div className="o-layout">
+						<div>
+							© {new Date().getFullYear()},{' '}
+							<a href="http://loufreyinstitute.org">Lou Frey Institute</a> at
+							the University of Central Florida.
+						</div>
+						<div className="o-layout-item is-fill" />
+						<div>
+							Built with <a href="https://www.gatsbyjs.org">Gatsby</a>.
+						</div>
+					</div>
+				</footer>
+			</div>
+		</ThemeContext.Provider>
 	);
 };
 
