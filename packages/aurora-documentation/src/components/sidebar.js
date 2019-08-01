@@ -1,11 +1,23 @@
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, {useContext} from 'react';
 import {Link} from 'gatsby';
 import {NavItem} from 'aurora-components';
 
+import ThemeContext from './theme-context';
+
 function Sidebar(props) {
+	const theme = useContext(ThemeContext);
+
 	return (
-		<div className={`o-block is-large ${props.className}`}>
+		<div
+			className={`t-${theme.toLowerCase()} has-overrides is-dark o-block ${
+				props.className
+			}`}
+			style={{
+				borderRight: '1px solid #303040',
+				minWidth: '16vw'
+			}}
+		>
 			<nav className="o-layout is-vertical u-margin-bottom">
 				<NavItem className="c-heading is-tiny u-margin-none" Component="h1">
 					Components

@@ -33,7 +33,7 @@ const Layout = ({children}) => {
 			<div
 				className={`t-${theme.toLowerCase()} ${
 					dark ? 'is-dark' : ''
-				} o-layout is-vertical u-full-height section`}
+				} o-layout is-vertical u-full-height`}
 			>
 				<Header
 					changeMode={toggleDark}
@@ -46,24 +46,28 @@ const Layout = ({children}) => {
 				<div className="o-layout is-horizontal o-layout-item is-fill">
 					<Sidebar />
 
-					<main className="o-block is-large">
-						<div className="o-container">{children}</div>
+					<main className="o-block is-large o-layout is-vertical o-layout-item is-fill">
+						<div className="o-layout-item is-fill u-margin-bottom+ s-prose">
+							{children}
+						</div>
+
+						<hr className="divider" />
+
+						<footer className="u-font-size- s-prose">
+							<div className="o-layout">
+								<div>
+									© {new Date().getFullYear()},{' '}
+									<a href="http://loufreyinstitute.org">Lou Frey Institute</a>{' '}
+									at the University of Central Florida.
+								</div>
+								<div className="o-layout-item is-fill" />
+								<div>
+									Built with <a href="https://www.gatsbyjs.org">Gatsby</a>.
+								</div>
+							</div>
+						</footer>
 					</main>
 				</div>
-
-				<footer className="o-block section is-inverted u-font-size-">
-					<div className="o-layout">
-						<div>
-							© {new Date().getFullYear()},{' '}
-							<a href="http://loufreyinstitute.org">Lou Frey Institute</a> at
-							the University of Central Florida.
-						</div>
-						<div className="o-layout-item is-fill" />
-						<div>
-							Built with <a href="https://www.gatsbyjs.org">Gatsby</a>.
-						</div>
-					</div>
-				</footer>
 			</div>
 		</ThemeContext.Provider>
 	);

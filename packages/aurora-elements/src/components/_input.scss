@@ -31,7 +31,7 @@ $input-border-width: $border-width !default;
 // Color variations.
 
 // Default variables.
-$input-background-color: $background-color-default !default;
+$input-background-color: $background-color-component !default;
 $input-border-color: transparent !default;
 $input-color: $color-default !default;
 
@@ -87,10 +87,10 @@ $input-color-error: $color-error !default;
 // Size variations.
 
 // Default variables.
-$input-padding-bottom: $spacing-small - $button-border-width !default;
-$input-padding-left: $spacing - $button-border-width !default;
-$input-padding-right: $spacing - $button-border-width !default;
-$input-padding-top: $spacing-small - $button-border-width !default;
+$input-padding-bottom: $spacing-small - strip-unit($button-border-width) !default;
+$input-padding-left: $spacing - strip-unit($button-border-width) !default;
+$input-padding-right: $spacing - strip-unit($button-border-width) !default;
+$input-padding-top: $spacing-small - strip-unit($button-border-width) !default;
 
 // CSS variables.
 @if $enable-css-properties and $enable-root-css-properties {

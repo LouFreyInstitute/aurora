@@ -1,5 +1,5 @@
 // Card variables.
-$card-background-color: $background-color-default !default;
+$card-background-color: $background-color-component !default;
 $card-border-color: transparent !default;
 $card-border-radius: $border-radius !default;
 $card-border-style: $border-style !default;
@@ -98,7 +98,7 @@ $card-color-brand: $color-brand !default;
   margin: $card-border-width * -1;
   margin-bottom: 0;
   overflow: hidden;
-  padding-top: 10rem + $card-border-width;
+  padding-top: 10rem + strip-unit($card-border-width);
   position: relative;
 }
 

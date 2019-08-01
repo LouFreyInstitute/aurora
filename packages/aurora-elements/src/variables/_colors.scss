@@ -1,15 +1,21 @@
 // Map colors to variable patterns.
 
-// Background colors.
-$background-color: white !default;
-$background-color-action: #e0e0e0 !default;
-$background-color-accent: sandybrown !default;
-$background-color-accent-action: $background-color-action !default;
-$background-color-brand: dodgerblue !default;
-$background-color-brand-action: $background-color-action !default;
-$background-color-default: #384048 !default;
-$background-color-default-action: #283038 !default;
-$background-color-disabled: #e0e0e0 !default;
+// Background Colors
+// ----
+
+// Page
+// $background-color-body: #f0f0f0 !default;
+$background-color-body: #282838 !default;
+
+// $background-color-component: #f8f8f8 !default;
+$background-color-component: #303244 !default;
+$background-color-component-action: scale-color(#f8f8f8, $saturation: 8%, $lightness: 8%) !default;
+
+$background-color-accent: #6880f8 !default;
+$background-color-accent-action: scale-color($background-color-accent, $saturation: 8%, $lightness: 8%) !default;
+$background-color-brand: #10d0a0 !default;
+$background-color-brand-action: scale-color($background-color-brand, $saturation: 8%, $lightness: 8%) !default;
+$background-color-disabled: #e8e8e8 !default;
 $background-color-error: rgb(255, 109, 130) !default;
 $background-color-error-action: $background-color-error !default;
 $background-color-info: rgb(132, 172, 243) !default;
@@ -20,12 +26,16 @@ $background-color-warning: rgb(255, 183, 136) !default;
 $background-color-warning-action: $background-color-warning !default;
 
 // Border colors.
-$border-color: #101010 !default;
+$border-color: #3e96c1 !default;
+// $border-color-body: #e0e0e0 !default;
+$border-color-body: #383848 !default;
 $border-color-action: $border-color !default;
-$border-color-accent: $border-color !default;
+$border-color-accent: #2840b8 !default;
 $border-color-accent-action: $border-color !default;
-$border-color-brand: $border-color !default;
-$border-color-brand-action: $border-color !default;
+$border-color-brand: #109060 !default;
+$border-color-brand-action: $border-color-brand !default;
+// $border-color-component: #b8b8b8 !default;
+$border-color-component: #505060 !default;
 $border-color-default: $border-color !default;
 $border-color-default-action: $border-color !default;
 $border-color-disabled: $border-color !default;
@@ -37,17 +47,20 @@ $border-color-warning: $border-color !default;
 $border-color-warning-action: $border-color !default;
 
 // Text colors.
-$color: rgba(32, 32, 64, 0.8) !default;
+// $color: #404040 !default;
+$color: #c0c0d8 !default;
 $color-action: $color !default;
-$color-accent: $color !default;
+$color-accent: #000048 !default;
 $color-accent-action: $color !default;
-$color-brand: $color !default;
+$color-brand: #103010 !default;
 $color-brand-action: $color !default;
 $color-default: rgba(255, 255, 255, 0.8) !default;
+// $color-component: #404040 !default;
+$color-component: #f0f0f8 !default;
 $color-default-action: rgba(255, 255, 255, 0.9) !default;
-$color-disabled: $background-color !default;
-$color-error: rgba(64, 32, 32, 0.8) !default;
-$color-error-action: $color-error !default;
+$color-disabled: #b8b8b8 !default;
+$color-error: #55000c !default;
+$color-error-action: #55000c !default;
 $color-success: rgba(32, 64, 32, 0.8) !default;
 $color-success-action: $color-success !default;
 $color-warning: rgba(64, 32, 32, 0.8) !default;
@@ -55,14 +68,14 @@ $color-warning-action: $color-warning !default;
 
 @if $enable-css-properties and $enable-root-css-properties {
   :root {
-    --background-color: #{$background-color};
-    --background-color-action: #{$background-color-action};
+    --background-color-body: #{$background-color-body};
+    --background-color-body-action: #{$background-color-body};
     --background-color-accent: #{$background-color-accent};
     --background-color-accent-action: #{$background-color-accent-action};
     --background-color-brand: #{$background-color-brand};
     --background-color-brand-action: #{$background-color-brand-action};
-    --background-color-default: #{$background-color-default};
-    --background-color-default-action: #{$background-color-default-action};
+    --background-color-component: #{$background-color-component};
+    --background-color-component-action: #{$background-color-component-action};
     --background-color-disabled: #{$background-color-disabled};
     --background-color-error: #{$background-color-error};
     --background-color-error-action: #{$background-color-error-action};

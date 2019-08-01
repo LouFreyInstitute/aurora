@@ -2,34 +2,69 @@
 // Primarily green and turquoise colors with subtle blue and purples.
 
 // Default 
-$aurora-gray-10: #dedee6;
-$aurora-gray-20: #bfbfd0;
-$aurora-gray-30: #a3a3bc;
-$aurora-gray-40: #8a8aaa;
-$aurora-gray-50: #73739a;
-$aurora-gray-60: #5e5e82;
-$aurora-gray-70: #4b4b68;
-$aurora-gray-80: #38384e;
-$aurora-gray-90: #232331;
+// $aurora-gray-10: #dedee6;
+// $aurora-gray-20: #bfbfd0;
+// $aurora-gray-30: #a3a3bc;
+// $aurora-gray-40: #8a8aaa;
+// $aurora-gray-50: #73739a;
+// $aurora-gray-60: #5e5e82;
+// $aurora-gray-70: #4b4b68;
+// $aurora-gray-80: #38384e;
+// $aurora-gray-90: #232331;
 
 // Brand
-$aurora-green-10: #bae7e7;
-$aurora-green-20: #75cfcf;
-$aurora-green-30: #3fb6b6;
-$aurora-green-40: #369b9b;
-$aurora-green-50: #2d8282;
-$aurora-green-60: #256b6b;
-$aurora-green-70: #1e5555;
-$aurora-green-80: #163f3f;
-$aurora-green-90: #0e2727;
+// $aurora-green-10: #bae7e7;
+// $aurora-green-20: #75cfcf;
+// $aurora-green-30: #3fb6b6;
+// $aurora-green-40: #369b9b;
+// $aurora-green-50: #2d8282;
+// $aurora-green-60: #256b6b;
+// $aurora-green-70: #1e5555;
+// $aurora-green-80: #163f3f;
+// $aurora-green-90: #0e2727;
 
 // Accent
-$aurora-purple-10: #ddddf3;
-$aurora-purple-20: #bdbde8;
-$aurora-purple-30: #a0a0de;
-$aurora-purple-40: #8585d5;
-$aurora-purple-50: #6c6ccd;
-$aurora-purple-60: #5454c4;
-$aurora-purple-70: #3e3eb3;
-$aurora-purple-80: #2f2f88;
-$aurora-purple-90: #1e1e58;
+// $aurora-purple-10: #ddddf3;
+// $aurora-purple-20: #bdbde8;
+// $aurora-purple-30: #a0a0de;
+// $aurora-purple-40: #8585d5;
+// $aurora-purple-50: #6c6ccd;
+// $aurora-purple-60: #5454c4;
+// $aurora-purple-70: #3e3eb3;
+// $aurora-purple-80: #2f2f88;
+// $aurora-purple-90: #1e1e58;
+
+// Demo with tint and shade!
+$aurora-gray: hsl(hue(#345), 50%, 50%);
+$aurora-gray-10: scale-color($aurora-gray, $lightness: 96%);
+$aurora-gray-20: scale-color($aurora-gray, $lightness: 80%);
+$aurora-gray-30: scale-color($aurora-gray, $lightness: 64%);
+$aurora-gray-40: scale-color($aurora-gray, $lightness: 32%);
+$aurora-gray-50: scale-color($aurora-gray, $lightness: 16%);
+$aurora-gray-60: $aurora-gray;
+// $aurora-gray-60: scale-color($aurora-gray, $lightness: -16%);
+$aurora-gray-70: scale-color($aurora-gray, $lightness: -32%);
+$aurora-gray-80: scale-color($aurora-gray, $lightness: -64%);
+$aurora-gray-90: scale-color($aurora-gray, $lightness: -80%);
+
+$aurora-green: hsl(hue(mediumseagreen), 50%, 50%);
+$aurora-green-10: scale-color($aurora-green, $lightness: 80%);
+$aurora-green-20: scale-color($aurora-green, $lightness: 64%);
+$aurora-green-30: scale-color($aurora-green, $lightness: 32%);
+$aurora-green-40: scale-color($aurora-green, $lightness: 16%);
+$aurora-green-50: $aurora-green;
+$aurora-green-60: scale-color($aurora-green, $lightness: -16%);
+$aurora-green-70: scale-color($aurora-green, $lightness: -32%);
+$aurora-green-80: scale-color($aurora-green, $lightness: -64%);
+$aurora-green-90: scale-color($aurora-green, $lightness: -80%);
+
+$aurora-purple: hsl(hue(turquoise), 50%, 50%);
+$aurora-purple-10: scale-color($aurora-purple, $lightness: 80%);
+$aurora-purple-20: scale-color($aurora-purple, $lightness: 64%);
+$aurora-purple-30: scale-color($aurora-purple, $lightness: 32%);
+$aurora-purple-40: scale-color($aurora-purple, $lightness: 16%);
+$aurora-purple-50: $aurora-purple;
+$aurora-purple-60: scale-color($aurora-purple, $lightness: -16%);
+$aurora-purple-70: scale-color($aurora-purple, $lightness: -32%);
+$aurora-purple-80: scale-color($aurora-purple, $lightness: -64%);
+$aurora-purple-90: scale-color($aurora-purple, $lightness: -80%);

@@ -13,120 +13,111 @@ function ButtonElement() {
 		<Layout>
 			<SEO title="Button" />
 
-			<div className="s-prose">
+			<div className="o-container s-prose">
 				<h1 className="c-heading is-large">Button</h1>
 
 				<p>Used to interact with page navigation, forms, or other elements.</p>
 
-				<h2 className="c-heading is-small">Default</h2>
-				<p>
-					<button className="c-button" type="button">
-						Default
-					</button>
-					{` `}
-					<button className="c-button is-inverted" type="button">
-						Inverted
-					</button>
-					{` `}
-					<button disabled className="c-button" type="button">
-						Disabled
-					</button>
-					{` `}
-					<button className="c-button is-brand" type="button">
-						Brand
-					</button>
-					{` `}
-					<button className="c-button is-accent" type="button">
-						Accent
-					</button>
-				</p>
+				<div className="o-block section u-margin-bottom+">
+					<h2 className="c-heading is-small">Default</h2>
+					<p>
+						<button className="c-button" type="button">
+							Default
+						</button>
+						{` `}
+						<button className="c-button is-inverted" type="button">
+							Inverted
+						</button>
+						{` `}
+						<button disabled className="c-button" type="button">
+							Disabled
+						</button>
+						{` `}
+						<button className="c-button is-brand" type="button">
+							Brand
+						</button>
+						{` `}
+						<button className="c-button is-accent" type="button">
+							Accent
+						</button>
+					</p>
+				</div>
 
-				<h2 className="c-heading is-small">Light (Using Context)</h2>
-				<ThemeContext.Consumer>
-					{theme => (
-						<p className={`t-${theme.toLowerCase()}`}>
-							<button className="c-button" type="button">
-								Default
-							</button>
-							{` `}
-							<button disabled className="c-button" type="button">
-								Disabled
-							</button>
-							{` `}
-							<button className="c-button is-brand" type="button">
-								Brand
-							</button>
-							{` `}
-							<button className="c-button is-accent" type="button">
-								Accent
-							</button>
-						</p>
-					)}
-				</ThemeContext.Consumer>
+				<div className="o-block section u-margin-bottom+">
+					<h2 className="c-heading is-small">Light (Using Context)</h2>
+					<ThemeContext.Consumer>
+						{theme => (
+							<p className={`t-${theme.toLowerCase()}`}>
+								<button className="c-button" type="button">
+									Default
+								</button>
+								{` `}
+								<button disabled className="c-button" type="button">
+									Disabled
+								</button>
+								{` `}
+								<button className="c-button is-brand" type="button">
+									Brand
+								</button>
+								{` `}
+								<button className="c-button is-accent" type="button">
+									Accent
+								</button>
+							</p>
+						)}
+					</ThemeContext.Consumer>
+				</div>
 
-				<h2 className="c-heading is-small">Civics360 Light</h2>
-				<p className="t-civics360">
-					<button className="c-button" type="button">
-						Default
-					</button>
-					{` `}
-					<button disabled className="c-button" type="button">
-						Disabled
-					</button>
-					{` `}
-					<button className="c-button is-brand" type="button">
-						Brand
-					</button>
-					{` `}
-					<button className="c-button is-accent" type="button">
-						Accent
-					</button>
-				</p>
+				<div className="o-block section u-margin-bottom+">
+					<h2 className="c-heading is-small">Large</h2>
+					<p>
+						<button className="c-button is-large" type="button">
+							Default
+						</button>
+						{` `}
+						<button className="c-button is-brand is-large" type="button">
+							Brand
+						</button>
+						{` `}
+						<button className="c-button is-accent is-large" type="button">
+							Accent
+						</button>
+					</p>
+				</div>
 
-				<h2 className="c-heading is-small">Large</h2>
-				<p>
-					<button className="c-button is-large" type="button">
-						Default
-					</button>
-					{` `}
-					<button className="c-button is-brand is-large" type="button">
-						Brand
-					</button>
-					{` `}
-					<button className="c-button is-accent is-large" type="button">
-						Accent
-					</button>
-				</p>
+				<div className="o-block section u-margin-bottom+">
+					<h2 className="c-heading is-small">Small</h2>
+					<p>
+						<button className="c-button is-small" type="button">
+							Default
+						</button>
+						{` `}
+						<button className="c-button is-brand is-small" type="button">
+							Brand
+						</button>
+						{` `}
+						<button className="c-button is-accent is-small" type="button">
+							Accent
+						</button>
+					</p>
+				</div>
 
-				<h2 className="c-heading is-small">Small</h2>
-				<p>
-					<button className="c-button is-small" type="button">
-						Default
-					</button>
-					{` `}
-					<button className="c-button is-brand is-small" type="button">
-						Brand
-					</button>
-					{` `}
-					<button className="c-button is-accent is-small" type="button">
-						Accent
-					</button>
-				</p>
-
-				<h2 className="c-heading is-small">Hollow</h2>
-				<p>
-					<button className="c-button is-hollow" type="button">
-						Default
-					</button>
-					{` `}
-					<button className="c-button is-brand is-hollow" type="button">
-						Brand
-					</button>
-					{` `}
-					<button className="c-button is-accent is-hollow" type="button">
-						Accent
-					</button>
-				</p>
+				<div className="o-block section u-margin-bottom+">
+					<h2 className="c-heading is-small">Hollow</h2>
+					<p>
+						<button className="c-button is-hollow" type="button">
+							Default
+						</button>
+						{` `}
+						<button className="c-button is-brand is-hollow" type="button">
+							Brand
+						</button>
+						{` `}
+						<button className="c-button is-accent is-hollow" type="button">
+							Accent
+						</button>
+					</p>
+				</div>
 			</div>
 		</Layout>
 	);

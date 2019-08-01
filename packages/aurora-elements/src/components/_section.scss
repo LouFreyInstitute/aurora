@@ -12,8 +12,8 @@
 // additional padding.
 
 // Default variables.
-$section-background-color: $background-color !default;
-$section-color: $color !default;
+$section-background-color: $background-color-component !default;
+$section-color: $color-component !default;
 
 // CSS variables.
 @if $enable-css-properties and $enable-root-css-properties {

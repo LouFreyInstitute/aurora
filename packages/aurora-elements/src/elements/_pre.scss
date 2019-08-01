@@ -9,7 +9,7 @@ pre {
   @include block;
   @include css-property-fallback("background-color", "--pre-background-color", $color);
   border-radius: 0.125rem;
-  @include css-property-fallback("color", "--pre-color", $background-color);
+  @include css-property-fallback("color", "--pre-color", $background-color-component);
   overflow: auto;
   padding-bottom: $pre-padding-bottom;
   padding-left: $pre-padding-left;

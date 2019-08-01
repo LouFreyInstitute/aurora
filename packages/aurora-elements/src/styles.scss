@@ -1,10 +1,10 @@
 // Enable support for CSS variables. This can be disabled if you don't want to
 // use CSS variables.
-$enable-css-properties: true !default;
+$enable-css-properties: false !default;
 
 // Add CSS variables to `:root`. This can be disabled if you are using nested
 // themes.
-$enable-root-css-properties: true !default;
+$enable-root-css-properties: false !default;
 
 // Import Sass variables.
 @import 'variables/borders';
@@ -16,6 +16,7 @@ $enable-root-css-properties: true !default;
 // Import mixins.
 @import 'mixins/block';
 @import 'mixins/css-property-fallback';
+@import 'mixins/strip-unit';
 
 // Import globals.
 @import 'globals/box-sizing';
@@ -37,6 +38,7 @@ $enable-root-css-properties: true !default;
 // Import components.
 @import 'components/button';
 @import 'components/card';
+@import 'components/divider';
 @import 'components/field';
 @import 'components/footer';
 @import 'components/heading';

@@ -9,11 +9,11 @@
 // These variables set margins and padding across the theme. Most components
 // will have custom padding and margins to override these.
 
-$spacing: 1rem !default;
-$spacing-tiny: $spacing * 0.25 !default;
-$spacing-small: $spacing * 0.5 !default;
-$spacing-large: $spacing * 1.5 !default;
-$spacing-huge: $spacing * 2 !default;
+$spacing-tiny: 4px !default;
+$spacing-small: 8px !default;
+$spacing: 16px !default;
+$spacing-large: 24px !default;
+$spacing-huge: 32px !default;
 
 @if $enable-css-properties and $enable-root-css-properties {
   :root {
