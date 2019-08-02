@@ -1,119 +1,120 @@
-// Map colors to variable patterns.
-
-// Background Colors
+// Colors
 // ----
 
-// Page
-// $background-color-body: #f0f0f0 !default;
-$background-color-body: #282838 !default;
+// Body colors are used for the page background and default text color.
+$background-color-body: #f7f8f9 !default;
+$border-color-body: #e0e2e4 !default;
+$color-body: #404040 !default;
 
-// $background-color-component: #f8f8f8 !default;
-$background-color-component: #303244 !default;
-$background-color-component-action: scale-color(#f8f8f8, $saturation: 8%, $lightness: 8%) !default;
+// Component colors are used for default interface elements.
+$background-color-component: #fff !default;
+$border-color-component: #b8babc !default;
+$color-component: #404040 !default;
 
-$background-color-accent: #6880f8 !default;
-$background-color-accent-action: scale-color($background-color-accent, $saturation: 8%, $lightness: 8%) !default;
+// Brand is the primary contrast color used to represent your identity.
 $background-color-brand: #10d0a0 !default;
-$background-color-brand-action: scale-color($background-color-brand, $saturation: 8%, $lightness: 8%) !default;
-$background-color-disabled: #e8e8e8 !default;
-$background-color-error: rgb(255, 109, 130) !default;
-$background-color-error-action: $background-color-error !default;
-$background-color-info: rgb(132, 172, 243) !default;
-$background-color-info-action: $background-color-info !default;
-$background-color-success: rgb(106, 210, 150) !default;
-$background-color-success-action: $background-color-success !default;
-$background-color-warning: rgb(255, 183, 136) !default;
-$background-color-warning-action: $background-color-warning !default;
-
-// Border colors.
-$border-color: #3e96c1 !default;
-// $border-color-body: #e0e0e0 !default;
-$border-color-body: #383848 !default;
-$border-color-action: $border-color !default;
-$border-color-accent: #2840b8 !default;
-$border-color-accent-action: $border-color !default;
 $border-color-brand: #109060 !default;
-$border-color-brand-action: $border-color-brand !default;
-// $border-color-component: #b8b8b8 !default;
-$border-color-component: #505060 !default;
-$border-color-default: $border-color !default;
-$border-color-default-action: $border-color !default;
-$border-color-disabled: $border-color !default;
-$border-color-error: rgb(255, 109, 130) !default;
-$border-color-error-action: $border-color !default;
-$border-color-success: $border-color !default;
-$border-color-success-action: $border-color !default;
-$border-color-warning: $border-color !default;
-$border-color-warning-action: $border-color !default;
-
-// Text colors.
-// $color: #404040 !default;
-$color: #c0c0d8 !default;
-$color-action: $color !default;
-$color-accent: #000048 !default;
-$color-accent-action: $color !default;
 $color-brand: #103010 !default;
-$color-brand-action: $color !default;
-$color-default: rgba(255, 255, 255, 0.8) !default;
-// $color-component: #404040 !default;
-$color-component: #f0f0f8 !default;
-$color-default-action: rgba(255, 255, 255, 0.9) !default;
-$color-disabled: #b8b8b8 !default;
+
+// Accent is a secondary contrast color to draw attention away from brand color.
+$background-color-accent: #6880f8 !default;
+$border-color-accent: #2840b8 !default;
+$color-accent: #101048 !default;
+
+// Disabled should be a subtle variation of default for disabled elements.
+$background-color-disabled: rgba(32, 32, 64, 0.08) !default;
+$border-color-disabled: rgba(32, 32, 64, 0.16) !default;
+$color-disabled: rgba(32, 32, 64, 0.32) !default;
+
+// Status Colors
+// ----
+
+// Error
+$background-color-error: rgb(255, 109, 130) !default;
+$border-color-error: rgb(255, 109, 130) !default;
 $color-error: #55000c !default;
-$color-error-action: #55000c !default;
-$color-success: rgba(32, 64, 32, 0.8) !default;
-$color-success-action: $color-success !default;
-$color-warning: rgba(64, 32, 32, 0.8) !default;
-$color-warning-action: $color-warning !default;
+
+// Info
+$background-color-info: rgb(132, 172, 243) !default;
+$border-color-info: rgb(132, 172, 243) !default;
+$color-info: rgb(132, 172, 243) !default;
+
+// Success
+$background-color-success: rgb(104, 216, 152) !default;
+$border-color-success: rgb(72, 184, 120) !default;
+$color-success: rgb(40, 152, 88) !default;
+
+// Warning
+$background-color-warning: rgb(255, 183, 136) !default;
+$border-color-warning: rgb(255, 183, 136) !default;
+$color-warning: rgb(255, 183, 136) !default;
 
 @if $enable-css-properties and $enable-root-css-properties {
   :root {
+    // Body
     --background-color-body: #{$background-color-body};
-    --background-color-body-action: #{$background-color-body};
-    --background-color-accent: #{$background-color-accent};
-    --background-color-accent-action: #{$background-color-accent-action};
-    --background-color-brand: #{$background-color-brand};
-    --background-color-brand-action: #{$background-color-brand-action};
+    --border-color-body: #{$border-color-body};
+    --color-body: #{$color-body};
+    
+    // Component
     --background-color-component: #{$background-color-component};
-    --background-color-component-action: #{$background-color-component-action};
-    --background-color-disabled: #{$background-color-disabled};
-    --background-color-error: #{$background-color-error};
-    --background-color-error-action: #{$background-color-error-action};
-    --background-color-success: #{$background-color-success};
-    --background-color-success-action: #{$background-color-success-action};
-    --background-color-warning: #{$background-color-warning};
-    --background-color-warning-action: #{$background-color-warning-action};
-
-    --border-color: #{$border-color};
-    --border-color-action: #{$border-color-action};
-    --border-color-accent: #{$border-color-accent};
-    --border-color-accent-action: #{$border-color-accent-action};
+    --border-color-component: #{$border-color-component};
+    --color-component: #{$color-component};
+    
+    // Brand
+    --background-color-brand: #{$background-color-brand};
     --border-color-brand: #{$border-color-brand};
-    --border-color-brand-action: #{$border-color-brand-action};
-    --border-color-default: #{$border-color-default};
-    --border-color-default-action: #{$border-color-default-action};
-    --border-color-disabled: #{$border-color-disabled};
-    --border-color-error: #{$border-color-error};
-    --border-color-error-action: #{$border-color-error-action};
-    --border-color-success: #{$border-color-success};
-    --border-color-success-action: #{$border-color-success-action};
-    --border-color-warning: #{$border-color-warning};
-    --border-color-warning-action: #{$border-color-warning-action};
-
-    --color: #{$color};
-    --color-action: #{$color-action};
-    --color-accent: #{$color-accent};
-    --color-accent-action: #{$color-accent-action};
     --color-brand: #{$color-brand};
-    --color-brand-action: #{$color-brand-action};
-    --color-default: #{$color-default};
-    --color-default-action: #{$color-default-action};
+    
+    // Accent
+    --background-color-accent: #{$background-color-accent};
+    --border-color-accent: #{$border-color-accent};
+    --color-accent: #{$color-accent};
+    
+    // Disabled
+    --background-color-disabled: #{$background-color-disabled};
+    --border-color-disabled: #{$border-color-disabled};
     --color-disabled: #{$color-disabled};
+    
+    // Error
+    --background-color-error: #{$background-color-error};
+    --border-color-error: #{$border-color-error};
     --color-error: #{$color-error};
-    --color-error-action: #{$color-error-action};
+    
+    // Info
+    --background-color-info: #{$background-color-info};
+    --border-color-info: #{$border-color-info};
+    --color-info: #{$color-info};
+    
+    // Success
+    --background-color-success: #{$background-color-success};
+    --border-color-success: #{$border-color-success};
     --color-success: #{$color-success};
-    --color-success-action: #{$color-success-action};
+
+    // Warning
+    --background-color-warning: #{$background-color-warning};
+    --border-color-warning: #{$border-color-warning};
     --color-warning: #{$color-warning};
-    --color-warning-action: #{$color-warning-action};
   }
+}
+
+// Dark Mode
+// ----
+$enable-dark-mode: true !default;
+
+@if $enable-dark-mode {
+  // Body
+  $background-color-body: #282838;
+  $border-color-body: #383848;
+  $color-body: #c0c0d8;
+
+  // Component
+  $background-color-component: #303244;
+  $border-color-component: #505060;
+  $color-component: #f0f0f8;
+
+  // Disabled
+  $background-color-disabled: rgba(208, 208, 240, 0.08);
+  $border-color-disabled: rgba(208, 208, 240, 0.16);
+  $color-disabled: rgba(208, 208, 240, 0.32);
 }

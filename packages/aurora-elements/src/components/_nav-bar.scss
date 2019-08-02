@@ -19,6 +19,21 @@ $nav-bar-color: $color-component !default;
   @include css-property-fallback("color", "--nav-bar-color", $nav-bar-color);
 }
 
+$nav-bar-background-color-brand: $background-color-brand !default;
+$nav-bar-color-brand: $color-brand !default;
+
+@if $enable-css-properties and $enable-root-css-properties {
+  :root {
+    --nav-bar-background-color-brand: var(--background-color-brand);
+    --nav-bar-color-brand: var(--color-brand);
+  }
+}
+
+.c-nav-bar.is-brand {
+  @include css-property-fallback("background-color", "--nav-bar-background-color-brand", $nav-bar-background-color-brand);
+  @include css-property-fallback("color", "--nav-bar-color-brand", $nav-bar-color-brand);
+}
+
 .c-nav-bar.is-fixed {
   position: fixed;
 }

@@ -9,15 +9,7 @@ function Sidebar(props) {
 	const theme = useContext(ThemeContext);
 
 	return (
-		<div
-			className={`t-${theme.toLowerCase()} has-overrides is-dark o-block ${
-				props.className
-			}`}
-			style={{
-				borderRight: '1px solid #303040',
-				minWidth: '16vw'
-			}}
-		>
+		<div className={`o-block ${props.className} sidebar`}>
 			<nav className="o-layout is-vertical u-margin-bottom">
 				<NavItem className="c-heading is-tiny u-margin-none" Component="h1">
 					Components

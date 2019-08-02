@@ -7,7 +7,8 @@
 
 // Tag variables.
 $tag-background-color: $background-color-component !default;
-$tag-color: $color-default !default;
+$tag-border-color: $border-color-component !default;
+$tag-color: $color-component !default;
 
 // Tag CSS properties.
 @if $enable-css-properties and $enable-root-css-properties {
@@ -20,7 +21,10 @@ $tag-color: $color-default !default;
 // Tag styles.
 .tag {
   @include css-property-fallback("background-color", "--tag-background-color", $tag-background-color);
+  border-color: $tag-border-color;
   border-radius: 0.125rem;
+  border-style: $border-style;
+  border-width: $border-width;
   @include css-property-fallback("color", "--tag-color", $tag-color);
   // display: inline-block;
   font-size: 0.75em;
@@ -46,6 +50,7 @@ $tag-color-accent: $color-accent !default;
 // Accent styles.
 .tag.is-accent {
   @include css-property-fallback("background-color", "--tag-background-color-accent", $tag-background-color-accent);
+  border-color: transparent;
   @include css-property-fallback("color", "--tag-color-accent", $tag-color-accent);
 }
 
@@ -64,5 +69,6 @@ $tag-color-brand: $color-brand !default;
 // Brand styles.
 .tag.is-brand {
   @include css-property-fallback("background-color", "--tag-background-color-brand", $tag-background-color-brand);
+  border-color: transparent;
   @include css-property-fallback("color", "--tag-color-brand", $tag-color-brand);
 }

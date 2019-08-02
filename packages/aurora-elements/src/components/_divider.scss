@@ -1,5 +1,13 @@
+$divider-background-color: $border-color-body !default;
+
+@if $enable-css-properties and $enable-root-css-properties {
+  :root {
+    --divider-background-color: var(--border-color-body);
+  }
+}
+
 .divider {
-  background-color: $background-color-component;
+  @include css-property-fallback("background-color", "--divider-background-color", $divider-background-color);
   border: 0;
   height: 1px;
   margin: 0;

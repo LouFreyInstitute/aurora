@@ -1,10 +1,10 @@
 // Card variables.
 $card-background-color: $background-color-component !default;
-$card-border-color: transparent !default;
+$card-border-color: $border-color-component !default;
 $card-border-radius: $border-radius !default;
 $card-border-style: $border-style !default;
 $card-border-width: $border-width !default;
-$card-color: $color-default !default;
+$card-color: $color-component !default;
 
 // Card CSS properties.
 @if $enable-css-properties and $enable-root-css-properties {
@@ -36,11 +36,15 @@ $card-color: $color-default !default;
   @include css-property-fallback("color", "--card-background-color", $card-background-color);
 }
 
-// Card Color Variants
+// Card Colors
+// ----
+
+// Accent
+// ----
 
 // Accent variables.
 $card-background-color-accent: $background-color-accent !default;
-$card-border-color-accent: transparent !default;
+$card-border-color-accent: $border-color-accent !default;
 $card-color-accent: $color-accent !default;
 
 // Accent CSS properties.
@@ -65,9 +69,12 @@ $card-color-accent: $color-accent !default;
   @include css-property-fallback("color", "--card-background-color-accent", $card-background-color-accent);
 }
 
+// Brand
+// ----
+
 // Brand variables.
 $card-background-color-brand: $background-color-brand !default;
-$card-border-color-brand: transparent !default;
+$card-border-color-brand: $border-color-brand !default;
 $card-color-brand: $color-brand !default;
 
 // Brand CSS properties.
@@ -86,26 +93,9 @@ $card-color-brand: $color-brand !default;
   @include css-property-fallback("color", "--card-color-brand", $card-color-brand);
 }
 
-// Accent inverted.
-.c-card.is-brand.is-inverted {
-  @include css-property-fallback("background-color", "--card-color-brand", $card-color-brand);
-  @include css-property-fallback("color", "--card-background-color-brand", $card-background-color-brand);
-}
-
-.c-card-media {
-  border-top-left-radius: $card-border-radius;
-  border-top-right-radius: $card-border-radius;
-  margin: $card-border-width * -1;
-  margin-bottom: 0;
-  overflow: hidden;
-  padding-top: 10rem + strip-unit($card-border-width);
-  position: relative;
-}
-
 .c-card-media > img {
-  position: absolute;
-  top: -25%;
-  left: -25%;
+  height: auto;
+  width: 100%;
 }
 
 .c-card-body {

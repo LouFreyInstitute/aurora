@@ -1,11 +1,15 @@
 // Civics360 Tag Variables
 
 .t-civics360 {
-  --tag-background-color: var(--background-color-default);
-  --tag-background-color-accent: var(--background-color-accent);
-  --tag-background-color-brand: var(--background-color-brand);
+  --tag-background-color: var(--background-color-component);
+  --tag-border-color: var(--border-color-component);
+  --tag-color: var(--color-component);
   
-  --tag-color: var(--color-default);
-  --tag-color-accent: var(--color-accent);
+  --tag-background-color-brand: var(--background-color-brand);
+  --tag-border-color-brand: transparent;
   --tag-color-brand: var(--color-brand);
+  
+  --tag-background-color-accent: var(--background-color-accent);
+  --tag-border-color-accent: transparent;
+  --tag-color-accent: var(--color-accent);
 }

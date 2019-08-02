@@ -7,7 +7,7 @@ pre {
   --pre-background-color: var(--color);
   --pre-color: var(--background-color);
   @include block;
-  @include css-property-fallback("background-color", "--pre-background-color", $color);
+  @include css-property-fallback("background-color", "--pre-background-color", $color-component);
   border-radius: 0.125rem;
   @include css-property-fallback("color", "--pre-color", $background-color-component);
   overflow: auto;

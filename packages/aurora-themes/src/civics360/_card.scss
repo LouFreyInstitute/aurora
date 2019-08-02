@@ -1,0 +1,22 @@
+// Civics360 Card CSS Properties
+//
+// Custom variables for cards while using the Civics360 theme. If you use nested
+// themes you should override the same variables in each theme to prevent
+// unwanted inheritance.
+
+.t-civics360 {
+  // Card background colors.
+  --card-background-color: var(--background-color);
+  --card-background-color-accent: var(--background-color-accent);
+  --card-background-color-brand: var(--background-color-brand);
+  
+  // Card border colors.
+  --card-border-color: transparent;
+  --card-border-color-accent: transparent;
+  --card-border-color-brand: transparent;
+  
+  // Card text colors.
+  --card-color: var(--color);
+  --card-color-accent: var(--color-accent);
+  --card-color-brand: var(--color-brand);
+}

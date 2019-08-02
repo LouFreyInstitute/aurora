@@ -13,7 +13,7 @@ import ThemeContext from './theme-context';
 import Header from './header';
 import Sidebar from './sidebar';
 
-const Layout = ({children}) => {
+const Layout = ({children, size}) => {
 	const data = useStaticQuery(graphql`
 		query SiteTitleQuery {
 			site {
@@ -31,7 +31,7 @@ const Layout = ({children}) => {
 	return (
 		<ThemeContext.Provider value={theme}>
 			<div
-				className={`t-${theme.toLowerCase()} ${
+				className={`t-${theme.toLowerCase()} has-overrides ${
 					dark ? 'is-dark' : ''
 				} o-layout is-vertical u-full-height`}
 			>
@@ -48,7 +48,7 @@ const Layout = ({children}) => {
 
 					<main className="o-block is-large o-layout is-vertical o-layout-item is-fill">
 						<div className="o-layout-item is-fill u-margin-bottom+ s-prose">
-							{children}
+							<div className={`o-container is-${size}`}>{children}</div>
 						</div>
 
 						<hr className="divider" />

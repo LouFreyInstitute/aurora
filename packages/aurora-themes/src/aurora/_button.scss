@@ -6,30 +6,20 @@
 
 .t-aurora {
   // Button background colors.
-  --button-background-color: var(--background-color-default);
-  --button-background-color-action: var(--background-color-default-action);
-  --button-background-color-accent: var(--background-color-accent);
-  --button-background-color-accent-action: var(--background-color-accent-action);
+  --button-background-color: var(--background-color-component);
+  --button-border-color: var(--border-color-component);
+  --button-color: var(--color-component);
+  
   --button-background-color-brand: var(--background-color-brand);
-  --button-background-color-brand-action: var(--background-color-brand-action);
-  --button-background-color-disabled: var(--background-color-disabled);
-  
-  // Button border colors.
-  --button-border-color: transparent;
-  --button-border-color-action: transparent;
-  --button-border-color-accent: transparent;
-  --button-border-color-accent-action: transparent;
   --button-border-color-brand: transparent;
-  --button-border-color-brand-action: transparent;
-  --button-border-color-disabled: transparent;
-  
-  // Button text colors.
-  --button-color: var(--color-default);
-  --button-color-action: var(--color-default-action);
-  --button-color-accent: var(--color-accent);
-  --button-color-accent-action: var(--color-accent-action);
   --button-color-brand: var(--color-brand);
-  --button-color-brand-action: var(--color-brand-action);
+  
+  --button-background-color-accent: var(--background-color-accent);
+  --button-border-color-accent: transparent;
+  --button-color-accent: var(--color-accent);
+  
+  --button-background-color-disabled: var(--background-color-disabled);
+  --button-border-color-disabled: transparent;
   --button-color-disabled: var(--color-disabled);
 }
 

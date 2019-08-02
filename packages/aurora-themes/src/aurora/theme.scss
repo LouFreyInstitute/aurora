@@ -19,50 +19,46 @@
 
 // CSS variables for Aurora theme.
 .t-aurora {
-  // Background colors.
-  --background-color: #{$aurora-gray-10};
-  --background-color-action: #{$aurora-gray-20};
+  // Body
+  --background-color-body: #{$aurora-gray-10};
+  --border-color-body: #{$aurora-gray-20};
+  --color-body: #{$aurora-gray-80};
+  
+  // Component
+  --background-color-component: #{white};
+  --border-color-component:  #{$aurora-gray-20};
+  --color-component: #{$aurora-gray-70};
+  
+  // Brand
   --background-color-brand: #{$aurora-green-30};
-  --background-color-brand-action: #{$aurora-green-40};
-  --background-color-accent: #{$aurora-purple-30};
-  --background-color-accent-action: #{$aurora-purple-40};  
-  --background-color-default: #{$aurora-gray-80};
-  --background-color-default-action: #{$aurora-gray-90};
-  --background-color-disabled: #{$aurora-gray-10};
-
-  // Border colors.
-  --border-color: #{$aurora-gray-20};
-  --border-color-action: #{$aurora-gray-30};
-  --border-color-accent: #{$aurora-purple-40};
   --border-color-brand:  #{$aurora-green-40};
-  --border-color-default:  #{$aurora-gray-90};
-  --border-color-disabled: #{$aurora-gray-20};
-  
-  // Text colors.
-  --color: #{$aurora-gray-80};
-  --color-action: #{$aurora-gray-80};
   --color-brand:  #{$aurora-green-80};
-  --color-brand-action:  #{$aurora-green-90};
-  --color-accent: #{$aurora-purple-80};
-  --color-accent-action: #{$aurora-purple-90};
-  --color-default: #{$aurora-gray-10};
-  --color-default-action: #{$aurora-gray-20};
-  --color-disabled: #{$aurora-gray-20};
   
+  // Accent
+  --background-color-accent: #{$aurora-purple-30};
+  --border-color-accent: #{$aurora-purple-40};
+  --color-accent: #{$aurora-purple-80};
+  
+  // Disabled
+  --background-color-disabled: #{$aurora-gray-10};
+  --border-color-disabled: #{$aurora-gray-20};
+  --color-disabled: #{$aurora-gray-20};
 }
 
 // CSS Custom Properties for Aurora theme in dark mode.
 .t-aurora.is-dark {
-  // Background colors.
-  --background-color: #{$aurora-gray-80};
-  --background-color-default: #{$aurora-gray-10};
-  --background-color-default-action: #{$aurora-gray-20};
-  --background-color-disabled: #{$aurora-gray-80};
+  // Body
+  --background-color-body: #{$aurora-gray-90};
+  --border-color-body: #{$aurora-gray-70};
+  --color-body: #{$aurora-gray-20};
   
-  // Text colors.
-  --color: #{$aurora-gray-10};
-  --color-default: #{$aurora-gray-80};
-  --color-default-action: #{$aurora-gray-90};
+  // Component
+  --background-color-component: #{$aurora-gray-80};
+  --border-color-component: #{$aurora-gray-60};
+  --color-component: #{$aurora-gray-10};
+  
+  // Disabled
+  --background-color-disabled: #{$aurora-gray-80};
   --color-disabled: #{$aurora-gray-90};
 }
 
@@ -82,17 +78,26 @@
 // Import custom card CSS properties.
 @import 'card';
 
+// Import custom card CSS properties.
+@import 'divider';
+
 // Import custom input CSS properties.
 @import 'input';
 
 // Import custom menu CSS properties.
 @import 'menu';
 
+// Import custom nav-bar CSS properties.
+@import 'nav-bar';
+
 // Import custom notification CSS properties.
 @import 'notification';
 
 // Import custom section CSS properties.
 @import 'section';
+
+// Import custom section CSS properties.
+@import 'sidebar';
 
 // Import custom tag CSS properties.
 @import 'tag';
@@ -102,6 +107,6 @@
 // element. It is recommended to use `.c-section` in conjunction with theme
 // classes to set these colors (especially with nesting themes) instead.
 .t-aurora.has-overrides {
-  background-color: var(--background-color);
-  color: var(--color);
+  background-color: var(--background-color-body);
+  color: var(--color-body);
 }

@@ -21,6 +21,7 @@ $input-border-width: $border-width !default;
   @include css-property-fallback("border-width", "--input-border-width", $input-border-width);
   font: inherit;
   margin: 0;
+  width: 100%;
 }
 
 // Add spacing between .input and .input-helper
@@ -32,15 +33,15 @@ $input-border-width: $border-width !default;
 
 // Default variables.
 $input-background-color: $background-color-component !default;
-$input-border-color: transparent !default;
-$input-color: $color-default !default;
+$input-border-color: $border-color-component !default;
+$input-color: $color-component !default;
 
 // CSS variables.
 @if $enable-css-properties and $enable-root-css-properties {
   :root {
-    --input-background-color: var(--background-color-default);
-    --input-border-color: transparent;
-    --input-color: var(--color-default);
+    --input-background-color: var(--background-color-component);
+    --input-border-color: var(--border-color-component);
+    --input-color: var(--color-component);
   }
 }
 
@@ -58,16 +59,16 @@ $input-color: $color-default !default;
 }
 
 // Error variables.
-$input-background-color-error: $background-color-error !default;
-$input-border-color-error: transparent !default;
-$input-color-error: $color-error !default;
+$input-background-color-error: transparent !default;
+$input-border-color-error: $border-color-error !default;
+$input-color-error: inherit !default;
 
 // CSS variables.
 @if $enable-css-properties and $enable-root-css-properties {
   :root {
-    --input-background-color-error: var(--background-color-error);
-    --input-border-color-error: transparent;
-    --input-color-error: var(--color-error);
+    --input-background-color-error: transparent;
+    --input-border-color-error: var(--border-color-error);
+    --input-color-error: inherit;
   }
 }
 

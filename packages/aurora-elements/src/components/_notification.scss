@@ -2,8 +2,8 @@
 
 // Notification variables.
 $notification-background-color: $background-color-component !default;
-$notification-border-color: $border-color !default;
-$notification-color: $color-default !default;
+$notification-border-color: $border-color-component !default;
+$notification-color: $color-component !default;
 
 // Notification CSS properties.
 @if $enable-css-properties and $enable-root-css-properties {
@@ -38,7 +38,7 @@ $notification-color: $color-default !default;
 
 // Error variables.
 $notification-background-color-error: $background-color-error !default;
-$notification-border-color-error: transparent !default;
+$notification-border-color-error: $border-color-error !default;
 $notification-color-error: $color-error !default;
 
 // Error CSS properties.
@@ -59,7 +59,7 @@ $notification-color-error: $color-error !default;
 
 // Success variables.
 $notification-background-color-success: $background-color-success !default;
-$notification-border-color-success: transparent !default;
+$notification-border-color-success: $border-color-success !default;
 $notification-color-success: $color-success !default;
 
 // Success CSS properties.
@@ -80,7 +80,7 @@ $notification-color-success: $color-success !default;
 
 // Warning variables.
 $notification-background-color-warning: $background-color-warning !default;
-$notification-border-color-warning: transparent !default;
+$notification-border-color-warning: $border-color-warning !default;
 $notification-color-warning: $color-warning !default;
 
 // Warning CSS properties.

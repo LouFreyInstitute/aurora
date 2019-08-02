@@ -1,5 +1,5 @@
 $footer-background-color: $background-color-body !default;
-$footer-color: $color !default;
+$footer-color: $color-body !default;
 
 @if $enable-css-properties and $enable-root-css-properties {
   :root {

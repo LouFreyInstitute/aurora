@@ -10,16 +10,18 @@ function ButtonElement() {
 	// const theme = useContext(ThemeContext);
 
 	return (
-		<Layout>
+		<Layout size="large">
 			<SEO title="Button" />
 
-			<div className="o-container s-prose">
-				<h1 className="c-heading is-large">Button</h1>
+			<h1 className="c-heading is-large">Button</h1>
 
-				<p>Used to interact with page navigation, forms, or other elements.</p>
+			<p>Used to interact with page navigation, forms, or other elements.</p>
 
-				<div className="o-block section u-margin-bottom+">
-					<h2 className="c-heading is-small">Default</h2>
+			<div className="o-layout is-horizontal u-margin-bottom+">
+				<div className="o-block o-layout-item is-fill section">
+					<h2 className="c-heading is-small">Default Buttons</h2>
+					<p>These are the standard size button with various color options.</p>
+
 					<p>
 						<button className="c-button" type="button">
 							Default
@@ -42,82 +44,118 @@ function ButtonElement() {
 						</button>
 					</p>
 				</div>
-
-				<div className="o-block section u-margin-bottom+">
-					<h2 className="c-heading is-small">Light (Using Context)</h2>
-					<ThemeContext.Consumer>
-						{theme => (
-							<p className={`t-${theme.toLowerCase()}`}>
-								<button className="c-button" type="button">
-									Default
-								</button>
-								{` `}
-								<button disabled className="c-button" type="button">
-									Disabled
-								</button>
-								{` `}
-								<button className="c-button is-brand" type="button">
-									Brand
-								</button>
-								{` `}
-								<button className="c-button is-accent" type="button">
-									Accent
-								</button>
-							</p>
-						)}
-					</ThemeContext.Consumer>
-				</div>
-
-				<div className="o-block section u-margin-bottom+">
-					<h2 className="c-heading is-small">Large</h2>
+				<div style={{borderRight: '1px solid var(--border-color-component)'}} />
+				<div className="o-block o-layout-item section">
+					<h1 className="c-heading is-small">Classes</h1>
 					<p>
-						<button className="c-button is-large" type="button">
-							Default
-						</button>
-						{` `}
-						<button className="c-button is-brand is-large" type="button">
-							Brand
-						</button>
-						{` `}
-						<button className="c-button is-accent is-large" type="button">
-							Accent
-						</button>
+						Use <code>.c-button</code> for the base class.
+					</p>
+					<p>
+						<code>.is-brand</code>
+					</p>
+					<p>
+						<code>.is-accent</code>
+					</p>
+					<p>
+						<code>.is-inverted</code>
+					</p>
+					<p>
+						<code>.is-hollow</code>
 					</p>
 				</div>
+			</div>
 
-				<div className="o-block section u-margin-bottom+">
-					<h2 className="c-heading is-small">Small</h2>
-					<p>
-						<button className="c-button is-small" type="button">
-							Default
-						</button>
-						{` `}
-						<button className="c-button is-brand is-small" type="button">
-							Brand
-						</button>
-						{` `}
-						<button className="c-button is-accent is-small" type="button">
-							Accent
-						</button>
-					</p>
-				</div>
+			<ThemeContext.Consumer>
+				{theme => (
+					<div
+						className={`t-${theme.toLowerCase()} o-block u-margin-bottom+ section`}
+					>
+						<h2 className="c-heading is-small">Light Mode Override</h2>
+						<p>
+							If using CSS variables and React you can use context to re-apply
+							the current theme without the `is-dark` class. This effectively
+							forces light mode.
+						</p>
 
-				<div className="o-block section u-margin-bottom+">
-					<h2 className="c-heading is-small">Hollow</h2>
-					<p>
-						<button className="c-button is-hollow" type="button">
-							Default
-						</button>
-						{` `}
-						<button className="c-button is-brand is-hollow" type="button">
-							Brand
-						</button>
-						{` `}
-						<button className="c-button is-accent is-hollow" type="button">
-							Accent
-						</button>
-					</p>
-				</div>
+						<p>
+							<button className="c-button" type="button">
+								Default
+							</button>
+							{` `}
+							<button disabled className="c-button" type="button">
+								Disabled
+							</button>
+							{` `}
+							<button className="c-button is-brand" type="button">
+								Brand
+							</button>
+							{` `}
+							<button className="c-button is-accent" type="button">
+								Accent
+							</button>
+						</p>
+
+						<p className="u-font-size-">
+							<em>Note: this will not work if CSS variables are disabled.</em>
+						</p>
+					</div>
+				)}
+			</ThemeContext.Consumer>
+
+			<div className="o-block section u-margin-bottom+">
+				<h2 className="c-heading is-small">Large Buttons</h2>
+				<p>A larger sized button useful for call-to-actions</p>
+				<p>
+					<button className="c-button is-brand is-large" type="button">
+						Sign Up
+					</button>
+					{` `}
+					<button className="c-button is-large" type="button">
+						Log In
+					</button>
+				</p>
+			</div>
+
+			<div className="o-block section u-margin-bottom+">
+				<h2 className="c-heading is-small">Small Buttons</h2>
+				<p>
+					A smaller sized button that can be used on navigation, sub-menus, etc.
+				</p>
+				<p>
+					<button className="c-button is-small" type="button">
+						Default
+					</button>
+					{` `}
+					<button className="c-button is-brand is-small" type="button">
+						Brand
+					</button>
+					{` `}
+					<button className="c-button is-accent is-small" type="button">
+						Accent
+					</button>
+				</p>
+			</div>
+
+			<div className="o-block section is-brand u-margin-bottom+">
+				<h2 className="c-heading is-small">Hollow Buttons</h2>
+				<p>
+					Can be used on top of dynamic content like banner images or to reduce
+					attention.
+				</p>
+
+				<p>
+					<button className="c-button is-hollow" type="button">
+						Default
+					</button>
+					{` `}
+					<button className="c-button is-brand is-hollow" type="button">
+						Brand
+					</button>
+					{` `}
+					<button className="c-button is-accent is-hollow" type="button">
+						Accent
+					</button>
+				</p>
 			</div>
 		</Layout>
 	);

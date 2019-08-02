@@ -1,10 +1,10 @@
 // Enable support for CSS variables. This can be disabled if you don't want to
 // use CSS variables.
-$enable-css-properties: false !default;
+$enable-css-properties: true !default;
 
 // Add CSS variables to `:root`. This can be disabled if you are using nested
 // themes.
-$enable-root-css-properties: false !default;
+$enable-root-css-properties: true !default;
 
 // Import Sass variables.
 @import 'variables/borders';
@@ -51,6 +51,7 @@ $enable-root-css-properties: false !default;
 @import 'components/nav-item';
 @import 'components/notification';
 @import 'components/section';
+@import 'components/sidebar';
 @import 'components/tag';
 @import 'components/input';
 

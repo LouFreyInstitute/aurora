@@ -7,11 +7,11 @@
 
 // Default variables.
 $menu-background-color: $background-color-component !default;
-$menu-border-color: $border-color-default !default;
+$menu-border-color: $border-color-component !default;
 $menu-border-radius: $border-radius !default;
 $menu-border-style: $border-style !default;
 $menu-border-width: $border-width !default;
-$menu-color: $color-default !default;
+$menu-color: $color-component !default;
 
 // CSS variables.
 @if $enable-css-properties and $enable-root-css-properties {
@@ -33,6 +33,5 @@ $menu-color: $color-default !default;
   @include css-property-fallback("border-style", "--menu-border-style", $menu-border-style);
   @include css-property-fallback("border-width", "--menu-border-width", $menu-border-width);
   @include css-property-fallback("color", "--menu-color", $menu-color);
-  padding-bottom: $spacing-small - strip-unit($menu-border-width);
-  padding-top: $spacing-small - strip-unit($menu-border-width);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.16);
 }
