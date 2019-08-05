@@ -17,7 +17,7 @@ function ButtonElement() {
 
 			<p>Used to interact with page navigation, forms, or other elements.</p>
 
-			<div className="o-layout is-horizontal u-margin-bottom+">
+			<div className="o-layout is-horizontal section-group">
 				<div className="o-block o-layout-item is-fill section is-rounded">
 					<h2 className="c-heading is-small">Default Buttons</h2>
 					<p>These are the standard size button with various color options.</p>
@@ -80,7 +80,7 @@ function ButtonElement() {
 			<ThemeContext.Consumer>
 				{theme => (
 					<div
-						className={`t-${theme.toLowerCase()} o-block u-margin-bottom+ section is-rounded`}
+						className={`t-${theme.toLowerCase()} o-block section is-rounded`}
 					>
 						<h2 className="c-heading is-small">Light Mode Override</h2>
 						<p>
@@ -114,7 +114,7 @@ function ButtonElement() {
 				)}
 			</ThemeContext.Consumer>
 
-			<div className="o-block section is-rounded u-margin-bottom+">
+			<div className="o-block section is-rounded">
 				<h2 className="c-heading is-small">Large Buttons</h2>
 				<p>A larger sized button useful for call-to-actions</p>
 				<p>
@@ -128,7 +128,7 @@ function ButtonElement() {
 				</p>
 			</div>
 
-			<div className="o-block section is-rounded u-margin-bottom+">
+			<div className="o-block section is-rounded">
 				<h2 className="c-heading is-small">Small Buttons</h2>
 				<p>
 					A smaller sized button that can be used on navigation, sub-menus, etc.
@@ -148,7 +148,7 @@ function ButtonElement() {
 				</p>
 			</div>
 
-			<div className="o-block section is-rounded is-brand u-margin-bottom+">
+			<div className="o-block section is-rounded is-brand">
 				<h2 className="c-heading is-small">Hollow Buttons</h2>
 				<p>
 					Can be used on top of dynamic content like banner images or to reduce

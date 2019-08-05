@@ -25,6 +25,7 @@ $section-color: $color-component !default;
 
 // Default styles.
 .section {
+  @include block;
   @include css-property-fallback("background-color", "--section-background-color", $section-background-color);
   @include css-property-fallback("color", "--section-color", $section-color);
 }
