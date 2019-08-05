@@ -38,7 +38,7 @@ class Layout extends React.Component {
 
 	setDark() {
 		this.setState(
-			previousState => ({dark: !previousState.dark}),
+			state => ({dark: !state.dark}),
 			() => {
 				if (typeof window !== 'undefined') {
 					window.localStorage.setItem('dark', this.state.dark);
@@ -49,7 +49,7 @@ class Layout extends React.Component {
 
 	componentDidMount() {
 		if (typeof window !== 'undefined') {
-			const theme = window.localStorage.getItem('theme');
+			const theme = window.localStorage.getItem('theme') || 'Aurora';
 			const dark = window.localStorage.getItem('dark') === 'true';
 			this.setState({theme, dark});
 		}
