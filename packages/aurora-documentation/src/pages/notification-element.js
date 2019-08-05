@@ -16,6 +16,10 @@ const TextInputElement = () => (
 			This is an error notification.
 		</div>
 
+		<div className="c-notification is-info">
+			This is an information notification.
+		</div>
+
 		<div className="c-notification is-success">
 			This is a success notification.
 		</div>

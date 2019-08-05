@@ -31,23 +31,23 @@ $color-disabled: rgba(32, 32, 64, 0.32) !default;
 
 // Error
 $background-color-error: rgb(255, 109, 130) !default;
-$border-color-error: rgb(255, 109, 130) !default;
-$color-error: #55000c !default;
+$border-color-error: rgb(190, 45, 66) !default;
+$color-error: rgb(126, 0, 2) !default;
 
 // Info
 $background-color-info: rgb(132, 172, 243) !default;
-$border-color-info: rgb(132, 172, 243) !default;
-$color-info: rgb(132, 172, 243) !default;
+$border-color-info: rgb(68, 108, 179) !default;
+$color-info: rgb(4, 44, 115) !default;
 
 // Success
 $background-color-success: rgb(104, 216, 152) !default;
-$border-color-success: rgb(72, 184, 120) !default;
-$color-success: rgb(40, 152, 88) !default;
+$border-color-success: rgb(40, 152, 88) !default;
+$color-success: rgb(0, 88, 24) !default;
 
 // Warning
 $background-color-warning: rgb(255, 183, 136) !default;
-$border-color-warning: rgb(255, 183, 136) !default;
-$color-warning: rgb(255, 183, 136) !default;
+$border-color-warning: rgb(190, 119, 72) !default;
+$color-warning: rgb(126, 55, 8) !default;
 
 @if $enable-css-properties and $enable-root-css-properties {
   :root {

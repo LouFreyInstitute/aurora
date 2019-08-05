@@ -19,9 +19,9 @@ $notification-color: $color-component !default;
   @include block;
   @include css-property-fallback("background-color", "--notification-background-color", $notification-background-color);
   @include css-property-fallback("border-color", "--notification-border-color", $notification-border-color);
-  border-radius: 0.125rem;
-  border-style: solid;
-  border-width: 0.125rem;
+  border-radius: $border-radius;
+  border-style: $border-style;
+  border-width: $border-width;
   @include css-property-fallback("color", "--notification-color", $notification-color);
   padding-bottom: 0.5rem - 0.125rem;
   padding-left: 1rem - 0.125rem;
@@ -38,7 +38,7 @@ $notification-color: $color-component !default;
 
 // Error variables.
 $notification-background-color-error: $background-color-error !default;
-$notification-border-color-error: $border-color-error !default;
+$notification-border-color-error: transparent !default;
 $notification-color-error: $color-error !default;
 
 // Error CSS properties.
@@ -59,7 +59,42 @@ $notification-color-error: $color-error !default;
 
 // Success variables.
 $notification-background-color-success: $background-color-success !default;
-$notification-border-color-success: $border-color-success !default;
+$notification-border-color-success: transparent !default;
+$notification-color-success: $color-success !default;
+
+// Success CSS properties.
+@if $enable-css-properties and $enable-root-css-properties {
+  :root {
+    --notification-background-color-success: var(--background-color-success);
+    --notification-border-color-success: transparent;
+    --notification-color-success: var(--color-success);
+  }
+}
+
+// Info variables.
+$notification-background-color-info: $background-color-info !default;
+$notification-border-color-info: transparent !default;
+$notification-color-info: $color-info !default;
+
+// Info CSS properties.
+@if $enable-css-properties and $enable-root-css-properties {
+  :root {
+    --notification-background-color-info: var(--background-color-info);
+    --notification-border-color-info: transparent;
+    --notification-color-info: var(--color-info);
+  }
+}
+
+// Info styles.
+.c-notification.is-info {
+  @include css-property-fallback("background-color", "--notification-background-color-info", $notification-background-color-info);
+  @include css-property-fallback("border-color", "--notification-border-color-info", $notification-border-color-info);
+  @include css-property-fallback("color", "--notification-color-info", $notification-color-info);
+}
+
+// Success variables.
+$notification-background-color-success: $background-color-success !default;
+$notification-border-color-success: transparent !default;
 $notification-color-success: $color-success !default;
 
 // Success CSS properties.
@@ -80,7 +115,7 @@ $notification-color-success: $color-success !default;
 
 // Warning variables.
 $notification-background-color-warning: $background-color-warning !default;
-$notification-border-color-warning: $border-color-warning !default;
+$notification-border-color-warning: transparent !default;
 $notification-color-warning: $color-warning !default;
 
 // Warning CSS properties.
