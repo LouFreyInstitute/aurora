@@ -181,6 +181,18 @@ $button-color-brand: $color-brand !default;
   }
 }
 
+.c-button.is-brand.is-hollow.is-inverted {
+  --button-border-color-brand: var(--border-color-brand);
+  @include css-property-fallback("border-color", "--button-border-color-brand", $button-border-color-brand);
+  @include css-property-fallback("color", "--button-color-brand", $button-color-brand);
+}
+
+.c-button.is-accent.is-hollow.is-inverted {
+  --button-border-color-accent: var(--border-color-accent);
+  @include css-property-fallback("border-color", "--button-border-color-accent", $button-border-color-accent);
+  @include css-property-fallback("color", "--button-color-accent", $button-color-accent);
+}
+
 // Disabled variables.
 $button-background-color-disabled: $background-color-disabled !default;
 $button-border-color-disabled: $border-color-disabled !default;

@@ -1,35 +1,92 @@
 // Civics360 Palette
 // A combination of patriotic blue and red slightly dulled down.
 
+$number-of-swatches: 16;
+$hue-step: 3.125;
+$saturation-step: 3.125;
+$lightness-step: 6.125;
+
+@function get-color($original-color, $current-step) {
+  $original-current-step: $current-step;
+
+  @if $current-step <= 8 {
+    $current-step: (($number-of-swatches / 2) + 1) - $current-step;
+  } @else {
+    $current-step: $current-step - ($number-of-swatches / 2) - 1;
+  }
+
+  $hue: hue($original-color) + ($current-step * $hue-step);
+  @if $hue > 360 {
+    $hue: $hue - 360;
+  }
+  
+  $saturation: saturation($original-color) + ($current-step * $saturation-step);
+  @if $saturation > 100% {
+    $saturation: 100%;
+  }
+
+  $lightness: (($number-of-swatches + 1) - $original-current-step) * $lightness-step;
+  
+  @return change-color($original-color, $hue: $hue, $saturation: $saturation, $lightness: $lightness);
+}
+
+// Aurora
+// Primarily blue and turquoise colors with subtle blue and reds.
+
 // Default
-$civics360-gray-10: #d7dee6;
-$civics360-gray-20: #b3c1d0;
-$civics360-gray-30: #92a7bc;
-$civics360-gray-40: #748fab;
-$civics360-gray-50: #5b7997;
-$civics360-gray-60: #4c647d;
-$civics360-gray-70: #3d5064;
-$civics360-gray-80: #2e3c4b;
-$civics360-gray-90: #1d2630;
+$civics360-gray: #505860;
+$civics360-gray-10: get-color($civics360-gray, 1);
+$civics360-gray-20: get-color($civics360-gray, 2);
+$civics360-gray-30: get-color($civics360-gray, 3);
+$civics360-gray-40: get-color($civics360-gray, 4);
+$civics360-gray-50: get-color($civics360-gray, 5);
+$civics360-gray-60: get-color($civics360-gray, 6);
+$civics360-gray-70: get-color($civics360-gray, 7);
+$civics360-gray-80: get-color($civics360-gray, 8);
+$civics360-gray-90: get-color($civics360-gray, 9);
+$civics360-gray-100: get-color($civics360-gray, 10);
+$civics360-gray-110: get-color($civics360-gray, 11);
+$civics360-gray-120: get-color($civics360-gray, 12);
+$civics360-gray-130: get-color($civics360-gray, 13);
+$civics360-gray-140: get-color($civics360-gray, 14);
+$civics360-gray-150: get-color($civics360-gray, 15);
+$civics360-gray-160: get-color($civics360-gray, 16);
 
 // Brand
-$civics360-blue-10: #dbdef3;
-$civics360-blue-20: #b9bfe7;
-$civics360-blue-30: #99a2dd;
-$civics360-blue-40: #7d88d4;
-$civics360-blue-50: #626fcb;
-$civics360-blue-60: #4857c2;
-$civics360-blue-70: #3744a4;
-$civics360-blue-80: #2a337c;
-$civics360-blue-90: #1b2150;
+// $civics360-blue: #626fcb;
+$civics360-blue: #46C;
+$civics360-blue-10: get-color($civics360-blue, 1);
+$civics360-blue-20: get-color($civics360-blue, 2);
+$civics360-blue-30: get-color($civics360-blue, 3);
+$civics360-blue-40: get-color($civics360-blue, 4);
+$civics360-blue-50: get-color($civics360-blue, 5);
+$civics360-blue-60: get-color($civics360-blue, 6);
+$civics360-blue-70: get-color($civics360-blue, 7);
+$civics360-blue-80: get-color($civics360-blue, 8);
+$civics360-blue-90: get-color($civics360-blue, 9);
+$civics360-blue-100: get-color($civics360-blue, 10);
+$civics360-blue-110: get-color($civics360-blue, 11);
+$civics360-blue-120: get-color($civics360-blue, 12);
+$civics360-blue-130: get-color($civics360-blue, 13);
+$civics360-blue-140: get-color($civics360-blue, 14);
+$civics360-blue-150: get-color($civics360-blue, 15);
+$civics360-blue-160: get-color($civics360-blue, 16);
 
 // Accent
-$civics360-red-10: #ebd9d9;
-$civics360-red-20: #dab7b7;
-$civics360-red-30: #ca9898;
-$civics360-red-40: #bc7b7b;
-$civics360-red-50: #af5f5f;
-$civics360-red-60: #964b4b;
-$civics360-red-70: #783c3c;
-$civics360-red-80: #5a2d2d;
-$civics360-red-90: #391d1d;
+$civics360-red: indianred;
+$civics360-red-10: get-color($civics360-red, 1);
+$civics360-red-20: get-color($civics360-red, 2);
+$civics360-red-30: get-color($civics360-red, 3);
+$civics360-red-40: get-color($civics360-red, 4);
+$civics360-red-50: get-color($civics360-red, 5);
+$civics360-red-60: get-color($civics360-red, 6);
+$civics360-red-70: get-color($civics360-red, 7);
+$civics360-red-80: get-color($civics360-red, 8);
+$civics360-red-90: get-color($civics360-red, 9);
+$civics360-red-100: get-color($civics360-red, 10);
+$civics360-red-110: get-color($civics360-red, 11);
+$civics360-red-120: get-color($civics360-red, 12);
+$civics360-red-130: get-color($civics360-red, 13);
+$civics360-red-140: get-color($civics360-red, 14);
+$civics360-red-150: get-color($civics360-red, 15);
+$civics360-red-160: get-color($civics360-red, 16);

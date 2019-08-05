@@ -5,18 +5,15 @@
 // unwanted inheritance.
 
 .t-aurora {
-  // Card background colors.
-  --card-background-color: var(--background-color);
-  --card-background-color-accent: var(--background-color-accent);
+  --card-background-color: var(--background-color-component);
+  --card-border-color: var(--border-color-component);
+  --card-color: var(--color-component);
+
   --card-background-color-brand: var(--background-color-brand);
-  
-  // Card border colors.
-  --card-border-color: transparent;
-  --card-border-color-accent: transparent;
   --card-border-color-brand: transparent;
-  
-  // Card text colors.
-  --card-color: var(--color);
   --card-color-accent: var(--color-accent);
+
+  --card-background-color-accent: var(--background-color-accent);
+  --card-border-color-accent: transparent;
   --card-color-brand: var(--color-brand);
 }

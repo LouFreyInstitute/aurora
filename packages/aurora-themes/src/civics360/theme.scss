@@ -6,44 +6,44 @@
   // Body
   --background-color-body: #{$civics360-gray-10};
   --border-color-body: #{$civics360-gray-20};
-  --color-body: #{$civics360-gray-80};
+  --color-body: #{$civics360-gray-110};
   
   // Component
   --background-color-component: #{white};
   --border-color-component:  #{$civics360-gray-20};
-  --color-component: #{$civics360-gray-70};
+  --color-component: #{$civics360-gray-110};
   
   // Brand
-  --background-color-brand: #{$civics360-blue-60};
-  --border-color-brand:  #{$civics360-blue-70};
+  --background-color-brand: #{$civics360-blue-80};
+  --border-color-brand:  #{$civics360-blue-100};
   --color-brand:  #{$civics360-blue-10};
   
   // Accent
-  --background-color-accent: #{$civics360-red-50};
-  --border-color-accent: #{$civics360-red-60};
-  --color-accent: #{white};
+  --background-color-accent: #{$civics360-red-70};
+  --border-color-accent: #{$civics360-red-90};
+  --color-accent: #{$civics360-red-150};
   
   // Disabled
-  --background-color-disabled: #{$civics360-gray-10};
-  --border-color-disabled: #{$civics360-gray-20};
-  --color-disabled: #{$civics360-gray-20};
+  --background-color-disabled: #{$civics360-gray-20};
+  --border-color-disabled: #{$civics360-gray-30};
+  --color-disabled: #{$civics360-gray-40};
 }
 
 // CSS Custom Properties for Civics360 theme in dark mode.
 .t-civics360.is-dark {
   // Body
-  --background-color-body: #{$civics360-gray-90};
-  --border-color-body: #{$civics360-gray-80};
-  --color-body: #{$civics360-gray-20};
+  --background-color-body: #{$civics360-gray-150};
+  --border-color-body: #{$civics360-gray-140};
+  --color-body: #{$civics360-gray-30};
   
   // Component
-  --background-color-component: #{$civics360-gray-80};
-  --border-color-component: #{$civics360-gray-60};
-  --color-component: #{$civics360-gray-10};
+  --background-color-component: #{$civics360-gray-140};
+  --border-color-component: #{$civics360-gray-130};
+  --color-component: #{$civics360-gray-20};
   
   // Disabled
-  --background-color-disabled: #{$civics360-gray-80};
-  --color-disabled: #{$civics360-gray-90};
+  --background-color-disabled: #{$civics360-gray-130};
+  --color-disabled: #{$civics360-gray-120};
 }
 
 // If you are using nested themes it is recommended to add a further level of

@@ -28,7 +28,7 @@ $lightness-step: 6.125;
 // Primarily green and turquoise colors with subtle blue and purples.
 
 // Default
-$aurora-gray: #303840;
+$aurora-gray: #383840;
 $aurora-gray-10: get-color($aurora-gray, 1);
 $aurora-gray-20: get-color($aurora-gray, 2);
 $aurora-gray-30: get-color($aurora-gray, 3);
@@ -66,12 +66,20 @@ $aurora-green-150: get-color($aurora-green, 15);
 $aurora-green-160: get-color($aurora-green, 16);
 
 // Accent
-$aurora-purple-10: #ddddf3;
-$aurora-purple-20: #bdbde8;
-$aurora-purple-30: #a0a0de;
-$aurora-purple-40: #8585d5;
-$aurora-purple-50: #6c6ccd;
-$aurora-purple-60: #5454c4;
-$aurora-purple-70: #3e3eb3;
-$aurora-purple-80: #2f2f88;
-$aurora-purple-90: #1e1e58;
+$aurora-purple: #a0a0de;
+$aurora-purple-10: get-color($aurora-purple, 1);
+$aurora-purple-20: get-color($aurora-purple, 2);
+$aurora-purple-30: get-color($aurora-purple, 3);
+$aurora-purple-40: get-color($aurora-purple, 4);
+$aurora-purple-50: get-color($aurora-purple, 5);
+$aurora-purple-60: get-color($aurora-purple, 6);
+$aurora-purple-70: get-color($aurora-purple, 7);
+$aurora-purple-80: get-color($aurora-purple, 8);
+$aurora-purple-90: get-color($aurora-purple, 9);
+$aurora-purple-100: get-color($aurora-purple, 10);
+$aurora-purple-110: get-color($aurora-purple, 11);
+$aurora-purple-120: get-color($aurora-purple, 12);
+$aurora-purple-130: get-color($aurora-purple, 13);
+$aurora-purple-140: get-color($aurora-purple, 14);
+$aurora-purple-150: get-color($aurora-purple, 15);
+$aurora-purple-160: get-color($aurora-purple, 16);

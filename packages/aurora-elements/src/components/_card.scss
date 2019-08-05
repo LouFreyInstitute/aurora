@@ -21,12 +21,10 @@ $card-color: $color-component !default;
 // Card styles.
 .c-card {
   @include css-property-fallback("background-color", "--card-background-color", $card-background-color);
-  border-radius: 0.125rem;
   @include css-property-fallback("border-color", "--card-border-color", $card-border-color);
   @include css-property-fallback("border-radius", "--card-border-radius", $card-border-radius);
   @include css-property-fallback("border-style", "--card-border-style", $card-border-style);
   @include css-property-fallback("border-width", "--card-border-width", $card-border-width);
-  border-width: 0.125rem;
   @include css-property-fallback("color", "--card-color", $card-color);
   height: 100%;
 }
