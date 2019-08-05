@@ -13,16 +13,17 @@ $tag-color: $color-component !default;
 // Tag CSS properties.
 @if $enable-css-properties and $enable-root-css-properties {
   :root {
-    --tag-background-color: var(--background-color-default);
-    --tag-color: var(--color-default);
+    --tag-background-color: var(--background-color-component);
+    --tag-border-color: var(--border-color-component);
+    --tag-color: var(--color-component);
   }
 }
 
 // Tag styles.
 .tag {
   @include css-property-fallback("background-color", "--tag-background-color", $tag-background-color);
-  border-color: $tag-border-color;
-  border-radius: 0.125rem;
+  @include css-property-fallback("border-color", "--tag-border-color", $tag-border-color);
+  border-radius: $border-radius;
   border-style: $border-style;
   border-width: $border-width;
   @include css-property-fallback("color", "--tag-color", $tag-color);

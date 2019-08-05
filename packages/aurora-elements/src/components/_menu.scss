@@ -16,12 +16,12 @@ $menu-color: $color-component !default;
 // CSS variables.
 @if $enable-css-properties and $enable-root-css-properties {
   :root {
-    --menu-background-color: var(--background-color-default);
-    --menu-border-color: var(--border-color-default);
+    --menu-background-color: var(--background-color-component);
+    --menu-border-color: var(--border-color-component);
     --menu-border-radius: var(--border-radius);
     --menu-border-style: var(--border-style);
     --menu-border-width: var(--border-width);
-    --menu-color: var(--color-default);
+    --menu-color: var(--color-component);
   }
 }
 
@@ -33,5 +33,5 @@ $menu-color: $color-component !default;
   @include css-property-fallback("border-style", "--menu-border-style", $menu-border-style);
   @include css-property-fallback("border-width", "--menu-border-width", $menu-border-width);
   @include css-property-fallback("color", "--menu-color", $menu-color);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.16);
+  // box-shadow: 0 2px 8px rgba(0, 0, 0, 0.16);
 }

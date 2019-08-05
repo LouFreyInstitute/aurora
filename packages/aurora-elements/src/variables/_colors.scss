@@ -8,7 +8,7 @@ $color-body: #404040 !default;
 
 // Component colors are used for default interface elements.
 $background-color-component: #fff !default;
-$border-color-component: #b8babc !default;
+$border-color-component: #dadadf !default;
 $color-component: #404040 !default;
 
 // Brand is the primary contrast color used to represent your identity.
@@ -100,7 +100,7 @@ $color-warning: rgb(126, 55, 8) !default;
 
 // Dark Mode
 // ----
-$enable-dark-mode: true !default;
+$enable-dark-mode: false !default;
 
 @if $enable-dark-mode {
   // Body

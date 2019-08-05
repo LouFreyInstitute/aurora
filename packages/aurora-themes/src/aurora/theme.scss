@@ -26,7 +26,7 @@
   
   // Component
   --background-color-component: #{white};
-  --border-color-component:  #b8babc;
+  --border-color-component:  #dadadf;
   --color-component: #404040;
   
   // Brand
@@ -84,6 +84,9 @@
 
 // Import custom input CSS properties.
 @import 'input';
+
+// Import custom menu CSS properties.
+@import 'list-item';
 
 // Import custom menu CSS properties.
 @import 'menu';
