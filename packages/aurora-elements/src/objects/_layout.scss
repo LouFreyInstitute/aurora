@@ -35,3 +35,19 @@
 .o-layout-item.is-fill {
   flex: 1;
 }
+
+// Styles at small media.
+@media all and (max-width: 640px) {
+  .o-layout {
+    flex-wrap: wrap;
+  }
+  
+  .o-layout-item {
+    flex: none;
+    width: 100%;
+  }
+  
+  .o-layout-item.is-fill {
+    flex: none;
+  }
+}

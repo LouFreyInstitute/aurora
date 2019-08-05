@@ -1,12 +1,28 @@
 .o-block {
   min-width: 0;
-  padding: 2rem;
+  padding: 1rem;
+  width: 100%;
 }
 
 .o-block.is-large {
-  padding: 2rem 4rem;
+  padding: 2rem;
 }
 
 .o-block.is-small {
-  padding: 2rem 1rem;
+  padding: 0.5rem;
+}
+
+@media all and (min-width: 640px) {
+  .o-block {
+    padding: 2rem;
+    width: auto;
+  }
+  
+  .o-block.is-large {
+    padding: 3rem;
+  }
+  
+  .o-block.is-small {
+    padding: 1rem;
+  }
 }

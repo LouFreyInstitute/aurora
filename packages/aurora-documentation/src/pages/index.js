@@ -28,8 +28,8 @@ const IndexPage = () => (
 			</p>
 		</div>
 
-		<div className="o-layout is-horizontal">
-			<div className="o-block is-large o-layout-item is-fill section is-brand">
+		<div className="o-layout is-horizontal section-group">
+			<div className="o-block is-large o-layout-item is-fill section is-rounded is-brand">
 				<h1 className="c-heading is-large">Aurora Core</h1>
 				<p>These form the foundation of Aurora.</p>
 
@@ -53,7 +53,7 @@ const IndexPage = () => (
 					colors.
 				</p>
 			</div>
-			<div className="o-block is-large o-layout-item is-fill section">
+			<div className="o-block is-large o-layout-item is-fill section is-rounded">
 				<h1 className="c-heading is-large">Aurora Extras</h1>
 				<p>Bonuses for your app development.</p>
 

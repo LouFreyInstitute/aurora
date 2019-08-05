@@ -1,27 +1,69 @@
+$number-of-swatches: 16;
+$hue-step: 3.125;
+$saturation-step: 3.125;
+$lightness-step: 6.125;
+
+@function get-color($original-color, $current-step) {
+  $original-current-step: $current-step;
+
+  @if $current-step <= 8 {
+    $current-step: (($number-of-swatches / 2) + 1) - $current-step;
+  } @else {
+    $current-step: $current-step - ($number-of-swatches / 2) - 1;
+  }
+
+  $hue: hue($original-color) + ($current-step * $hue-step);
+  @if $hue > 360 {
+    $hue: $hue - 360;
+  }
+  
+  $saturation: saturation($original-color) + ($current-step * $saturation-step);
+
+  $lightness: (($number-of-swatches + 1) - $original-current-step) * $lightness-step;
+  
+  @return change-color($original-color, $hue: $hue, $saturation: $saturation, $lightness: $lightness);
+}
+
 // Aurora
 // Primarily green and turquoise colors with subtle blue and purples.
 
-// Default 
-$aurora-gray-10: #dedee6;
-$aurora-gray-20: #bfbfd0;
-$aurora-gray-30: #a3a3bc;
-$aurora-gray-40: #8a8aaa;
-$aurora-gray-50: #73739a;
-$aurora-gray-60: #5e5e82;
-$aurora-gray-70: #4b4b68;
-$aurora-gray-80: #38384e;
-$aurora-gray-90: #232331;
+// Default
+$aurora-gray: #303840;
+$aurora-gray-10: get-color($aurora-gray, 1);
+$aurora-gray-20: get-color($aurora-gray, 2);
+$aurora-gray-30: get-color($aurora-gray, 3);
+$aurora-gray-40: get-color($aurora-gray, 4);
+$aurora-gray-50: get-color($aurora-gray, 5);
+$aurora-gray-60: get-color($aurora-gray, 6);
+$aurora-gray-70: get-color($aurora-gray, 7);
+$aurora-gray-80: get-color($aurora-gray, 8);
+$aurora-gray-90: get-color($aurora-gray, 9);
+$aurora-gray-100: get-color($aurora-gray, 10);
+$aurora-gray-110: get-color($aurora-gray, 11);
+$aurora-gray-120: get-color($aurora-gray, 12);
+$aurora-gray-130: get-color($aurora-gray, 13);
+$aurora-gray-140: get-color($aurora-gray, 14);
+$aurora-gray-150: get-color($aurora-gray, 15);
+$aurora-gray-160: get-color($aurora-gray, 16);
 
 // Brand
-$aurora-green-10: #bae7e7;
-$aurora-green-20: #75cfcf;
-$aurora-green-30: #3fb6b6;
-$aurora-green-40: #369b9b;
-$aurora-green-50: #2d8282;
-$aurora-green-60: #256b6b;
-$aurora-green-70: #1e5555;
-$aurora-green-80: #163f3f;
-$aurora-green-90: #0e2727;
+$aurora-green: mediumseagreen;
+$aurora-green-10: get-color($aurora-green, 1);
+$aurora-green-20: get-color($aurora-green, 2);
+$aurora-green-30: get-color($aurora-green, 3);
+$aurora-green-40: get-color($aurora-green, 4);
+$aurora-green-50: get-color($aurora-green, 5);
+$aurora-green-60: get-color($aurora-green, 6);
+$aurora-green-70: get-color($aurora-green, 7);
+$aurora-green-80: get-color($aurora-green, 8);
+$aurora-green-90: get-color($aurora-green, 9);
+$aurora-green-100: get-color($aurora-green, 10);
+$aurora-green-110: get-color($aurora-green, 11);
+$aurora-green-120: get-color($aurora-green, 12);
+$aurora-green-130: get-color($aurora-green, 13);
+$aurora-green-140: get-color($aurora-green, 14);
+$aurora-green-150: get-color($aurora-green, 15);
+$aurora-green-160: get-color($aurora-green, 16);
 
 // Accent
 $aurora-purple-10: #ddddf3;

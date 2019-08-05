@@ -69,3 +69,7 @@ $section-color-brand: $color-brand !default;
   @include css-property-fallback("background-color", "--section-background-color-brand", $section-background-color-brand);
   @include css-property-fallback("color", "--section-color-brand", $section-color-brand);
 }
+
+.section.is-rounded {
+  border-radius: $border-radius * 2;
+}

@@ -15,53 +15,98 @@
 // and not worry about overriding.
 
 // Import our color palette from the `aurora-palettes` module.
-// @import "../../node_modules/aurora-palettes/src/aurora";
+@import "../../node_modules/aurora-palettes/src/aurora";
 
 // CSS variables for Aurora theme.
 .t-aurora {
   // Body
-  --background-color-body: #f7f8f9;
-  --border-color-body: #e0e2e4;
-  --color-body: #404040;
+  --background-color-body: #{$aurora-gray-10};
+  --border-color-body: #{$aurora-gray-20};
+  --color-body: #{$aurora-gray-110};
   
   // Component
   --background-color-component: #{white};
-  --border-color-component:  #dadadf;
-  --color-component: #404040;
+  --border-color-component:  #{$aurora-gray-20};
+  --color-component: #{$aurora-gray-120};
   
   // Brand
-  --background-color-brand: #10d0a0;
-  --border-color-brand:  #109060;
-  --color-brand:  #103010;
+  --background-color-brand: #{$aurora-green-60};
+  --border-color-brand:  #{$aurora-green-70};
+  --color-brand:  #{$aurora-green-140};
   
   // Accent
-  --background-color-accent: #6880f8;
-  --border-color-accent: #2840b8;
-  --color-accent: #101048;
+  --background-color-accent: #{$aurora-purple-30};
+  --border-color-accent: #{$aurora-purple-40};
+  --color-accent: #{$aurora-purple-80};
   
   // Disabled
   --background-color-disabled: rgba(32, 32, 64, 0.08);
   --border-color-disabled: rgba(32, 32, 64, 0.16);
   --color-disabled: rgba(32, 32, 64, 0.32);
 }
+// // CSS variables for Aurora theme.
+// .t-aurora {
+//   // Body
+//   --background-color-body: #f7f8f9;
+//   --border-color-body: #e0e2e4;
+//   --color-body: #404040;
+// 
+//   // Component
+//   --background-color-component: #{white};
+//   --border-color-component:  #dadadf;
+//   --color-component: #404040;
+// 
+//   // Brand
+//   --background-color-brand: #10d0a0;
+//   --border-color-brand:  #109060;
+//   --color-brand:  #103010;
+// 
+//   // Accent
+//   --background-color-accent: #6880f8;
+//   --border-color-accent: #2840b8;
+//   --color-accent: #101048;
+// 
+//   // Disabled
+//   --background-color-disabled: rgba(32, 32, 64, 0.08);
+//   --border-color-disabled: rgba(32, 32, 64, 0.16);
+//   --color-disabled: rgba(32, 32, 64, 0.32);
+// }
 
 // CSS Custom Properties for Aurora theme in dark mode.
 .t-aurora.is-dark {
   // Body
-  --background-color-body: #282838;
-  --border-color-body: #383848;
-  --color-body: #c0c0d8;
+  --background-color-body: #{$aurora-gray-150};
+  --border-color-body: #{$aurora-gray-140};
+  --color-body: #{$aurora-gray-50};
 
   // Component
-  --background-color-component: #303244;
-  --border-color-component: #505060;
-  --color-component: #f0f0f8;
+  --background-color-component: #{$aurora-gray-140};
+  --border-color-component: #{$aurora-gray-130};
+  --color-component: #{$aurora-gray-40};
 
   // Disabled
   --background-color-disabled: rgba(208, 208, 240, 0.08);
   --border-color-disabled: rgba(208, 208, 240, 0.16);
   --color-disabled: rgba(208, 208, 240, 0.32);
 }
+// 
+// // CSS Custom Properties for Aurora theme in dark mode.
+// .t-aurora.is-dark {
+//   // Body
+//   --background-color-body: #282838;
+//   --border-color-body: #383848;
+//   --color-body: #c0c0d8;
+// 
+//   // Component
+//   --background-color-component: #303244;
+//   --border-color-component: #505060;
+//   --color-component: #f0f0f8;
+// 
+//   // Disabled
+//   --background-color-disabled: rgba(208, 208, 240, 0.08);
+//   --border-color-disabled: rgba(208, 208, 240, 0.16);
+//   --color-disabled: rgba(208, 208, 240, 0.32);
+// }
 
 // If you are using nested themes it is recommended to add a further level of
 // CSS properties to prevent unwanted inheritance. These can be broken up into
