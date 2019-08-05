@@ -21,7 +21,18 @@ $input-border-width: $border-width !default;
   @include css-property-fallback("border-width", "--input-border-width", $input-border-width);
   font: inherit;
   margin: 0;
-  width: 100%;
+}
+
+.input.is-half-width {
+  min-width: 50%;
+}
+
+.input.is-three-quarters-width {
+  min-width: 75%;
+}
+
+.input.is-full-width {
+  min-width: 100%;
 }
 
 // Add spacing between .input and .input-helper

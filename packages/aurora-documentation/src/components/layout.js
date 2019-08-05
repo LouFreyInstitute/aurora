@@ -20,7 +20,7 @@ class Layout extends React.Component {
 		super(props);
 
 		this.state = {
-			theme: 'Aurora',
+			theme: 'Borealis',
 			dark: false
 		};
 
@@ -49,7 +49,7 @@ class Layout extends React.Component {
 
 	componentDidMount() {
 		if (typeof window !== 'undefined') {
-			const theme = window.localStorage.getItem('theme') || 'Aurora';
+			const theme = window.localStorage.getItem('theme') || 'Borealis';
 			const dark = window.localStorage.getItem('dark') === 'true';
 			this.setState({theme, dark});
 		}

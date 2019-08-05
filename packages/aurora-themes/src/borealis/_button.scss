@@ -1,10 +1,10 @@
-// Aurora Button CSS Properties
+// Borealis Button CSS Properties
 //
-// Custom variables for buttons while using the Aurora theme. If you use nested
+// Custom variables for buttons while using the Borealis theme. If you use nested
 // themes you should override the same variables in each theme to prevent
 // unwanted inheritance.
 
-.t-aurora {
+.t-borealis {
   // Button background colors.
   --button-background-color: var(--background-color-component);
   --button-border-color: var(--border-color-component);
@@ -19,19 +19,19 @@
   --button-color-accent: var(--color-accent);
   
   --button-background-color-disabled: var(--background-color-disabled);
-  --button-border-color-disabled: transparent;
+  --button-border-color-disabled: var(--border-color-disabled);
   --button-color-disabled: var(--color-disabled);
 }
 
 // You can customize how buttons appear in `dark` mode.
 //
-// .t-aurora.is-dark {
+// .t-borealis.is-dark {
 //   --button-background-color: red; // Yuck!
 // }
 
 // You can also add other variations as you see fit.
 //
-// .t-aurora.has-funky-borders {
+// .t-borealis.has-funky-borders {
 //   --button-border-color: #f030f0;
 //   --button-border-style: dashed;
 // }

@@ -20,7 +20,7 @@ function Header(props) {
 					value={theme}
 					onChange={({target}) => changeTheme(target.value)}
 				>
-					<option>Aurora</option>
+					<option>Borealis</option>
 					<option>Civics360</option>
 				</select>
 

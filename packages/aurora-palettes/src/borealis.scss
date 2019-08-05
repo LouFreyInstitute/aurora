@@ -1,0 +1,85 @@
+$number-of-swatches: 16;
+$hue-step: 3.125;
+$saturation-step: 3.125;
+$lightness-step: 6.125;
+
+@function get-color($original-color, $current-step) {
+  $original-current-step: $current-step;
+
+  @if $current-step <= 8 {
+    $current-step: (($number-of-swatches / 2) + 1) - $current-step;
+  } @else {
+    $current-step: $current-step - ($number-of-swatches / 2) - 1;
+  }
+
+  $hue: hue($original-color) + ($current-step * $hue-step);
+  @if $hue > 360 {
+    $hue: $hue - 360;
+  }
+  
+  $saturation: saturation($original-color) + ($current-step * $saturation-step);
+
+  $lightness: (($number-of-swatches + 1) - $original-current-step) * $lightness-step;
+  
+  @return change-color($original-color, $hue: $hue, $saturation: $saturation, $lightness: $lightness);
+}
+
+// Aurora
+// Primarily green and turquoise colors with subtle blue and purples.
+
+// Default
+$borealis-gray: #383840;
+$borealis-gray-10: get-color($borealis-gray, 1);
+$borealis-gray-20: get-color($borealis-gray, 2);
+$borealis-gray-30: get-color($borealis-gray, 3);
+$borealis-gray-40: get-color($borealis-gray, 4);
+$borealis-gray-50: get-color($borealis-gray, 5);
+$borealis-gray-60: get-color($borealis-gray, 6);
+$borealis-gray-70: get-color($borealis-gray, 7);
+$borealis-gray-80: get-color($borealis-gray, 8);
+$borealis-gray-90: get-color($borealis-gray, 9);
+$borealis-gray-100: get-color($borealis-gray, 10);
+$borealis-gray-110: get-color($borealis-gray, 11);
+$borealis-gray-120: get-color($borealis-gray, 12);
+$borealis-gray-130: get-color($borealis-gray, 13);
+$borealis-gray-140: get-color($borealis-gray, 14);
+$borealis-gray-150: get-color($borealis-gray, 15);
+$borealis-gray-160: get-color($borealis-gray, 16);
+
+// Brand
+$borealis-green: mediumseagreen;
+$borealis-green-10: get-color($borealis-green, 1);
+$borealis-green-20: get-color($borealis-green, 2);
+$borealis-green-30: get-color($borealis-green, 3);
+$borealis-green-40: get-color($borealis-green, 4);
+$borealis-green-50: get-color($borealis-green, 5);
+$borealis-green-60: get-color($borealis-green, 6);
+$borealis-green-70: get-color($borealis-green, 7);
+$borealis-green-80: get-color($borealis-green, 8);
+$borealis-green-90: get-color($borealis-green, 9);
+$borealis-green-100: get-color($borealis-green, 10);
+$borealis-green-110: get-color($borealis-green, 11);
+$borealis-green-120: get-color($borealis-green, 12);
+$borealis-green-130: get-color($borealis-green, 13);
+$borealis-green-140: get-color($borealis-green, 14);
+$borealis-green-150: get-color($borealis-green, 15);
+$borealis-green-160: get-color($borealis-green, 16);
+
+// Accent
+$borealis-purple: #a0a0de;
+$borealis-purple-10: get-color($borealis-purple, 1);
+$borealis-purple-20: get-color($borealis-purple, 2);
+$borealis-purple-30: get-color($borealis-purple, 3);
+$borealis-purple-40: get-color($borealis-purple, 4);
+$borealis-purple-50: get-color($borealis-purple, 5);
+$borealis-purple-60: get-color($borealis-purple, 6);
+$borealis-purple-70: get-color($borealis-purple, 7);
+$borealis-purple-80: get-color($borealis-purple, 8);
+$borealis-purple-90: get-color($borealis-purple, 9);
+$borealis-purple-100: get-color($borealis-purple, 10);
+$borealis-purple-110: get-color($borealis-purple, 11);
+$borealis-purple-120: get-color($borealis-purple, 12);
+$borealis-purple-130: get-color($borealis-purple, 13);
+$borealis-purple-140: get-color($borealis-purple, 14);
+$borealis-purple-150: get-color($borealis-purple, 15);
+$borealis-purple-160: get-color($borealis-purple, 16);
