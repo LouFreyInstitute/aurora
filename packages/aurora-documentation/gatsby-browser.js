@@ -34,6 +34,6 @@ import 'aurora-elements';
  * should not matter here. If you start to get weird results when nesting check
  * that your themes set the same CSS variables!
  */
-import 'aurora-themes/dist/aurora-borealis/styles.css';
 import 'aurora-themes/dist/civics360/styles.css';
+import 'aurora-themes/dist/northern-lights/styles.css';
 import 'aurora-themes/dist/super-nintendo/styles.css';
