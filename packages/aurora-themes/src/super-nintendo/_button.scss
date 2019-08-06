@@ -1,10 +1,10 @@
-// Civics360 Button CSS Properties
+// Borealis Button CSS Properties
 //
-// Custom variables for buttons while using the Civics360 theme. If you use nested
+// Custom variables for buttons while using the Borealis theme. If you use nested
 // themes you should override the same variables in each theme to prevent
 // unwanted inheritance.
 
-.t-civics360 {
+.t-super-nintendo {
   // Button background colors.
   --button-background-color: var(--background-color-component);
   --button-border-color: var(--border-color-component);
@@ -25,13 +25,13 @@
 
 // You can customize how buttons appear in `dark` mode.
 //
-// .t-civics360.is-dark {
+// .t-super-nintendo.is-dark {
 //   --button-background-color: red; // Yuck!
 // }
 
 // You can also add other variations as you see fit.
 //
-// .t-civics360.has-funky-borders {
+// .t-super-nintendo.has-funky-borders {
 //   --button-border-color: #f030f0;
 //   --button-border-style: dashed;
 // }

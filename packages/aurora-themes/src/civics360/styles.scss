@@ -24,9 +24,9 @@
   --color-accent: #{$civics360-red-150};
   
   // Disabled
-  --background-color-disabled: #{$civics360-gray-20};
+  --background-color-disabled: #{$civics360-gray-10};
   --border-color-disabled: #{$civics360-gray-30};
-  --color-disabled: #{$civics360-gray-40};
+  --color-disabled: #{$civics360-gray-110};
 }
 
 // CSS Custom Properties for Civics360 theme in dark mode.
@@ -43,7 +43,8 @@
   
   // Disabled
   --background-color-disabled: #{$civics360-gray-130};
-  --color-disabled: #{$civics360-gray-120};
+  --border-color-disabled: #{$civics360-gray-110};
+  --color-disabled: #{$civics360-gray-20};
 }
 
 // If you are using nested themes it is recommended to add a further level of

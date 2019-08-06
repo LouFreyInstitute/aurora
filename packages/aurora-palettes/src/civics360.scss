@@ -1,34 +1,7 @@
 // Civics360 Palette
 // A combination of patriotic blue and red slightly dulled down.
 
-$number-of-swatches: 16;
-$hue-step: 3.125;
-$saturation-step: 3.125;
-$lightness-step: 6.125;
-
-@function get-color($original-color, $current-step) {
-  $original-current-step: $current-step;
-
-  @if $current-step <= 8 {
-    $current-step: (($number-of-swatches / 2) + 1) - $current-step;
-  } @else {
-    $current-step: $current-step - ($number-of-swatches / 2) - 1;
-  }
-
-  $hue: hue($original-color) + ($current-step * $hue-step);
-  @if $hue > 360 {
-    $hue: $hue - 360;
-  }
-  
-  $saturation: saturation($original-color) + ($current-step * $saturation-step);
-  @if $saturation > 100% {
-    $saturation: 100%;
-  }
-
-  $lightness: (($number-of-swatches + 1) - $original-current-step) * $lightness-step;
-  
-  @return change-color($original-color, $hue: $hue, $saturation: $saturation, $lightness: $lightness);
-}
+@import "get-color";
 
 // Aurora
 // Primarily blue and turquoise colors with subtle blue and reds.

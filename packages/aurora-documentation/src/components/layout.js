@@ -20,7 +20,7 @@ class Layout extends React.Component {
 		super(props);
 
 		this.state = {
-			theme: 'Borealis',
+			theme: 't-aurora-borealis',
 			dark: false
 		};
 
@@ -49,7 +49,7 @@ class Layout extends React.Component {
 
 	componentDidMount() {
 		if (typeof window !== 'undefined') {
-			const theme = window.localStorage.getItem('theme') || 'Borealis';
+			const theme = window.localStorage.getItem('theme') || 't-aurora-borealis';
 			const dark = window.localStorage.getItem('dark') === 'true';
 			this.setState({theme, dark});
 		}
@@ -73,7 +73,7 @@ class Layout extends React.Component {
 				render={data => (
 					<ThemeContext.Provider value={theme}>
 						<div
-							className={`t-${theme.toLowerCase()} has-overrides ${
+							className={`${theme} has-overrides ${
 								dark ? 'is-dark' : ''
 							} o-layout is-vertical u-full-height`}
 						>

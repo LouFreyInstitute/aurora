@@ -79,9 +79,7 @@ function ButtonElement() {
 
 			<ThemeContext.Consumer>
 				{theme => (
-					<div
-						className={`t-${theme.toLowerCase()} o-block is-large section is-rounded`}
-					>
+					<div className={`${theme} o-block is-large section is-rounded`}>
 						<h2 className="c-heading is-small">Light Mode Override</h2>
 						<p>
 							If using CSS variables and React you can use context to re-apply

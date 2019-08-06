@@ -4,7 +4,7 @@
 // themes you should override the same variables in each theme to prevent
 // unwanted inheritance.
 
-.t-borealis {
+.t-aurora-borealis {
   // Button background colors.
   --button-background-color: var(--background-color-component);
   --button-border-color: var(--border-color-component);
@@ -25,13 +25,13 @@
 
 // You can customize how buttons appear in `dark` mode.
 //
-// .t-borealis.is-dark {
+// .t-aurora-borealis.is-dark {
 //   --button-background-color: red; // Yuck!
 // }
 
 // You can also add other variations as you see fit.
 //
-// .t-borealis.has-funky-borders {
+// .t-aurora-borealis.has-funky-borders {
 //   --button-border-color: #f030f0;
 //   --button-border-style: dashed;
 // }

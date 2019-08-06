@@ -20,8 +20,9 @@ function Header(props) {
 					value={theme}
 					onChange={({target}) => changeTheme(target.value)}
 				>
-					<option>Borealis</option>
-					<option>Civics360</option>
+					<option value="t-aurora-borealis">Aurora Borealis</option>
+					<option value="t-civics360">Civics360</option>
+					<option value="t-super-nintendo">Super Nintendo</option>
 				</select>
 
 				<label htmlFor="dark">

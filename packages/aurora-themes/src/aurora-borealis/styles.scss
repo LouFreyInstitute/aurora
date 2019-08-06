@@ -10,52 +10,52 @@
 // and not worry about overriding.
 
 // Import our color palette from the `aurora-palettes` module.
-@import "../../node_modules/aurora-palettes/src/borealis";
+@import "../../node_modules/aurora-palettes/src/aurora-borealis";
 
 // CSS variables for Borealis theme.
-.t-borealis {
+.t-aurora-borealis {
   // Body
-  --background-color-body: #{$borealis-gray-10};
-  --border-color-body: #{$borealis-gray-20};
-  --color-body: #{$borealis-gray-110};
+  --background-color-body: #{$aurora-borealis-gray-10};
+  --border-color-body: #{$aurora-borealis-gray-20};
+  --color-body: #{$aurora-borealis-gray-110};
   
   // Component
   --background-color-component: #{white};
-  --border-color-component:  #{$borealis-gray-20};
-  --color-component: #{$borealis-gray-120};
+  --border-color-component:  #{$aurora-borealis-gray-20};
+  --color-component: #{$aurora-borealis-gray-120};
   
   // Brand
-  --background-color-brand: #{$borealis-green-60};
-  --border-color-brand:  #{$borealis-green-80};
-  --color-brand:  #{$borealis-green-140};
+  --background-color-brand: #{$aurora-borealis-green-60};
+  --border-color-brand:  #{$aurora-borealis-green-80};
+  --color-brand:  #{$aurora-borealis-green-140};
   
   // Accent
-  --background-color-accent: #{$borealis-purple-60};
-  --border-color-accent: #{$borealis-purple-80};
-  --color-accent: #{$borealis-purple-140};
+  --background-color-accent: #{$aurora-borealis-purple-60};
+  --border-color-accent: #{$aurora-borealis-purple-80};
+  --color-accent: #{$aurora-borealis-purple-140};
   
   // Disabled
-  --background-color-disabled: #{$borealis-gray-10};
-  --border-color-disabled:  #{$borealis-gray-30};
-  --color-disabled:  #{$borealis-gray-130};
+  --background-color-disabled: #{$aurora-borealis-gray-10};
+  --border-color-disabled:  #{$aurora-borealis-gray-30};
+  --color-disabled:  #{$aurora-borealis-gray-130};
 }
 
 // CSS Custom Properties for Borealis theme in dark mode.
-.t-borealis.is-dark {
+.t-aurora-borealis.is-dark {
   // Body
-  --background-color-body: #{$borealis-gray-150};
-  --border-color-body: #{$borealis-gray-140};
-  --color-body: #{$borealis-gray-50};
+  --background-color-body: #{$aurora-borealis-gray-150};
+  --border-color-body: #{$aurora-borealis-gray-140};
+  --color-body: #{$aurora-borealis-gray-50};
 
   // Component
-  --background-color-component: #{$borealis-gray-140};
-  --border-color-component: #{$borealis-gray-120};
-  --color-component: #{$borealis-gray-40};
+  --background-color-component: #{$aurora-borealis-gray-140};
+  --border-color-component: #{$aurora-borealis-gray-120};
+  --color-component: #{$aurora-borealis-gray-40};
 
   // Disabled
-  --background-color-disabled: #{$borealis-gray-130};
-  --border-color-disabled: #{$borealis-gray-110};
-  --color-disabled: #{$borealis-gray-30};
+  --background-color-disabled: #{$aurora-borealis-gray-130};
+  --border-color-disabled: #{$aurora-borealis-gray-110};
+  --color-disabled: #{$aurora-borealis-gray-30};
 }
 
 // If you are using nested themes it is recommended to add a further level of
@@ -105,7 +105,7 @@
 // Overrides `background-color` and `color` if theme can't be set on the `html`
 // element. It is recommended to use `.c-section` in conjunction with theme
 // classes to set these colors (especially with nesting themes) instead.
-.t-borealis.has-overrides {
+.t-aurora-borealis.has-overrides {
   background-color: var(--background-color-body);
   color: var(--color-body);
 }
