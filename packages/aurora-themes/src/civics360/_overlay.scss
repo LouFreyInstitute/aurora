@@ -1,0 +1,7 @@
+.t-civics360 {
+  --overlay-background-color: #{change-color($civics360-gray-20, $alpha: 0.8)};
+}
+
+.t-civics360.is-dark {
+  --overlay-background-color: #{change-color($civics360-gray-150, $alpha: 0.8)};
+}

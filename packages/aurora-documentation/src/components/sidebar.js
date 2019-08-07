@@ -14,8 +14,8 @@ function Sidebar(props) {
 				<NavItem className="c-heading is-tiny u-margin-none" Component="h1">
 					Components
 				</NavItem>
-				<NavItem Component={Link} to="/button-component">
-					Button
+				<NavItem Component={Link} to="/modal-component">
+					Modal
 				</NavItem>
 			</nav>
 

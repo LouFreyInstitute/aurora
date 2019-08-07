@@ -1,0 +1,61 @@
+@import "get-color";
+
+// Northern Lights
+// Primarily green and turquoise colors with subtle blue and purples.
+
+// Default
+$northern-lights-gray: #383840;
+$northern-lights-gray-10: get-color($northern-lights-gray, 1);
+$northern-lights-gray-20: get-color($northern-lights-gray, 2);
+$northern-lights-gray-30: get-color($northern-lights-gray, 3);
+$northern-lights-gray-40: get-color($northern-lights-gray, 4);
+$northern-lights-gray-50: get-color($northern-lights-gray, 5);
+$northern-lights-gray-60: get-color($northern-lights-gray, 6);
+$northern-lights-gray-70: get-color($northern-lights-gray, 7);
+$northern-lights-gray-80: get-color($northern-lights-gray, 8);
+$northern-lights-gray-90: get-color($northern-lights-gray, 9);
+$northern-lights-gray-100: get-color($northern-lights-gray, 10);
+$northern-lights-gray-110: get-color($northern-lights-gray, 11);
+$northern-lights-gray-120: get-color($northern-lights-gray, 12);
+$northern-lights-gray-130: get-color($northern-lights-gray, 13);
+$northern-lights-gray-140: get-color($northern-lights-gray, 14);
+$northern-lights-gray-150: get-color($northern-lights-gray, 15);
+$northern-lights-gray-160: get-color($northern-lights-gray, 16);
+
+// Brand
+$northern-lights-green: mediumseagreen;
+$northern-lights-green-10: get-color($northern-lights-green, 1);
+$northern-lights-green-20: get-color($northern-lights-green, 2);
+$northern-lights-green-30: get-color($northern-lights-green, 3);
+$northern-lights-green-40: get-color($northern-lights-green, 4);
+$northern-lights-green-50: get-color($northern-lights-green, 5);
+$northern-lights-green-60: get-color($northern-lights-green, 6);
+$northern-lights-green-70: get-color($northern-lights-green, 7);
+$northern-lights-green-80: get-color($northern-lights-green, 8);
+$northern-lights-green-90: get-color($northern-lights-green, 9);
+$northern-lights-green-100: get-color($northern-lights-green, 10);
+$northern-lights-green-110: get-color($northern-lights-green, 11);
+$northern-lights-green-120: get-color($northern-lights-green, 12);
+$northern-lights-green-130: get-color($northern-lights-green, 13);
+$northern-lights-green-140: get-color($northern-lights-green, 14);
+$northern-lights-green-150: get-color($northern-lights-green, 15);
+$northern-lights-green-160: get-color($northern-lights-green, 16);
+
+// Accent
+$northern-lights-purple: #a0a0de;
+$northern-lights-purple-10: get-color($northern-lights-purple, 1);
+$northern-lights-purple-20: get-color($northern-lights-purple, 2);
+$northern-lights-purple-30: get-color($northern-lights-purple, 3);
+$northern-lights-purple-40: get-color($northern-lights-purple, 4);
+$northern-lights-purple-50: get-color($northern-lights-purple, 5);
+$northern-lights-purple-60: get-color($northern-lights-purple, 6);
+$northern-lights-purple-70: get-color($northern-lights-purple, 7);
+$northern-lights-purple-80: get-color($northern-lights-purple, 8);
+$northern-lights-purple-90: get-color($northern-lights-purple, 9);
+$northern-lights-purple-100: get-color($northern-lights-purple, 10);
+$northern-lights-purple-110: get-color($northern-lights-purple, 11);
+$northern-lights-purple-120: get-color($northern-lights-purple, 12);
+$northern-lights-purple-130: get-color($northern-lights-purple, 13);
+$northern-lights-purple-140: get-color($northern-lights-purple, 14);
+$northern-lights-purple-150: get-color($northern-lights-purple, 15);
+$northern-lights-purple-160: get-color($northern-lights-purple, 16);

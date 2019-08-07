@@ -1,0 +1,17 @@
+$overlay-background-color: $background-color-body !default;
+
+@if $enable-css-properties and $enable-root-css-properties {
+  :root {
+    --overlay-background-color: var(--background-color-body);
+  }
+}
+
+.overlay {
+  @include css-property-fallback("background-color", "--overlay-background-color", $overlay-background-color);
+  bottom: 0;
+  display: flex;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+}

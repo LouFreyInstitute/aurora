@@ -1,0 +1,37 @@
+// Borealis Button CSS Properties
+//
+// Custom variables for buttons while using the Borealis theme. If you use nested
+// themes you should override the same variables in each theme to prevent
+// unwanted inheritance.
+
+.t-northern-lights {
+  // Button background colors.
+  --button-background-color: var(--background-color-component);
+  --button-border-color: var(--border-color-component);
+  --button-color: var(--color-component);
+  
+  --button-background-color-brand: var(--background-color-brand);
+  --button-border-color-brand: transparent;
+  --button-color-brand: var(--color-brand);
+  
+  --button-background-color-accent: var(--background-color-accent);
+  --button-border-color-accent: transparent;
+  --button-color-accent: var(--color-accent);
+  
+  --button-background-color-disabled: var(--background-color-disabled);
+  --button-border-color-disabled: var(--border-color-disabled);
+  --button-color-disabled: var(--color-disabled);
+}
+
+// You can customize how buttons appear in `dark` mode.
+//
+// .t-northern-lights.is-dark {
+//   --button-background-color: red; // Yuck!
+// }
+
+// You can also add other variations as you see fit.
+//
+// .t-northern-lights.has-funky-borders {
+//   --button-border-color: #f030f0;
+//   --button-border-style: dashed;
+// }

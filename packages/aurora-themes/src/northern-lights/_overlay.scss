@@ -1,0 +1,7 @@
+.t-northern-lights {
+  --overlay-background-color: #{change-color($northern-lights-gray-10, $alpha: 0.8)};
+}
+
+.t-northern-lights.is-dark {
+  --overlay-background-color: #{change-color($northern-lights-gray-150, $alpha: 0.88)};
+}

@@ -1,4 +1,4 @@
-// Super Nintendo
+// Northern Lights
 // ----
 // A Theme for Aurora
 // ====
@@ -10,52 +10,52 @@
 // and not worry about overriding.
 
 // Import our color palette from the `aurora-palettes` module.
-@import "../../node_modules/aurora-palettes/src/super-nintendo";
+@import "../../node_modules/aurora-palettes/src/northern-lights";
 
-// CSS variables for Super Nintendo theme.
-.t-super-nintendo {
+// CSS variables for Northern Lights theme.
+.t-northern-lights {
   // Body
-  --background-color-body: #{$super-nintendo-gray-20};
-  --border-color-body: #{$super-nintendo-gray-30};
-  --color-body: #{$super-nintendo-gray-120};
+  --background-color-body: #{$northern-lights-gray-10};
+  --border-color-body: #{$northern-lights-gray-20};
+  --color-body: #{$northern-lights-gray-110};
   
   // Component
-  --background-color-component: #{$super-nintendo-gray-10};
-  --border-color-component:  #{$super-nintendo-gray-30};
-  --color-component: #{$super-nintendo-gray-110};
+  --background-color-component: #{white};
+  --border-color-component:  #{$northern-lights-gray-20};
+  --color-component: #{$northern-lights-gray-120};
   
   // Brand
-  --background-color-brand: #{$super-nintendo-purple-70};
-  --border-color-brand:  #{$super-nintendo-purple-90};
-  --color-brand:  #{$super-nintendo-purple-10};
+  --background-color-brand: #{$northern-lights-green-60};
+  --border-color-brand:  #{$northern-lights-green-80};
+  --color-brand:  #{$northern-lights-green-140};
   
   // Accent
-  --background-color-accent: #{$super-nintendo-indigo-40};
-  --border-color-accent: #{$super-nintendo-indigo-60};
-  --color-accent: #{$super-nintendo-indigo-100};
+  --background-color-accent: #{$northern-lights-purple-60};
+  --border-color-accent: #{$northern-lights-purple-80};
+  --color-accent: #{$northern-lights-purple-140};
   
   // Disabled
-  --background-color-disabled: #{$super-nintendo-gray-40};
-  --border-color-disabled:  #{$super-nintendo-gray-60};
-  --color-disabled:  #{$super-nintendo-gray-140};
+  --background-color-disabled: #{$northern-lights-gray-10};
+  --border-color-disabled:  #{$northern-lights-gray-30};
+  --color-disabled:  #{$northern-lights-gray-130};
 }
 
-// CSS Custom Properties for Super Nintendo theme in dark mode.
-.t-super-nintendo.is-dark {
+// CSS Custom Properties for Northern Lights theme in dark mode.
+.t-northern-lights.is-dark {
   // Body
-  --background-color-body: #{$super-nintendo-gray-140};
-  --border-color-body: #{$super-nintendo-gray-140};
-  --color-body: #{$super-nintendo-gray-50};
+  --background-color-body: #{$northern-lights-gray-150};
+  --border-color-body: #{$northern-lights-gray-140};
+  --color-body: #{$northern-lights-gray-50};
 
   // Component
-  --background-color-component: #{$super-nintendo-gray-130};
-  --border-color-component: #{$super-nintendo-gray-120};
-  --color-component: #{$super-nintendo-gray-40};
+  --background-color-component: #{$northern-lights-gray-140};
+  --border-color-component: #{$northern-lights-gray-120};
+  --color-component: #{$northern-lights-gray-40};
 
   // Disabled
-  --background-color-disabled: #{$super-nintendo-gray-130};
-  --border-color-disabled: #{$super-nintendo-gray-110};
-  --color-disabled: #{$super-nintendo-gray-30};
+  --background-color-disabled: #{$northern-lights-gray-130};
+  --border-color-disabled: #{$northern-lights-gray-110};
+  --color-disabled: #{$northern-lights-gray-30};
 }
 
 // If you are using nested themes it is recommended to add a further level of
@@ -92,7 +92,7 @@
 // Import custom notification CSS properties.
 @import 'notification';
 
-// Import custom notification CSS properties.
+// Import custom overlay CSS properties.
 @import 'overlay';
 
 // Import custom section CSS properties.
@@ -108,7 +108,7 @@
 // Overrides `background-color` and `color` if theme can't be set on the `html`
 // element. It is recommended to use `.c-section` in conjunction with theme
 // classes to set these colors (especially with nesting themes) instead.
-.t-super-nintendo.has-overrides {
+.t-northern-lights.has-overrides {
   background-color: var(--background-color-body);
   color: var(--color-body);
 }
