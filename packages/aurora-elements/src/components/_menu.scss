@@ -33,5 +33,28 @@ $menu-color: $color-component !default;
   @include css-property-fallback("border-style", "--menu-border-style", $menu-border-style);
   @include css-property-fallback("border-width", "--menu-border-width", $menu-border-width);
   @include css-property-fallback("color", "--menu-color", $menu-color);
-  // box-shadow: 0 2px 8px rgba(0, 0, 0, 0.16);
 }
+
+.menu.is-floating {
+  position: absolute;
+}
+
+.menu.is-full-width {
+  width: 100%;
+}
+
+.menu.is-hidden {
+  margin-top: 0;
+  opacity: 0;
+  transition: margin-top 80ms, opacity 80ms, visibility 80ms;
+  visibility: hidden;
+}
+
+.menu.is-open {
+  margin-top: 0.5rem;
+  opacity: 1;
+  transition: margin-top 80ms, opacity 80ms, visibility 80ms;
+  visibility: visible;
+  z-index: 1000;
+}
+

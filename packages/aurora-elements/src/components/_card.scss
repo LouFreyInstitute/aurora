@@ -92,13 +92,14 @@ $card-color-brand: $color-brand !default;
 }
 
 .c-card-media > img {
+  display: block;
   height: auto;
   width: 100%;
 }
 
 .c-card-body {
-  padding-bottom: 0.5rem - 0.125rem;
-  padding-left: 1rem - 0.125rem;
-  padding-right: 1rem - 0.125rem;
-  padding-top: 0.5rem - 0.125rem;
+  padding-bottom: $spacing - $card-border-width;
+  padding-left: $spacing - $card-border-width;
+  padding-right: $spacing - $card-border-width;
+  padding-top: $spacing - $card-border-width;
 }

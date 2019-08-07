@@ -1,10 +1,5 @@
 {
   "author": "Mike Barnahrdt <mikebarnhardt+github@gmail.com>",
-  "dependencies": {
-    "aurora-hooks": "0.0.0",
-    "classnames": "^2.2.6",
-    "prop-types": "^15.7.2"
-  },
   "devDependencies": {
     "@babel/cli": "^7.5.0",
     "@babel/core": "^7.5.0",
@@ -12,13 +7,14 @@
     "@babel/preset-react": "^7.0.0",
     "react": "^16.8.6"
   },
-  "description": "React component library using Aurora.",
+  "description": "Hooks used in Aurora Components.",
   "keywords": [
+    "hooks",
     "react"
   ],
   "license": "UNLICENSED",
   "main": "es/index.js",
-  "name": "aurora-components",
+  "name": "aurora-hooks",
   "peerDependencies": {
     "react": "^16.8.6"
   },
