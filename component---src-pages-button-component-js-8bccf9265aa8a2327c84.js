@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[4],{177:function(t,e,n){"use strict";n.r(e);var a=n(0),l=n.n(a),o=n(189),u=n(187),c=n(186);e.default=function(){return l.a.createElement(u.a,null,l.a.createElement(c.a,{title:"Button"}),l.a.createElement("pre",null,l.a.createElement("code",null,'<Button color="default">\n  This is my button\n</Button>')),l.a.createElement(o.Button,{color:"default"},"This is my button"))}}}]);
+//# sourceMappingURL=component---src-pages-button-component-js-8bccf9265aa8a2327c84.js.map
