@@ -1,12 +1,14 @@
-import React, {useState} from 'react';
+/* global document */
+
+import React from 'react';
 import {Menu} from 'aurora-components';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 
 const MenuComponent = () => {
-	const [isDefaultOpen, setIsDefaultOpen] = useState(false);
-	const [isWidthOpen, setIsWidthOpen] = useState(false);
+	const [isDefaultOpen, setIsDefaultOpen] = React.useState(false);
+	const [isWidthOpen, setIsWidthOpen] = React.useState(false);
 
 	return (
 		<Layout>
@@ -26,28 +28,47 @@ const MenuComponent = () => {
 				>
 					Open Menu
 				</button>
+
 				<Menu
+					isOpen={isDefaultOpen}
 					render={ref => (
-						<ul
+						<div
 							ref={ref}
 							className={`menu is-floating ${
 								isDefaultOpen ? 'is-open' : 'is-hidden'
-							}`}
+							}`.trim()}
+							tabIndex="-1"
 						>
-							<li className="list-item" onClick={() => setIsDefaultOpen(false)}>
+							<a
+								className="list-item"
+								href="#"
+								onClick={() => setIsDefaultOpen(false)}
+							>
 								Pizza
-							</li>
-							<li className="list-item" onClick={() => setIsDefaultOpen(false)}>
+							</a>
+							<a
+								className="list-item"
+								href="#"
+								onClick={() => setIsDefaultOpen(false)}
+							>
 								Beer
-							</li>
-							<li className="list-item" onClick={() => setIsDefaultOpen(false)}>
+							</a>
+							<a
+								className="list-item"
+								href="#"
+								onClick={() => setIsDefaultOpen(false)}
+							>
 								Tacos
-							</li>
-							<li className="list-item" onClick={() => setIsDefaultOpen(false)}>
+							</a>
+							<a
+								className="list-item"
+								href="#"
+								onClick={() => setIsDefaultOpen(false)}
+							>
 								Tequila
-							</li>
+							</a>
 							<li className="list-item">Clicking me won&apos;t do anything!</li>
-						</ul>
+						</div>
 					)}
 					onClose={() => isDefaultOpen && setIsDefaultOpen(false)}
 				/>
@@ -70,30 +91,33 @@ const MenuComponent = () => {
 					>
 						Open Menu
 					</button>
+
 					<Menu
+						isOpen={isWidthOpen}
 						render={ref => (
-							<ul
+							<div
 								ref={ref}
 								className={`menu is-floating is-full-width ${
 									isWidthOpen ? 'is-open' : 'is-hidden'
-								}`}
+								}`.trim()}
+								tabIndex="-1"
 							>
 								<li className="list-item" onClick={() => setIsWidthOpen(false)}>
-									Pizza
+									<a href="#">Pizza</a>
 								</li>
 								<li className="list-item" onClick={() => setIsWidthOpen(false)}>
-									Beer
+									<a href="#">Beer</a>
 								</li>
 								<li className="list-item" onClick={() => setIsWidthOpen(false)}>
-									Tacos
+									<a href="#">Tacos</a>
 								</li>
 								<li className="list-item" onClick={() => setIsWidthOpen(false)}>
-									Tequila
+									<a href="#">Tequila</a>
 								</li>
 								<li className="list-item">
 									Clicking me won&apos;t do anything!
 								</li>
-							</ul>
+							</div>
 						)}
 						onClose={() => isWidthOpen && setIsWidthOpen(false)}
 					/>

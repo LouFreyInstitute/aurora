@@ -6,6 +6,16 @@ $enable-css-properties: true !default;
 // themes.
 $enable-root-css-properties: true !default;
 
+// Disable the outline on elements with `tabindex="-1"` which are generally
+// targeted by JavaScript to apply focus traps.
+$disable-tab-index-outline: true !default;
+
+@if $disable-tab-index-outline {
+  [tabindex="-1"]:focus {
+    outline: none;
+  }
+}
+
 // Import Sass variables.
 @import 'variables/borders';
 @import 'variables/colors';

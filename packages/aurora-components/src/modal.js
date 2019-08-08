@@ -1,16 +1,33 @@
 import PropTypes from 'prop-types';
-import React from 'react';
-import {useClickOutsideHandler} from 'aurora-hooks';
+import {useRef} from 'react';
+import {
+	useClickOutsideHandler,
+	useFocusHandler,
+	useFocusTrap,
+	useKeyDownHandler
+} from 'aurora-hooks';
 
 function Modal(props) {
-	const {onClose, render} = props;
-	const ref = useClickOutsideHandler(onClose);
+	const {isOpen, onClose, render} = props;
+
+	const ref = useRef(null);
+
+	useClickOutsideHandler({onClickOutside: onClose, ref});
+	useFocusHandler({shouldFocus: isOpen, ref});
+	useFocusTrap({isActive: isOpen, ref});
+	useKeyDownHandler({keyName: 'Escape', onKeyDown: onClose});
+
 	return render(ref);
 }
 
 Modal.propTypes = {
-	render: PropTypes.func.isRequired,
-	onClose: PropTypes.func.isRequired
+	isOpen: PropTypes.bool,
+	onClose: PropTypes.func.isRequired,
+	render: PropTypes.func.isRequired
+};
+
+Modal.defaultProps = {
+	isOpen: false
 };
 
 export default Modal;

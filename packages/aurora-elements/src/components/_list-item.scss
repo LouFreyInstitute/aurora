@@ -11,7 +11,18 @@ $list-item-border-color: $border-color-component !default;
   border-style: $border-style;
   border-width: 0;
   cursor: pointer;
+  display: block;
   padding: $spacing-small $spacing;
+}
+
+$list-item-background-color-hover: $background-color-brand;
+$list-item-color-hover: $color-brand;
+
+.list-item:focus,
+.list-item:hover {
+  @include css-property-fallback("background-color", "--list-item-background-color-hover", $list-item-background-color-hover);
+  @include css-property-fallback("color", "--list-item-color-hover", $list-item-color-hover);
+  outline: none;
 }
 
 .list-item:not(:last-child) {

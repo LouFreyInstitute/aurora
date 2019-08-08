@@ -58,3 +58,6 @@ $menu-color: $color-component !default;
   z-index: 1000;
 }
 
+.menu[tabindex="-1"]:focus {
+  outline: none;
+}

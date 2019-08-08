@@ -4,6 +4,15 @@ import {Modal} from 'aurora-components';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 
+function Overlay({isOpen, ...passOverlayProps}) {
+	return (
+		<div
+			className={`overlay ${isOpen ? 'is-open' : ''}`}
+			{...passOverlayProps}
+		/>
+	);
+}
+
 const ModalComponent = () => {
 	const [isDefaultOpen, setIsDefaultOpen] = useState(false);
 	const [isAlternativeOpen, setIsAlternativeOpen] = useState(false);
@@ -28,10 +37,16 @@ const ModalComponent = () => {
 				</p>
 
 				<Modal
+					isOpen={isDefaultOpen}
+					OverlayComponent={Overlay}
 					render={ref => (
-						<div className={`overlay${isDefaultOpen ? ' is-open' : ''}`}>
-							<div ref={ref} className="o-container" style={{margin: 'auto'}}>
-								<section className="o-block is-large section is-rounded">
+						<div className={`overlay ${isDefaultOpen ? 'is-open' : ''}`.trim()}>
+							<div className="o-container" style={{margin: 'auto'}}>
+								<section
+									ref={ref}
+									className="o-block is-large section is-rounded"
+									tabIndex="-1"
+								>
 									<h1 className="c-heading is-small">Modal Demo</h1>
 									<p>
 										This is some modal content. You can click on the button
@@ -70,14 +85,16 @@ const ModalComponent = () => {
 					</button>
 
 					<Modal
+						isOpen={isAlternativeOpen}
+						OverlayComponent={Overlay}
 						render={ref => (
-							<div className={`overlay${isAlternativeOpen ? ' is-open' : ''}`}>
-								<div
-									ref={ref}
-									className="o-container is-small"
-									style={{margin: 'auto'}}
-								>
-									<div className="c-card is-brand">
+							<div
+								className={`overlay ${
+									isAlternativeOpen ? 'is-open' : 'is-hidden'
+								}`.trim()}
+							>
+								<div className="o-container is-small" style={{margin: 'auto'}}>
+									<div ref={ref} className="c-card is-brand" tabIndex="-1">
 										<div className="c-card-media">
 											<img alt="Kitten" src="https://placekitten.com/300/300" />
 										</div>

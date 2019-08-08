@@ -89,7 +89,7 @@ class Layout extends React.Component {
 								<Sidebar />
 
 								<main className="o-block is-large o-layout is-vertical o-layout-item is-fill">
-									<div className="o-layout-item is-fill u-margin-bottom+ s-prose">
+									<div className="o-layout-item is-fill u-margin-bottom+">
 										<div className={`o-container is-${size}`}>{children}</div>
 									</div>
 

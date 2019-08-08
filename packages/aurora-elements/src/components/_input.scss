@@ -45,6 +45,8 @@ $input-border-width: $border-width !default;
 // Default variables.
 $input-background-color: $background-color-component !default;
 $input-border-color: $border-color-component !default;
+$input-border-color-focus: darken($border-color-component, 10%) !default;
+$input-box-shadow-focus: 0 0 0 2px change-color($input-border-color-focus, $alpha: 0.48) !default;
 $input-color: $color-component !default;
 
 // CSS variables.
@@ -61,6 +63,12 @@ $input-color: $color-component !default;
   @include css-property-fallback("background-color", "--input-background-color", $input-background-color);
   @include css-property-fallback("border-color", "--input-border-color", $input-border-color);
   @include css-property-fallback("color", "--input-color", $input-color);
+  
+  &:focus {
+    outline: none;
+    @include css-property-fallback("border-color", "--input-border-color-focus", $input-border-color-focus);
+    box-shadow: $input-box-shadow-focus;
+  }
 }
 
 .input.is-inverted {
