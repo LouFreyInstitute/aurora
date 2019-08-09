@@ -18,6 +18,7 @@ $overlay-background-color: $background-color-body !default;
   top: 0;
   transition: margin-top 80ms, opacity 80ms, visibility 80ms;
   visibility: hidden;
+  z-index: 10000;
 }
 
 .overlay.is-open {

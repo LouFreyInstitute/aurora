@@ -1,5 +1,3 @@
-/* global document */
-
 import React from 'react';
 import {Menu} from 'aurora-components';
 
@@ -9,6 +7,7 @@ import SEO from '../components/seo';
 const MenuComponent = () => {
 	const [isDefaultOpen, setIsDefaultOpen] = React.useState(false);
 	const [isWidthOpen, setIsWidthOpen] = React.useState(false);
+	const [isThemeOpen, setIsThemeOpen] = React.useState(false);
 
 	return (
 		<Layout>
@@ -17,7 +16,7 @@ const MenuComponent = () => {
 			<h1 className="c-heading is-large">Menu</h1>
 			<p>Display a menu list triggered by an event—usually a button.</p>
 
-			<div className="o-block is-large section">
+			<div className="o-block is-large section is-rounded">
 				<h1 className="c-heading is-small">Default Interaction</h1>
 				<p>Clicking on a button to open a menu.</p>
 
@@ -74,7 +73,7 @@ const MenuComponent = () => {
 				/>
 			</div>
 
-			<div className="o-block is-large section">
+			<div className="o-block is-large section is-rounded">
 				<h1 className="c-heading is-small">Dynamic Menu Width</h1>
 				<p>
 					By wrapping the <code>menu</code> in a <code>position: relative</code>{' '}
@@ -120,6 +119,69 @@ const MenuComponent = () => {
 							</div>
 						)}
 						onClose={() => isWidthOpen && setIsWidthOpen(false)}
+					/>
+				</div>
+			</div>
+
+			<div className="t-northern-lights is-dark o-block is-large section is-rounded">
+				<h1 className="c-heading is-small">Nested Theme Example</h1>
+				<p>
+					This section is set to use the Northern Lights theme in dark mode!
+				</p>
+
+				<div style={{position: 'relative'}}>
+					<button
+						className="c-button is-brand"
+						type="button"
+						onClick={() => !isThemeOpen && setIsThemeOpen(true)}
+					>
+						Open Menu
+					</button>
+
+					<Menu
+						isOpen={isThemeOpen}
+						render={ref => (
+							<div
+								ref={ref}
+								className={`menu is-floating is-full-width ${
+									isThemeOpen ? 'is-open' : 'is-hidden'
+								}`.trim()}
+								tabIndex="-1"
+							>
+								<a
+									className="list-item"
+									href="#"
+									onClick={() => setIsThemeOpen(false)}
+								>
+									Pizza
+								</a>
+								<a
+									className="list-item"
+									href="#"
+									onClick={() => setIsThemeOpen(false)}
+								>
+									Beer
+								</a>
+								<a
+									className="list-item"
+									href="#"
+									onClick={() => setIsThemeOpen(false)}
+								>
+									Tacos
+								</a>
+								<a
+									className="list-item"
+									href="#"
+									onClick={() => setIsThemeOpen(false)}
+								>
+									Tequila
+								</a>
+								<li className="list-item">
+									Clicking me won&apos;t do anything!
+								</li>
+							</div>
+						)}
+						onClose={() => isThemeOpen && setIsThemeOpen(false)}
 					/>
 				</div>
 			</div>

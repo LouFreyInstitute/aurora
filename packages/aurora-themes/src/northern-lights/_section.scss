@@ -1,7 +1,15 @@
 .t-northern-lights {
   --section-background-color: var(--background-color-component);
+  // Used for hollow, if the component border is the same as the body background
+  // it will appear invisible so we can override it here.
+  --section-border-color: var(--border-color-body);
   --section-color: var(--color-component);
 
   --section-background-color-brand: var(--background-color-brand);
+  --section-border-color-brand: var(--background-color-brand);
   --section-color-brand: var(--color-brand);
+
+  --section-background-color-accent: var(--background-color-accent);
+  --section-border-color-accent: var(--background-color-accent);
+  --section-color-accent: var(--color-accent);
 }

@@ -1,6 +1,12 @@
+// Label
+// ----
+// Used to identify form fields.
+//
+// [1] Prevent cursor pointer on unnecessary white-space. This requires the
+//     input to be set to `display: block` or wrapped in a block container.
 .c-label {
   cursor: pointer;
-  display: block;
+  display: inline-block; // [1]
   font: inherit;
   font-family: $font-family-mono;
   font-weight: 600;

@@ -146,26 +146,50 @@ function ButtonElement() {
 				</p>
 			</div>
 
-			<div className="o-block is-large section is-rounded is-brand">
-				<h2 className="c-heading is-small">Hollow Buttons</h2>
-				<p>
-					Can be used on top of dynamic content like banner images or to reduce
-					attention.
-				</p>
+			<div className="o-layout is-horizontal section-group">
+				<section className="o-block is-large section is-rounded">
+					<h2 className="c-heading is-small">Hollow Buttons</h2>
+					<p>
+						Can be used on top of dynamic content like banner images or to
+						reduce attention.
+					</p>
 
-				<p>
-					<button className="c-button is-hollow" type="button">
-						Default
-					</button>
-					{` `}
-					<button className="c-button is-brand is-hollow" type="button">
-						Brand
-					</button>
-					{` `}
-					<button className="c-button is-accent is-hollow" type="button">
-						Accent
-					</button>
-				</p>
+					<p>
+						<button className="c-button is-hollow" type="button">
+							Default
+						</button>
+						{` `}
+						<button className="c-button is-brand is-hollow" type="button">
+							Brand
+						</button>
+						{` `}
+						<button className="c-button is-accent is-hollow" type="button">
+							Accent
+						</button>
+					</p>
+				</section>
+
+				<section className="o-block is-large section is-accent is-rounded">
+					<h2 className="c-heading is-small">Accented Section</h2>
+					<p>
+						Select your colors carefully. The default button should look good
+						with any background.
+					</p>
+
+					<p>
+						<button className="c-button is-hollow" type="button">
+							Default
+						</button>
+						{` `}
+						<button className="c-button is-brand is-hollow" type="button">
+							Brand
+						</button>
+						{` `}
+						<button className="c-button is-accent is-hollow" type="button">
+							Accent
+						</button>
+					</p>
+				</section>
 			</div>
 		</Layout>
 	);

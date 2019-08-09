@@ -82,10 +82,6 @@ $button-padding-top: $spacing-small - $button-border-width !default;
   // `-inverse` or use `color`.
   @include css-property-fallback("border-color", "--button-color", $button-color);
   @include css-property-fallback("color", "--button-background-color", $button-background-color);
-  
-  &:focus,
-  &:hover {
-  }
 }
 
 // Accent variables.
@@ -107,10 +103,6 @@ $button-color-accent: $color-accent !default;
   @include css-property-fallback("background-color", "--button-background-color-accent", $button-background-color-accent);
   @include css-property-fallback("border-color", "--button-border-color-accent", $button-border-color-accent);
   @include css-property-fallback("color", "--button-color-accent", $button-color-accent);
-  
-  &:focus,
-  &:hover {
-  }
 }
 
 // Brand variables.
@@ -132,10 +124,6 @@ $button-color-brand: $color-brand !default;
   @include css-property-fallback("background-color", "--button-background-color-brand", $button-background-color-brand);
   @include css-property-fallback("border-color", "--button-border-color-brand", $button-border-color-brand);
   @include css-property-fallback("color", "--button-color-brand", $button-color-brand);
-  
-  &:focus,
-  &:hover {
-  }
 }
 
 .c-button.is-brand.is-inverted {
@@ -147,46 +135,21 @@ $button-color-brand: $color-brand !default;
 // Hollow styles.
 .c-button.is-hollow {
   background-color: transparent;
-  @include css-property-fallback("border-color", "--button-border-color", $button-border-color);
   color: inherit;
-  
-  &:focus,
-  &:hover {
-  }
 }
 
-// Accent hollow styles.
-.c-button.is-accent.is-hollow {
-  background-color: transparent;
-  @include css-property-fallback("border-color", "--button-background-color-accent", $button-background-color-accent);
-  color: inherit;
-
-  &:focus,
-  &:hover {
-  }
+.c-button.is-hollow {
+  // In case the default is used on top of an image we can prevent strange
+  // color results when switching modes.
+  border-color: currentColor;
 }
 
-// Brand hollow styles.
 .c-button.is-brand.is-hollow {
-  background-color: transparent;
   @include css-property-fallback("border-color", "--button-background-color-brand", $button-background-color-brand);
-  color: inherit;
-  
-  &:focus,
-  &:hover {
-  }
 }
 
-.c-button.is-brand.is-hollow.is-inverted {
-  --button-border-color-brand: var(--border-color-brand);
-  @include css-property-fallback("border-color", "--button-border-color-brand", $button-border-color-brand);
-  @include css-property-fallback("color", "--button-color-brand", $button-color-brand);
-}
-
-.c-button.is-accent.is-hollow.is-inverted {
-  --button-border-color-accent: var(--border-color-accent);
-  @include css-property-fallback("border-color", "--button-border-color-accent", $button-border-color-accent);
-  @include css-property-fallback("color", "--button-color-accent", $button-color-accent);
+.c-button.is-accent.is-hollow {
+  @include css-property-fallback("border-color", "--button-background-color-accent", $button-background-color-accent);
 }
 
 // Disabled variables.

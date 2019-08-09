@@ -1,3 +1,11 @@
 .t-northern-lights {
   --list-item-border-color: var(--border-color-component);
+  --list-item-background-color-hover: #{$northern-lights-gray-10};
+  --list-item-color-hover: #{$northern-lights-gray-110};
+}
+
+.t-northern-lights.is-dark {
+  --list-item-border-color: var(--border-color-component);
+  --list-item-background-color-hover: #{$northern-lights-gray-130};
+  --list-item-color-hover: #{$northern-lights-gray-30};
 }

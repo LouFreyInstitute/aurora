@@ -1,8 +1,12 @@
+$list-item-background-color: $background-color-component !default;
 $list-item-border-color: $border-color-component !default;
+$list-item-color: $color-component !default;
 
 @if $enable-css-properties and $enable-root-css-properties {
   :root {
+    --list-item-background-color: var(--background-color-component);
     --list-item-border-color: var(--border-color-component);
+    --list-item-color: var(--color-component);
   }
 }
 
@@ -14,17 +18,38 @@ $list-item-border-color: $border-color-component !default;
   display: block;
   padding: $spacing-small $spacing;
 }
+// 
+// .list-item:first-child {
+//   border-top-left-radius: $border-radius;
+//   border-top-right-radius: $border-radius;
+// }
+// 
+// .list-item:last-child {
+//   border-bottom-left-radius: $border-radius;
+//   border-bottom-right-radius: $border-radius;
+// }
+
+// .list-item:not(:last-child) {
+//   margin-bottom: $border-width * -1;
+// }
 
 $list-item-background-color-hover: $background-color-brand;
+$list-item-border-color-hover: $border-color-brand;
 $list-item-color-hover: $color-brand;
 
 .list-item:focus,
 .list-item:hover {
   @include css-property-fallback("background-color", "--list-item-background-color-hover", $list-item-background-color-hover);
+  @include css-property-fallback("border-color", "--list-item-border-color-hover", $list-item-border-color-hover);
   @include css-property-fallback("color", "--list-item-color-hover", $list-item-color-hover);
   outline: none;
 }
 
-.list-item:not(:last-child) {
-  border-bottom-width: $border-width;
-}
+// .list-item:focus + .list-item,
+// .list-item:hover + .list-item {
+//   @include css-property-fallback("border-top-color", "--list-item-border-color-hover", $list-item-border-color-hover);
+// }
+
+// .list-item:not(:last-child) {
+//   border-bottom-width: $border-width;
+// }

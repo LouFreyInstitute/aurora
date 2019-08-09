@@ -27,24 +27,19 @@ function Sidebar(props) {
 					Elements
 				</NavItem>
 				<NavItem Component={Link} to="/button-element">
-					.c-button
+					Button
 				</NavItem>
 				<NavItem Component={Link} to="/card-element">
-					.c-card
+					Card
 				</NavItem>
 				<NavItem Component={Link} to="/notification-element">
-					.c-notification
+					Notification
 				</NavItem>
 				<NavItem Component={Link} to="/tag-element">
-					<div className="o-layout">
-						<div className="o-layout-item is-fill">.c-tag</div>
-						<div>
-							<span className="tag is-brand">New</span>
-						</div>
-					</div>
+					Tag
 				</NavItem>
 				<NavItem Component={Link} to="/input-element">
-					.input
+					Input
 				</NavItem>
 			</nav>
 		</div>

@@ -9,7 +9,7 @@ const IndexPage = () => (
 
 		<div className="o-container u-margin-bottom+">
 			<h1 className="c-heading is-large">Aurora</h1>
-			<p>
+			<p className="s-prose">
 				Aurora is a collection of CSS patterns, React components, icons, and
 				color themes designed for use with{' '}
 				<a
@@ -21,11 +21,6 @@ const IndexPage = () => (
 				</a>{' '}
 				various products.
 			</p>
-			<p>
-				It was born out of exploration of various frameworks and technologies,
-				which always seemed to be over-engineered or bloated, and a want to be
-				as minimalist as possible.
-			</p>
 		</div>
 
 		<div className="o-layout is-horizontal section-group">
@@ -35,23 +30,17 @@ const IndexPage = () => (
 
 				<h2 className="c-heading is-small">Aurora Elements</h2>
 				<p>
-					CSS classes written in SCSS that are the foundation of Aurora.{' '}
-					<em>Elements</em> can be used independently by just importing the
-					stylesheet.
+					Written in SCSS, this is the foundation of Aurora used to build out
+					user interfaces and web applications.
 				</p>
 
 				<h2 className="c-heading is-small">Aurora Themes</h2>
 				<p>
-					<em>Themes</em> override the variables found in <em>Elements</em>.
-					Themes are only designed to be imported before <em>Elements</em> in
-					order to customize the design of Aurora.
+					If CSS variables are enabled, themes are used to override those
+					variables. Aurora was designed to allow for nested theming.
 				</p>
 				<h2 className="c-heading is-small">Aurora Palettes</h2>
-				<p>
-					Color schemes that can be consumed by <em>Themes</em>. They can be
-					imported separately into your projects if you just want to use the
-					colors.
-				</p>
+				<p>A set of colorschemes to import into your themes.</p>
 			</div>
 			<div className="o-block is-large o-layout-item is-fill section is-rounded">
 				<h1 className="c-heading is-large">Aurora Extras</h1>

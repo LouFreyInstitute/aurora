@@ -1,8 +1,8 @@
 $code-font-family: $font-family-mono !default;
 
 code {
-  background-color: rgba(64, 64, 64, 0.08);
-  // border: 1px solid currentColor;
+  background-color: rgba(128, 128, 128, 0.125);
+  border: 1px solid rgba(128, 128, 128, 0.25);
   border-radius: $border-radius;
   color: inherit;
   font: inherit;

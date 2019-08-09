@@ -19,6 +19,7 @@ $input-border-width: $border-width !default;
   @include css-property-fallback("border-radius", "--input-border-radius", $input-border-radius);
   @include css-property-fallback("border-style", "--input-border-style", $input-border-style);
   @include css-property-fallback("border-width", "--input-border-width", $input-border-width);
+  display: block;
   font: inherit;
   margin: 0;
 }
@@ -45,8 +46,7 @@ $input-border-width: $border-width !default;
 // Default variables.
 $input-background-color: $background-color-component !default;
 $input-border-color: $border-color-component !default;
-$input-border-color-focus: darken($border-color-component, 10%) !default;
-$input-box-shadow-focus: 0 0 0 2px change-color($input-border-color-focus, $alpha: 0.48) !default;
+$input-border-color-focus: $background-color-brand !default;
 $input-color: $color-component !default;
 
 // CSS variables.
@@ -67,7 +67,6 @@ $input-color: $color-component !default;
   &:focus {
     outline: none;
     @include css-property-fallback("border-color", "--input-border-color-focus", $input-border-color-focus);
-    box-shadow: $input-box-shadow-focus;
   }
 }
 

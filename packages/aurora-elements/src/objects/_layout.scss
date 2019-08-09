@@ -33,7 +33,9 @@
 }
 
 .o-layout-item.is-fill {
-  flex: 1;
+  // Using `auto` instead of `1` here translates to `1 1 auto` to avoid
+  // collapsing siblings.
+  flex: auto;
 }
 
 // Styles at small media.

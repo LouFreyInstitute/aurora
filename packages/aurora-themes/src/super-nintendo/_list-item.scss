@@ -1,5 +1,5 @@
 .t-super-nintendo {
   --list-item-border-color: var(--border-color-component);
-  --list-item-background-color-hover: var(--background-color-brand);
-  --list-item-color-hover: var(--color-brand);
+  --list-item-background-color-hover: #{$super-nintendo-gray-20};
+  --list-item-color-hover: #{$super-nintendo-gray-120};
 }

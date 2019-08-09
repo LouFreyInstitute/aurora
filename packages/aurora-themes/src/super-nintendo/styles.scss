@@ -36,9 +36,9 @@
   --color-accent: #{$super-nintendo-indigo-100};
   
   // Disabled
-  --background-color-disabled: #{$super-nintendo-gray-40};
-  --border-color-disabled:  #{$super-nintendo-gray-60};
-  --color-disabled:  #{$super-nintendo-gray-140};
+  --background-color-disabled: #{$super-nintendo-gray-30};
+  --border-color-disabled:  #{$super-nintendo-gray-50};
+  --color-disabled:  #{$super-nintendo-gray-130};
 }
 
 // CSS Custom Properties for Super Nintendo theme in dark mode.
@@ -46,12 +46,12 @@
   // Body
   --background-color-body: #{$super-nintendo-gray-140};
   --border-color-body: #{$super-nintendo-gray-140};
-  --color-body: #{$super-nintendo-gray-50};
+  --color-body: #{$super-nintendo-gray-40};
 
   // Component
   --background-color-component: #{$super-nintendo-gray-130};
   --border-color-component: #{$super-nintendo-gray-120};
-  --color-component: #{$super-nintendo-gray-40};
+  --color-component: #{$super-nintendo-gray-30};
 
   // Disabled
   --background-color-disabled: #{$super-nintendo-gray-130};

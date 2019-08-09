@@ -33,10 +33,14 @@ $menu-color: $color-component !default;
   @include css-property-fallback("border-style", "--menu-border-style", $menu-border-style);
   @include css-property-fallback("border-width", "--menu-border-width", $menu-border-width);
   @include css-property-fallback("color", "--menu-color", $menu-color);
+  padding-bottom: $spacing-tiny - $menu-border-width;
+  padding-top: $spacing-tiny - $menu-border-width;
 }
 
 .menu.is-floating {
   position: absolute;
+  overflow: auto;
+  box-shadow: $shadow;
 }
 
 .menu.is-full-width {
