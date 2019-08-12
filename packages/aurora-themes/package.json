@@ -1,7 +1,7 @@
 {
   "author": "Mike Barnhardt <mikebarnhardt+github@gmail.com>",
   "dependencies": {
-    "@lou-frey-institute/aurora-palettes": "^1.0.0-alpha.0"
+    "@lou-frey-institute/aurora-palettes": "^1.0.1-alpha.0"
   },
   "description": "Themes used in Aurora elements.",
   "main": "src/aurora.scss",
@@ -10,7 +10,7 @@
     "build": "sass --style compressed src/:dist/",
     "start": "sass src/:dist/ --watch"
   },
-  "version": "1.0.0-alpha.0",
+  "version": "1.0.1-alpha.0",
   "devDependencies": {
     "sass": "^1.22.5"
   }

@@ -1,7 +1,7 @@
 {
   "author": "Mike Barnahrdt <mikebarnhardt+github@gmail.com>",
   "dependencies": {
-    "@lou-frey-institute/aurora-palettes": "^1.0.0-alpha.0"
+    "@lou-frey-institute/aurora-palettes": "^1.0.1-alpha.0"
   },
   "description": "Themable CSS styles written in SCSS.",
   "devDependencies": {
@@ -18,5 +18,5 @@
     "build": "sass --style compressed src/:dist/",
     "start": "sass src/:dist/ --watch"
   },
-  "version": "1.0.0-alpha.0"
+  "version": "1.0.1-alpha.0"
 }

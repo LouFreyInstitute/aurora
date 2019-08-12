@@ -3,5 +3,5 @@
   "description": "Palettes used in Aurora themes.",
   "main": "src/aurora.scss",
   "name": "@lou-frey-institute/aurora-palettes",
-  "version": "1.0.0-alpha.0"
+  "version": "1.0.1-alpha.0"
 }
