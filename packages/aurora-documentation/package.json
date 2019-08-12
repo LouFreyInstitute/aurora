@@ -2,9 +2,9 @@
   "author": "Mike Barnhardt <mikebarnhardt+github@gmail.com>",
   "bugs": "https://github.com/loufreyinstitute/aurora/issues",
   "dependencies": {
-    "aurora-components": "^1.0.0-alpha.0",
-    "aurora-elements": "^1.0.0-alpha.0",
-    "aurora-themes": "^1.0.0-alpha.0",
+    "@lou-frey-institute/aurora-components": "^1.0.0-alpha.0",
+    "@lou-frey-institute/aurora-elements": "^1.0.0-alpha.0",
+    "@lou-frey-institute/aurora-themes": "^1.0.0-alpha.0",
     "gatsby": "^2.13.9",
     "gatsby-image": "^2.2.4",
     "gatsby-plugin-manifest": "^2.2.1",
@@ -30,7 +30,7 @@
     "react"
   ],
   "license": "UNLICENSED",
-  "name": "aurora-documentation",
+  "name": "@lou-frey-institute/aurora-documentation",
   "private": true,
   "repository": "https://github.com/LouFreyInstitute/aurora.git",
   "scripts": {

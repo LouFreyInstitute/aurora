@@ -14,7 +14,7 @@
   ],
   "license": "UNLICENSED",
   "main": "es/index.js",
-  "name": "aurora-hooks",
+  "name": "@lou-frey-institute/aurora-hooks",
   "peerDependencies": {
     "react": "^16.8.6"
   },

@@ -1,7 +1,7 @@
 {
   "author": "Mike Barnahrdt <mikebarnhardt+github@gmail.com>",
   "dependencies": {
-    "aurora-hooks": "^1.0.0-alpha.0",
+    "@lou-frey-institute/aurora-hooks": "^1.0.0-alpha.0",
     "classnames": "^2.2.6",
     "prop-types": "^15.7.2"
   },
@@ -18,7 +18,7 @@
   ],
   "license": "UNLICENSED",
   "main": "es/index.js",
-  "name": "aurora-components",
+  "name": "@lou-frey-institute/aurora-components",
   "peerDependencies": {
     "react": "^16.8.6"
   },
