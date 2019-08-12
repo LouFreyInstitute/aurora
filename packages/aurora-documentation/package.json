@@ -2,9 +2,9 @@
   "author": "Mike Barnhardt <mikebarnhardt+github@gmail.com>",
   "bugs": "https://github.com/loufreyinstitute/aurora/issues",
   "dependencies": {
-    "aurora-components": "0.0.0",
-    "aurora-elements": "0.0.0",
-    "aurora-themes": "0.0.0",
+    "aurora-components": "^1.0.0-alpha.0",
+    "aurora-elements": "^1.0.0-alpha.0",
+    "aurora-themes": "^1.0.0-alpha.0",
     "gatsby": "^2.13.9",
     "gatsby-image": "^2.2.4",
     "gatsby-plugin-manifest": "^2.2.1",
@@ -37,6 +37,6 @@
     "deploy": "gatsby build --prefix-paths && gh-pages -d public",
     "start": "gatsby develop"
   },
-  "version": "0.0.0",
+  "version": "1.0.0-alpha.0",
   "xo": false
 }
