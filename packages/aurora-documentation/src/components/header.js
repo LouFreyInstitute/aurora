@@ -1,5 +1,5 @@
 import {Link} from 'gatsby';
-import {Nav, NavBar, NavItem} from 'aurora-components';
+import {Nav, NavBar, NavItem} from '@lou-frey-institute/aurora-components';
 import PropTypes from 'prop-types';
 import React from 'react';
 

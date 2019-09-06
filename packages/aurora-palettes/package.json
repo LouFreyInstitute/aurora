@@ -1,7 +1,10 @@
 {
   "author": "Mike Barnhardt <mikebarnhardt+github@gmail.com>",
+  "bugs": "https://github.com/loufreyinstitute/aurora/issues",
   "description": "Palettes used in Aurora themes.",
+  "license": "MIT",
   "main": "src/aurora.scss",
   "name": "@lou-frey-institute/aurora-palettes",
+  "repository": "https://github.com/LouFreyInstitute/aurora.git",
   "version": "1.0.1-alpha.0"
 }

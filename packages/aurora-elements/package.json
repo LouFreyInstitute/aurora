@@ -11,9 +11,10 @@
     "css",
     "scss"
   ],
-  "license": "UNLICENSED",
+  "license": "MIT",
   "main": "dist/styles.css",
   "name": "@lou-frey-institute/aurora-elements",
+  "repository": "https://github.com/LouFreyInstitute/aurora.git",
   "scripts": {
     "build": "sass --style compressed src/:dist/",
     "start": "sass src/:dist/ --watch"

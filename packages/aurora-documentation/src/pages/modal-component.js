@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Modal} from 'aurora-components';
+import {Modal} from '@lou-frey-institute/aurora-components';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';

@@ -10,7 +10,7 @@
 // and not worry about overriding.
 
 // Import our color palette from the `aurora-palettes` module.
-@import "../../node_modules/aurora-palettes/src/northern-lights";
+@import "../../node_modules/@lou-frey-institute/aurora-palettes/src/northern-lights";
 
 // CSS variables for Northern Lights theme.
 .t-northern-lights {
@@ -21,8 +21,8 @@
   
   // Component
   --background-color-component: #{white};
-  --border-color-component:  #{$northern-lights-gray-20};
-  --color-component: #{$northern-lights-gray-120};
+  --border-color-component:  #{$northern-lights-gray-30};
+  --color-component: #{$northern-lights-gray-130};
   
   // Brand
   --background-color-brand: #{$northern-lights-green-60};

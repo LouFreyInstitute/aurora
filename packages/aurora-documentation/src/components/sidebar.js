@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, {useContext} from 'react';
 import {Link} from 'gatsby';
-import {NavItem} from 'aurora-components';
+import {NavItem} from '@lou-frey-institute/aurora-components';
 
 import ThemeContext from './theme-context';
 

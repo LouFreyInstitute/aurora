@@ -12,12 +12,13 @@
     "hooks",
     "react"
   ],
-  "license": "UNLICENSED",
+  "license": "MIT",
   "main": "es/index.js",
   "name": "@lou-frey-institute/aurora-hooks",
   "peerDependencies": {
     "react": "^16.8.6"
   },
+  "repository": "https://github.com/LouFreyInstitute/aurora.git",
   "scripts": {
     "build": "babel src -d es",
     "start": "babel src -d es -w"

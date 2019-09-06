@@ -5,7 +5,7 @@ import {
 	useFocusHandler,
 	useFocusTrap,
 	useKeyDownHandler
-} from 'aurora-hooks';
+} from '@lou-frey-institute/aurora-hooks';
 
 function Modal(props) {
 	const {isOpen, onClose, render} = props;

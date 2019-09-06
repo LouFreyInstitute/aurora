@@ -1,5 +1,5 @@
 import React from 'react';
-import {Menu} from 'aurora-components';
+import {Menu} from '@lou-frey-institute/aurora-components';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';

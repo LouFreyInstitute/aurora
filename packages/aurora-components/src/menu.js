@@ -5,7 +5,7 @@ import {
 	useFocusHandler,
 	useFocusTrap,
 	useKeyDownHandler
-} from 'aurora-hooks';
+} from '@lou-frey-institute/aurora-hooks';
 
 function Menu(props) {
 	const {onClose, isOpen, render} = props;
