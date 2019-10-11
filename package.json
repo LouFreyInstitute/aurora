@@ -1,12 +1,12 @@
 {
   "devDependencies": {
-    "eslint": "^6.3.0",
+    "eslint": "^6.5.1",
     "eslint-config-xo-react": "^0.20.0",
-    "eslint-plugin-react": "^7.14.3",
-    "eslint-plugin-react-hooks": "^2.0.1",
-    "lerna": "^3.16.4",
-    "react": "^16.9.0",
-    "xo": "^0.24.0"
+    "eslint-plugin-react": "^7.16.0",
+    "eslint-plugin-react-hooks": "^2.1.2",
+    "lerna": "^3.17.0",
+    "react": "^16.10.2",
+    "xo": "^0.25.3"
   },
   "private": true,
   "xo": {
