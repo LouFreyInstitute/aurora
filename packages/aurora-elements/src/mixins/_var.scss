@@ -1,0 +1,12 @@
+/**
+ * Manually sets a property-value pair fallback for browsers that don't support
+ * CSS custom properties (variables). If `$enable-css-variables` is off then it
+ * omits CSS custom properties entirely.
+ */
+@mixin var($property-name, $css-property-name, $property-value) {
+  #{$property-name}: #{$property-value};
+
+  @if $enable-css-variables {
+    #{$property-name}: var(#{$css-property-name}, #{$property-value});
+  }
+}

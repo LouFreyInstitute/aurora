@@ -1,0 +1,7 @@
+// Enable support for CSS variables. This can be disabled if you don't want to
+// use CSS variables.
+$enable-css-variables: true !default;
+
+// Add CSS variables to `:root`. This can be disabled if you are using nested
+// themes.
+$enable-root-css-variables: true !default;

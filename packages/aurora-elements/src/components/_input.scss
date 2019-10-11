@@ -1,130 +1,57 @@
-// General styles.
-
-// Default variables.
-$input-border-radius: $border-radius !default;
-$input-border-style: $border-style !default;
-$input-border-width: $border-width !default;
-
-// CSS variables.
-@if $enable-css-properties and $enable-root-css-properties {
-  :root {
-    --input-border-radius: #{$border-radius};
-    --input-border-style: #{$border-style};
-    --input-border-width: #{$border-width};
-  }
-}
-
-// Default styles.
 .input {
-  @include css-property-fallback("border-radius", "--input-border-radius", $input-border-radius);
-  @include css-property-fallback("border-style", "--input-border-style", $input-border-style);
-  @include css-property-fallback("border-width", "--input-border-width", $input-border-width);
+  border-color: transparent;
+  @include var("border-radius", "--border-radius", $border-radius);
+  @include var("border-style", "--border-style", $border-style);
+  @include var("border-width", "--border-width", $border-width);
   display: block;
   font: inherit;
   margin: 0;
+  width: 100%;
 }
 
-.input.is-half-width {
-  min-width: 50%;
+.input,
+.input.is-default {
+  @include var("background-color", "--component-background-color", $component-background-color);
+  @include var("color", "--component-text-color", $component-text-color);
 }
 
-.input.is-three-quarters-width {
-  min-width: 75%;
+.input.is-invert,
+.input.is-invert.is-default {
+  @include var("background-color", "--component-text-color", $component-text-color);
+  @include var("color", "--component-background-color", $component-background-color);
 }
 
-.input.is-full-width {
-  min-width: 100%;
-}
-
-// Add spacing between .input and .input-helper
-.input:not(:last-child) {
-  margin-bottom: $spacing-small;
-}
-
-// Color variations.
-
-// Default variables.
-$input-background-color: $background-color-component !default;
-$input-border-color: $border-color-component !default;
-$input-border-color-focus: $background-color-brand !default;
-$input-color: $color-component !default;
-
-// CSS variables.
-@if $enable-css-properties and $enable-root-css-properties {
-  :root {
-    --input-background-color: var(--background-color-component);
-    --input-border-color: var(--border-color-component);
-    --input-color: var(--color-component);
-  }
-}
-
-// Default styles.
-.input {
-  @include css-property-fallback("background-color", "--input-background-color", $input-background-color);
-  @include css-property-fallback("border-color", "--input-border-color", $input-border-color);
-  @include css-property-fallback("color", "--input-color", $input-color);
-  
-  &:focus {
-    outline: none;
-    @include css-property-fallback("border-color", "--input-border-color-focus", $input-border-color-focus);
-  }
-}
-
-.input.is-inverted {
-  @include css-property-fallback("background-color", "--input-color", $input-color);
-  @include css-property-fallback("border-color", "--input-border-color", $input-border-color);
-  @include css-property-fallback("color", "--input-background-color", $input-background-color);
-}
-
-// Error variables.
-$input-background-color-error: transparent !default;
-$input-border-color-error: $border-color-error !default;
-$input-color-error: inherit !default;
-
-// CSS variables.
-@if $enable-css-properties and $enable-root-css-properties {
-  :root {
-    --input-background-color-error: transparent;
-    --input-border-color-error: var(--border-color-error);
-    --input-color-error: inherit;
-  }
-}
-
-// Error styles.
 .input.is-error {
-  @include css-property-fallback("background-color", "--input-background-color-error", $input-background-color-error);
-  @include css-property-fallback("border-color", "--input-border-color-error", $input-border-color-error);
-  @include css-property-fallback("color", "--input-color-error", $input-color-error);
+  @include var("background-color", "--error-background-color", $error-background-color);
+  @include var("color", "--error-text-color", $error-text-color);
 }
 
-.input.is-error.is-inverted {
-  @include css-property-fallback("background-color", "--input-color-error", $input-color-error);
-  @include css-property-fallback("border-color", "--input-border-color-error", $input-border-color-error);
-  @include css-property-fallback("color", "--input-background-color-error", $input-background-color-error);
+.input.is-invert.is-error {
+  @include var("background-color", "--error-text-color", $error-text-color);
+  @include var("color", "--error-background-color", $error-background-color);
 }
 
-// Size variations.
-
-// Default variables.
-$input-padding-bottom: $spacing-small - strip-unit($button-border-width) !default;
-$input-padding-left: $spacing - strip-unit($button-border-width) !default;
-$input-padding-right: $spacing - strip-unit($button-border-width) !default;
-$input-padding-top: $spacing-small - strip-unit($button-border-width) !default;
-
-// CSS variables.
-@if $enable-css-properties and $enable-root-css-properties {
-  :root {
-    --input-padding-bottom: calc(var(--spacing-small) - var(--input-border-width));
-    --input-padding-left: calc(var(--spacing) - var(--input-border-width));
-    --input-padding-right: calc(var(--spacing) - var(--input-border-width));
-    --input-padding-top: calc(var(--spacing-small) - var(--input-border-width));
-  }
+.input.is-hollow,
+.input.is-hollow.is-default {
+  background-color: transparent;
+  border-color: currentColor;
+  color: inherit;
 }
 
-// Default styles.
-.input {
-  @include css-property-fallback("padding-bottom", "--input-padding-bottom", $input-padding-bottom);
-  @include css-property-fallback("padding-left", "--input-padding-left", $input-padding-left);
-  @include css-property-fallback("padding-right", "--input-padding-right", $input-padding-right);
-  @include css-property-fallback("padding-top", "--input-padding-top", $input-padding-top);
+.input.is-hollow.is-error {
+  @include var("border-color", "--error-background-color", $error-background-color);
+}
+
+.input.has-outline,
+.input.has-outline.is-default {
+  @include var("border-color", "--component-border-color", $component-border-color);
+}
+
+
+.input,
+.input.is-medium {
+  @include var("padding-bottom", "--spacing-medium", $spacing-small-border);
+  @include var("padding-left", "--spacing-medium", $spacing-medium-border);
+  @include var("padding-right", "--spacing-medium", $spacing-medium-border);
+  @include var("padding-top", "--spacing-medium", $spacing-small-border);
 }

@@ -7,7 +7,7 @@ function Header(props) {
 	const {changeMode, changeTheme, dark, siteTitle, theme} = props;
 
 	return (
-		<NavBar className="is-top" color="brand">
+		<div className="nav-bar is-brand o-layout is-horizontal">
 			<Nav>
 				<NavItem Component="h1" className="c-heading is-tiny">
 					<Link to="/">{siteTitle}</Link>
@@ -42,7 +42,7 @@ function Header(props) {
 					View Code on GitHub
 				</NavItem>
 			</Nav>
-		</NavBar>
+		</div>
 	);
 }
 

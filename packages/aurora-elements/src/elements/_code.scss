@@ -1,14 +1,13 @@
 $code-font-family: $font-family-mono !default;
 
 code {
-  background-color: rgba(128, 128, 128, 0.125);
-  border: 1px solid rgba(128, 128, 128, 0.25);
+  border: $border-width $border-style;
   border-radius: $border-radius;
   color: inherit;
   font: inherit;
   font-family: $code-font-family;
   font-size: $font-size-small;
   font-weight: 500;
-  padding-left: 0.25rem;
-  padding-right: 0.25rem;
+  padding-left: $spacing-tiny;
+  padding-right: $spacing-tiny;
 }

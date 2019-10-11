@@ -1,75 +1,60 @@
-//  _____
-// |_   _|_ _  __ _ 
-//   | |/ _` |/ _` |
-//   | | (_| | (_| |
-//   |_|\__,_|\__, |
-//            |___/
-
-// Tag variables.
-$tag-background-color: $background-color-component !default;
-$tag-border-color: $border-color-component !default;
-$tag-color: $color-component !default;
-
-// Tag CSS properties.
-@if $enable-css-properties and $enable-root-css-properties {
-  :root {
-    --tag-background-color: var(--background-color-component);
-    --tag-border-color: var(--border-color-component);
-    --tag-color: var(--color-component);
-  }
-}
-
-// Tag styles.
 .tag {
-  @include css-property-fallback("background-color", "--tag-background-color", $tag-background-color);
-  @include css-property-fallback("border-color", "--tag-border-color", $tag-border-color);
+  border-color: transparent;
   border-radius: $border-radius;
   border-style: $border-style;
   border-width: $border-width;
-  @include css-property-fallback("color", "--tag-color", $tag-color);
-  // display: inline-block;
   font-size: 0.75em;
-  padding: 0.125em 0.25em;
+  padding: 0.1875rem 0.375rem;
   position: relative;
   top: -0.125em;
 }
 
-// Tag color variations.
-
-// Accent variables.
-$tag-background-color-accent: $background-color-accent !default;
-$tag-color-accent: $color-accent !default;
-
-// Accent CSS properties.
-@if $enable-css-properties and $enable-root-css-properties {
-  :root {
-    --tag-background-color-accent: var(--background-color-accent);
-    --tag-color-accent: var(--color-accent);
-  }
+.tag,
+.tag.is-default {
+  @include var("background-color", "--component-background-color", $component-background-color);
+  @include var("color", "--component-text-color", $component-text-color);
 }
 
-// Accent styles.
-.tag.is-accent {
-  @include css-property-fallback("background-color", "--tag-background-color-accent", $tag-background-color-accent);
-  border-color: transparent;
-  @include css-property-fallback("color", "--tag-color-accent", $tag-color-accent);
+.tag.is-invert,
+.tag.is-default {
+  @include var("background-color", "--component-text-color", $component-text-color);
+  @include var("color", "--component-background-color", $component-background-color);
 }
 
-// Brand variables.
-$tag-background-color-brand: $background-color-brand !default;
-$tag-color-brand: $color-brand !default;
-
-// Brand CSS properties.
-@if $enable-css-properties and $enable-root-css-properties {
-  :root {
-    --tag-background-color-brand: var(--background-color-brand);
-    --tag-color-brand: var(--color-brand);
-  }
-}
-
-// Brand styles.
 .tag.is-brand {
-  @include css-property-fallback("background-color", "--tag-background-color-brand", $tag-background-color-brand);
-  border-color: transparent;
-  @include css-property-fallback("color", "--tag-color-brand", $tag-color-brand);
+  @include var("background-color", "--brand-background-color", $brand-background-color);
+  @include var("color", "--brand-text-color", $brand-text-color);
+}
+
+.tag.is-accent {
+  @include var("background-color", "--accent-background-color", $accent-background-color);
+  @include var("color", "--accent-text-color", $accent-text-color);
+}
+
+.tag.is-hollow,
+.tag.is-hollow.is-default {
+  background-color: transparent;
+  border-color: currentColor;
+  color: inherit;
+}
+
+.tag.is-hollow.is-brand {
+  @include var("border-color", "--brand-background-color", $brand-background-color);
+}
+
+.tag.is-hollow.is-accent {
+  @include var("border-color", "--accent-background-color", $accent-background-color);
+}
+
+.tag.has-outline,
+.tag.has-outline.is-default {
+  @include var("border-color", "--component-border-color", $component-border-color);
+}
+
+.tag.has-outline.is-brand {
+  @include var("border-color", "--brand-border-color", $brand-border-color);
+}
+
+.tag.has-outline.is-accent {
+  @include var("border-color", "--accent-border-color", $accent-border-color);
 }

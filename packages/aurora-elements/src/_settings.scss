@@ -1,0 +1,13 @@
+// Enable using CSS variables for properties on styles with a SCSS variable
+// fallback.
+$enable-css-variables: true !default;
+
+// Declare all CSS variables in the `:root` selector which will apply the
+// current SCSS theme to CSS variables.
+$enable-root-css-variables: true !default;
+
+// Override SCSS theme variables to use dark mode variables.
+$enable-dark-mode: true !default;
+
+// Outlines tabbable elements with the `outline` property on focus.
+$enable-tab-index-outline: false !default;

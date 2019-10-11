@@ -1,38 +1,33 @@
-// Enable support for CSS variables. This can be disabled if you don't want to
-// use CSS variables.
-$enable-css-properties: true !default;
+// SETTINGS
+@import 'settings';
 
-// Add CSS variables to `:root`. This can be disabled if you are using nested
-// themes.
-$enable-root-css-properties: true !default;
+// THEME
+// Only import one theme.
+@import 'themes/default';
 
-// Disable the outline on elements with `tabindex="-1"` which are generally
-// targeted by JavaScript to apply focus traps.
-$disable-tab-index-outline: true !default;
-
-@if $disable-tab-index-outline {
-  [tabindex="-1"]:focus {
-    outline: none;
-  }
-}
-
-// Import Sass variables.
+// VARIABLES
+@import 'variables/css-variables';
 @import 'variables/borders';
 @import 'variables/colors';
+@import 'variables/tab-index';
 @import 'variables/font-families';
 @import 'variables/font-sizes';
+@import 'variables/media-breakpoints';
 @import 'variables/shadows';
 @import 'variables/spacing';
 
-// Import mixins.
+// MIXINS
+// Helper classes with optional parameters.
 @import 'mixins/block';
-@import 'mixins/css-property-fallback';
-@import 'mixins/strip-unit';
+@import 'mixins/var';
+@import 'mixins/media';
 
-// Import globals.
+// GLOBALS
+// Apply to all elements.
 @import 'globals/box-sizing';
 
-// Import elements.
+// ELEMENTS
+// HTML element styles.
 @import 'elements/a';
 @import 'elements/body';
 @import 'elements/code';
@@ -40,18 +35,20 @@ $disable-tab-index-outline: true !default;
 @import 'elements/p';
 @import 'elements/pre';
 
-// Import objects.
-@import 'objects/block';
-@import 'objects/container';
-@import 'objects/grid';
-@import 'objects/layout';
+// STRUCTURES
+// These structure the content in various ways with no other styling.
+@import 'structures/container';
+@import 'structures/grid';
+@import 'structures/layout';
+@import 'structures/section';
 
-// Import components.
+// COMPONENTS
+// Styles specific to various interface elements.
+@import 'components/banner';
+@import 'components/box';
 @import 'components/button';
 @import 'components/card';
-@import 'components/divider';
 @import 'components/field';
-@import 'components/footer';
 @import 'components/heading';
 @import 'components/input-helper';
 @import 'components/label';
@@ -62,18 +59,19 @@ $disable-tab-index-outline: true !default;
 @import 'components/nav-item';
 @import 'components/notification';
 @import 'components/overlay';
-@import 'components/section';
-@import 'components/section-group';
 @import 'components/sidebar';
 @import 'components/tag';
 @import 'components/input';
 
-// Import utilities.
-@import 'utilities/color';
-@import 'utilities/display';
-@import 'utilities/font';
-@import 'utilities/sizing';
-@import 'utilities/spacing';
+// OVERRIDES
+// Utility classes that override specific properties.
+@import 'overrides/color';
+@import 'overrides/display';
+@import 'overrides/font';
+@import 'overrides/padding';
+@import 'overrides/sizing';
+@import 'overrides/spacing';
 
-// Import scopes.
+// SCOPES
+// For advanced debugging/overriding of non-specific bodies of content.
 @import 'scopes/prose';

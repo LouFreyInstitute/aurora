@@ -1,17 +1,7 @@
-$sidebar-border-color: $border-color-body !default;
-
-@if $enable-css-properties and $enable-root-css-properties {
-  :root {
-    --sidebar-border-color: var(--border-color-body);
-  }
-}
-
 .sidebar {
-  @include css-property-fallback("border-color", "--sidebar-border-color", $sidebar-border-color);
+  @include var("border-color", "--page-border-color", $page-border-color);
   border-style: $border-style;
   border-width: 0;
   border-right-width: $border-width;
   min-width: 16vw;
-  padding: 2rem;
-  padding-right: 2rem - 0.0625rem;
 }

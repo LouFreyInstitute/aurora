@@ -1,7 +1,0 @@
-.t-super-nintendo {
-  --overlay-background-color: #{change-color($super-nintendo-purple-30, $alpha: 0.8)};
-}
-
-.t-super-nintendo.is-dark {
-  --overlay-background-color: #{change-color($super-nintendo-gray-120, $alpha: 0.8)};
-}

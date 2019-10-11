@@ -1,0 +1,76 @@
+.box {
+  @include block;
+  border-color: transparent;
+  border-radius: $border-radius;
+  border-style: $border-style;
+  border-width: $border-width;
+}
+
+.box,
+.box.is-default {
+  @include var("background-color", "--container-background-color", $container-background-color);
+  @include var("color", "--container-text-color", $container-text-color);
+}
+
+.box.is-brand {
+  @include var("background-color", "--brand-background-color", $brand-background-color);
+  @include var("color", "--brand-text-color", $brand-text-color);
+}
+
+.box.is-accent {
+  @include var("background-color", "--accent-background-color", $accent-background-color);
+  @include var("color", "--accent-text-color", $accent-text-color);
+}
+
+.box.is-hollow,
+.box.is-hollow.is-default {
+  background-color: transparent;
+  border-color: currentColor;
+  color: inherit;
+}
+
+.box.is-hollow.is-brand {
+  @include var("border-color", "--brand-background-color", $brand-background-color);
+}
+
+.box.is-hollow.is-accent {
+  @include var("border-color", "--accent-background-color", $accent-background-color);
+}
+
+.box,
+.box.is-medium {
+  @include var("padding", "--spacing-medium", ($spacing-medium - $border-width));
+}
+
+.box.is-small {
+  @include var("padding", "--spacing-small", ($spacing-small - $border-width));
+}
+
+.box.is-large {
+  @include var("padding", "--spacing-large", ($spacing-large - $border-width));
+}
+
+.boxes {
+  @include block;
+}
+
+@media all and (min-width: 960px) {
+  .boxes > .box {
+    border-radius: 0;
+    margin: 0;
+  }
+
+  .boxes > .box:first-child {
+    border-bottom-left-radius: $border-radius;
+    border-top-left-radius: $border-radius;
+  }
+
+  .boxes > .box:last-child {
+    border-bottom-right-radius: $border-radius;
+    border-top-right-radius: $border-radius;
+  }
+  
+  .boxes.has-outline > .box:not(:last-child) {
+    border-right-color: red;
+  }
+}

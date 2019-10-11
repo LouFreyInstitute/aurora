@@ -1,39 +1,13 @@
-$nav-bar-background-color: $background-color-component !default;
-$nav-bar-border-color: $border-color-component !default;
-$nav-bar-color: $color-component !default;
-
-@if $enable-css-properties and $enable-root-css-properties {
-  :root {
-    --nav-bar-background-color: var(--background-color-component);
-    --nav-bar-border-color: var(--border-color-component);
-    --nav-bar-color: var(--color-component);
-  }
+.nav-bar {
+  @include var("background-color", "--container-background-color", $container-background-color);
+  @include var("color", "--container-text-color", $container-text-color);
 }
 
-.c-nav-bar {
-  @include css-property-fallback("background-color", "--nav-bar-background-color", $nav-bar-background-color);
-  // @include css-property-fallback("border-color", "--nav-bar-border-color", $nav-bar-border-color);
-  // border-radius: $border-radius;
-  // border-style: $border-style;
-  // border-width: $border-width;
-  @include css-property-fallback("color", "--nav-bar-color", $nav-bar-color);
+.nav-bar.is-brand {
+  @include var("background-color", "--brand-background-color", $brand-background-color);
+  @include var("color", "--brand-text-color", $brand-text-color);
 }
 
-$nav-bar-background-color-brand: $background-color-brand !default;
-$nav-bar-color-brand: $color-brand !default;
-
-@if $enable-css-properties and $enable-root-css-properties {
-  :root {
-    --nav-bar-background-color-brand: var(--background-color-brand);
-    --nav-bar-color-brand: var(--color-brand);
-  }
-}
-
-.c-nav-bar.is-brand {
-  @include css-property-fallback("background-color", "--nav-bar-background-color-brand", $nav-bar-background-color-brand);
-  @include css-property-fallback("color", "--nav-bar-color-brand", $nav-bar-color-brand);
-}
-
-.c-nav-bar.is-fixed {
+.nav-bar.is-fixed {
   position: fixed;
 }

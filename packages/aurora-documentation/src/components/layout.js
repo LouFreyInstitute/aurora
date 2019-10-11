@@ -88,16 +88,12 @@ class Layout extends React.Component {
 							<div className="o-layout is-horizontal o-layout-item is-fill">
 								<Sidebar />
 
-								<main className="o-block is-large o-layout is-vertical o-layout-item is-fill">
-									<div className="o-layout-item is-fill u-margin-bottom+">
-										<div className={`o-container is-${size}`}>{children}</div>
-									</div>
+								<main className="o-layout is-vertical o-layout-item is-fill">
+									<div className="o-layout-item is-fill">{children}</div>
 
-									<hr className="divider" />
-
-									<footer className="u-font-size- s-prose">
+									<footer className="section">
 										<div className="o-layout">
-											<div>
+											<div className="s-prose">
 												© {new Date().getFullYear()},{' '}
 												<a href="http://loufreyinstitute.org">
 													Lou Frey Institute
@@ -105,7 +101,7 @@ class Layout extends React.Component {
 												at the University of Central Florida.
 											</div>
 											<div className="o-layout-item is-fill" />
-											<div>
+											<div className="s-prose">
 												Built with <a href="https://www.gatsbyjs.org">Gatsby</a>
 												.
 											</div>

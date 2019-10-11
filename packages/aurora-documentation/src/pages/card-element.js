@@ -7,17 +7,26 @@ const CardElement = () => (
 	<Layout>
 		<SEO title="Button" />
 
-		<h1 className="c-heading is-large">Card</h1>
-		<p>Displays lesser information in a controlled format.</p>
+		<section className="section s-prose">
+			<a href="#">Aurora</a>
+			{' / '}
+			<span>Elements</span>
+			{' / '}
+			<span>Button</span>
+		</section>
 
-		<div className="o-block is-large section">
-			<h2 className="c-heading is-small">Default</h2>
-			<p>Basic cards with an image media and color variants.</p>
+		<section className="section is-large">
+			<div className="container">
+				<h1 className="c-heading is-large">Card</h1>
+				<p>Displays lesser information in a controlled format.</p>
+			</div>
+		</section>
 
+		<section className="section is-large">
 			<div className="o-grid">
 				<div className="o-grid-column is-fill">
-					<div className="o-layout is-vertical c-card">
-						<div className="c-card-media">
+					<div className="o-layout is-vertical card">
+						<div className="card-media">
 							<img
 								alt="Kitten"
 								height="300px"
@@ -25,10 +34,10 @@ const CardElement = () => (
 								width="300px"
 							/>
 						</div>
-						<div className="c-card-body">
+						<div className="card-body">
 							<p className="u-margin-bottom-">This is a card.</p>
 							<button
-								className="c-button is-small u-margin-bottom-"
+								className="button is-small has-outline is-hollow"
 								type="button"
 							>
 								Action
@@ -38,8 +47,8 @@ const CardElement = () => (
 				</div>
 
 				<div className="o-grid-column is-fill">
-					<div className="o-layout is-vertical c-card is-brand">
-						<div className="c-card-media">
+					<div className="o-layout is-vertical card is-brand">
+						<div className="card-media">
 							<img
 								alt="Kitten"
 								height="300px"
@@ -47,12 +56,12 @@ const CardElement = () => (
 								width="300px"
 							/>
 						</div>
-						<div className="c-card-body">
+						<div className="card-body">
 							<p className="u-margin-bottom-">
 								This is a card with brand colors.
 							</p>
 							<button
-								className="c-button is-brand is-hollow is-inverted is-small u-margin-bottom-"
+								className="button is-brand has-outline is-small"
 								type="button"
 							>
 								Action
@@ -62,8 +71,8 @@ const CardElement = () => (
 				</div>
 
 				<div className="o-grid-column is-fill">
-					<div className="o-layout is-vertical c-card is-accent">
-						<div className="c-card-media">
+					<div className="o-layout is-vertical card is-accent">
+						<div className="card-media">
 							<img
 								alt="Kitten"
 								height="300px"
@@ -71,12 +80,12 @@ const CardElement = () => (
 								width="300px"
 							/>
 						</div>
-						<div className="c-card-body">
+						<div className="card-body">
 							<p className="u-margin-bottom-">
 								This is a card with accent colors.
 							</p>
 							<button
-								className="c-button is-accent is-hollow is-inverted is-small u-margin-bottom-"
+								className="button is-accent has-outline is-inverted is-small"
 								type="button"
 							>
 								Action
@@ -85,7 +94,7 @@ const CardElement = () => (
 					</div>
 				</div>
 			</div>
-		</div>
+		</section>
 	</Layout>
 );
 

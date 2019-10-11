@@ -1,115 +1,53 @@
-// Super Nintendo
-// ----
-// A Theme for Aurora
-// ====
-// You can use this theme as the foundation for creating new themes. All
-// variables used here must be overriden or it will use the parent theme's.
-// If it is the parent theme then it will use the defaults given to Sass.
-//
-// If you don't want to use nested themes you can throw everything into `:root`
-// and not worry about overriding.
-
-// Import our color palette from the `aurora-palettes` module.
 @import "../../node_modules/@lou-frey-institute/aurora-palettes/src/super-nintendo";
 
-// CSS variables for Super Nintendo theme.
 .t-super-nintendo {
-  // Body
-  --background-color-body: #{$super-nintendo-gray-20};
-  --border-color-body: #{$super-nintendo-gray-30};
-  --color-body: #{$super-nintendo-gray-120};
+  --page-background-color: #{$super-nintendo-gray-20};
+  --page-border-color: #{$super-nintendo-gray-30};
+  --page-text-color: #{$super-nintendo-gray-120};
+
+  --container-background-color: #{$super-nintendo-gray-10};
+  --container-border-color: #{$super-nintendo-gray-30};
+  --container-text-color: #{$super-nintendo-gray-110};
   
-  // Component
-  --background-color-component: #{$super-nintendo-gray-10};
-  --background-color-component-hover: #{$super-nintendo-gray-20};
-  --border-color-component:  #{$super-nintendo-gray-30};
-  --color-component: #{$super-nintendo-gray-110};
+  --component-background-color: #{$super-nintendo-gray-120};
+  --component-border-color:  #{$super-nintendo-gray-140};
+  --component-text-color: #{$super-nintendo-gray-20};
   
-  // Brand
-  --background-color-brand: #{$super-nintendo-purple-70};
-  --border-color-brand:  #{$super-nintendo-purple-90};
-  --color-brand:  #{$super-nintendo-purple-10};
+  --brand-background-color: #{$super-nintendo-purple-70};
+  --brand-border-color:  #{$super-nintendo-purple-90};
+  --brand-text-color:  #{$super-nintendo-purple-10};
   
-  // Accent
-  --background-color-accent: #{$super-nintendo-indigo-40};
-  --border-color-accent: #{$super-nintendo-indigo-60};
-  --color-accent: #{$super-nintendo-indigo-100};
+  --accent-background-color: #{$super-nintendo-indigo-40};
+  --accent-border-color: #{$super-nintendo-indigo-60};
+  --accent-text-color: #{$super-nintendo-indigo-100};
   
-  // Disabled
-  --background-color-disabled: #{$super-nintendo-gray-30};
-  --border-color-disabled:  #{$super-nintendo-gray-50};
-  --color-disabled:  #{$super-nintendo-gray-130};
+  --disabled-background-color: #{$super-nintendo-gray-20};
+  --disabled-border-color:  #{$super-nintendo-gray-40};
+  --disabled-text-color:  #{$super-nintendo-gray-60};
 }
 
 // CSS Custom Properties for Super Nintendo theme in dark mode.
 .t-super-nintendo.is-dark {
-  // Body
-  --background-color-body: #{$super-nintendo-gray-140};
-  --border-color-body: #{$super-nintendo-gray-140};
-  --color-body: #{$super-nintendo-gray-40};
+  --page-background-color: #{$super-nintendo-gray-140};
+  --page-border-color: #{$super-nintendo-gray-130};
+  --page-text-color: #{$super-nintendo-gray-40};
+  
+  --container-background-color: #{$super-nintendo-gray-130};
+  --container-border-color: #{$super-nintendo-gray-120};
+  --container-text-color: #{$super-nintendo-gray-30};
 
-  // Component
-  --background-color-component: #{$super-nintendo-gray-130};
-  --border-color-component: #{$super-nintendo-gray-120};
-  --color-component: #{$super-nintendo-gray-30};
+  --component-background-color: #{$super-nintendo-gray-20};
+  --component-border-color: #{$super-nintendo-gray-40};
+  --component-text-color: #{$super-nintendo-gray-120};
 
-  // Disabled
-  --background-color-disabled: #{$super-nintendo-gray-130};
-  --border-color-disabled: #{$super-nintendo-gray-110};
-  --color-disabled: #{$super-nintendo-gray-30};
+  --disabled-background-color: #{$super-nintendo-gray-120};
+  --disabled-border-color: #{$super-nintendo-gray-100};
+  --disabled-text-color: #{$super-nintendo-gray-80};
 }
 
-// If you are using nested themes it is recommended to add a further level of
-// CSS properties to prevent unwanted inheritance. These can be broken up into
-// separate files (see below) or defined in a single file. You can even use
-// plain CSS.
-//
-// An easy rule to follow is that any CSS property that is set should be defined
-// in all other themes as well to prevent overriding each other when nested. As
-// such you will usually only override colors and can generally leave spacing
-// and typography variables alone.
-
-// Import custom button CSS properties.
-@import 'button';
-
-// Import custom card CSS properties.
-@import 'card';
-
-// Import custom card CSS properties.
-@import 'divider';
-
-// Import custom input CSS properties.
-@import 'input';
-
-// Import custom menu CSS properties.
-@import 'list-item';
-
-// Import custom menu CSS properties.
-@import 'menu';
-
-// Import custom nav-bar CSS properties.
-@import 'nav-bar';
-
-// Import custom notification CSS properties.
-@import 'notification';
-
-// Import custom notification CSS properties.
-@import 'overlay';
-
-// Import custom section CSS properties.
-@import 'section';
-
-// Import custom section CSS properties.
-@import 'sidebar';
-
-// Import custom tag CSS properties.
-@import 'tag';
-
-
 // Overrides `background-color` and `color` if theme can't be set on the `html`
-// element. It is recommended to use `.c-section` in conjunction with theme
-// classes to set these colors (especially with nesting themes) instead.
+// element.
 .t-super-nintendo.has-overrides {
-  background-color: var(--background-color-body);
-  color: var(--color-body);
+  background-color: var(--page-background-color);
+  color: var(--page-text-color);
 }

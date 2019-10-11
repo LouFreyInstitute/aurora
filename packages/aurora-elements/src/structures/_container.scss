@@ -1,0 +1,17 @@
+.container {
+  width: 100%;
+}
+
+@include phone {
+  .container {
+    max-width: 640px;
+  }
+
+  .container.is-large {
+    max-width: 960px;
+  }
+
+  .container.is-small {
+    max-width: 480px;
+  }
+}

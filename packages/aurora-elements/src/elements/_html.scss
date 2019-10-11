@@ -1,25 +1,25 @@
-$html-background-color: $background-color-body !default;
-$html-color: $color-body !default;
+$html-background-color: $page-background-color !default;
+$html-color: $page-text-color !default;
 $html-font-family: $font-family-sans !default;
 $html-font-size: $font-size !default;
 $html-line-height: 1.5 !default;
 
-@if $enable-css-properties and $enable-root-css-properties {
+@if $enable-css-variables and $enable-root-css-variables {
   :root {
-    --html-background-color: var(--background-color);
-    --html-color: var(--color);
+    --html-background-color: var(--page-background-color);
+    --html-color: var(--page-text-color);
     --html-font-size: var(--font-size);
     --html-line-height: 1.5;
   }
 }
 
 html {
-  @include css-property-fallback("background-color", "--html-background-color", $html-background-color);
-  @include css-property-fallback("color", "--html-color", $html-color);
+  @include var("background-color", "--html-background-color", $html-background-color);
+  @include var("color", "--html-color", $html-color);
   font-family: $html-font-family;
-  @include css-property-fallback("font-size", "--html-font-size", $html-font-size);
+  @include var("font-size", "--html-font-size", $html-font-size);
   font-smoothing: antialiased;
-  @include css-property-fallback("line-height", "--html-line-height", $html-line-height);
+  @include var("line-height", "--html-line-height", $html-line-height);
   line-height: $html-line-height;
 
   -webkit-font-smoothing: antialiased;

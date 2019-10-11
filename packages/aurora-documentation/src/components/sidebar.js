@@ -1,46 +1,38 @@
 import PropTypes from 'prop-types';
-import React, {useContext} from 'react';
+import React from 'react';
 import {Link} from 'gatsby';
 import {NavItem} from '@lou-frey-institute/aurora-components';
 
-import ThemeContext from './theme-context';
-
 function Sidebar(props) {
-	const theme = useContext(ThemeContext);
-
 	return (
-		<div className={`o-block ${props.className} sidebar`}>
-			<nav className="o-layout is-vertical u-margin-bottom">
-				<NavItem className="c-heading is-tiny u-margin-none" Component="h1">
-					Components
-				</NavItem>
-				<NavItem Component={Link} to="/menu-component">
+		<div className={`${props.className} sidebar`}>
+			<nav className="o-layout is-aligned-top c-nav is-vertical">
+				<h1 className="c-nav-item c-heading is-tiny">Components</h1>
+				<Link className="c-nav-item" to="/menu-component">
 					Menu
-				</NavItem>
-				<NavItem Component={Link} to="/modal-component">
+				</Link>
+				<Link className="c-nav-item" to="/modal-component">
 					Modal
-				</NavItem>
+				</Link>
 			</nav>
 
-			<nav className="o-layout is-vertical u-margin-bottom">
-				<NavItem className="c-heading is-tiny u-margin-none" Component="h1">
-					Elements
-				</NavItem>
-				<NavItem Component={Link} to="/button-element">
+			<nav className="o-layout is-aligned-top c-nav is-vertical">
+				<h1 className="c-nav-item c-heading is-tiny">Elements</h1>
+				<Link className="c-nav-item" to="/button-element">
 					Button
-				</NavItem>
-				<NavItem Component={Link} to="/card-element">
+				</Link>
+				<Link className="c-nav-item" to="/card-element">
 					Card
-				</NavItem>
-				<NavItem Component={Link} to="/notification-element">
+				</Link>
+				<Link className="c-nav-item" to="/notification-element">
 					Notification
-				</NavItem>
-				<NavItem Component={Link} to="/tag-element">
+				</Link>
+				<Link className="c-nav-item" to="/tag-element">
 					Tag
-				</NavItem>
-				<NavItem Component={Link} to="/input-element">
+				</Link>
+				<Link className="c-nav-item" to="/input-element">
 					Input
-				</NavItem>
+				</Link>
 			</nav>
 		</div>
 	);

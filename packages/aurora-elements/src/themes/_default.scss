@@ -1,0 +1,73 @@
+// Import a palette file here if you have colors already assembled.
+// @import '../palettes/default';
+
+// Page is used for the main body of content. It will be probably only be used
+// on the root or when nesting themes.
+$page-background-color: #f8f8f8;
+$page-border-color: #d8d8d8;
+$page-text-color: #484848;
+
+@if $enable-dark-mode {
+  $page-background-color: #282030;
+  $page-border-color: #383040;
+  $page-text-color: #e8e0f0;
+}
+
+// Containers house components and are elements such as cards, sections, etc.
+$container-background-color: white;
+$container-border-color: #e8e0f0;
+$container-text-color: #282030;
+
+@if $enable-dark-mode {
+  $container-background-color: #383040;
+  $container-border-color: #484050;
+  $container-text-color: #f0e8f8;
+}
+
+// Components are interactive elements such as buttons, forms, etc.
+$component-background-color: #383040;
+$component-border-color: #181020;
+$component-text-color: #e0e8f0;
+
+@if $enable-dark-mode {
+  $component-background-color: #e0e8f0;
+  $component-border-color: #c0c8d0;
+  $component-text-color: #484050;
+}
+
+// Brand is the primary color represeting your identity.
+$brand-background-color: #60f0c0;
+$brand-border-color: #50c0a0;
+$brand-text-color: #406060;
+
+// Accent is used as a secondary color to complement `brand` and should be used
+// sparingly.
+$accent-background-color: #c0a0e0;
+$accent-border-color: #a090b0;
+$accent-text-color: #604060;
+
+$disabled-background-color: #e0e8f0;
+$disabled-border-color: #b8b0c0;
+$disabled-text-color: #383040;
+
+@if $enable-dark-mode {
+  $disabled-background-color: #484050;
+  $disabled-border-color: #686070;
+  $disabled-text-color: #888090;
+}
+
+$error-background-color: #f06060;
+$error-border-color: #c03030;
+$error-text-color: #600;
+
+$info-background-color: #60b0f0;
+$info-border-color: #4090d0;
+$info-text-color: #005090;
+
+$success-background-color: #90c090;
+$success-border-color: #609060;
+$success-text-color: #306030;
+
+$warning-background-color: #f0c090;
+$warning-border-color: #c09060;
+$warning-text-color: #906030;

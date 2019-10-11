@@ -1,26 +1,11 @@
-// ..######..########.....###.....######..####.##....##..######..
-// .##....##.##.....##...##.##...##....##..##..###...##.##....##.
-// .##.......##.....##..##...##..##........##..####..##.##.......
-// ..######..########..##.....##.##........##..##.##.##.##...####
-// .......##.##........#########.##........##..##..####.##....##.
-// .##....##.##........##.....##.##....##..##..##...###.##....##.
-// ..######..##........##.....##..######..####.##....##..######..
-//
-// These variables set margins and padding across the theme. Most components
-// will have custom padding and margins to override these.
+$spacing-tiny: 0.375rem;
+$spacing-small: 0.75rem;
+$spacing-medium: 1.5rem;
+$spacing-large: 3rem;
+$spacing-huge: 6rem;
 
-$spacing-tiny: 4px !default;
-$spacing-small: 8px !default;
-$spacing: 16px !default;
-$spacing-large: 24px !default;
-$spacing-huge: 32px !default;
-
-@if $enable-css-properties and $enable-root-css-properties {
-  :root {
-    --spacing: #{$spacing};
-    --spacing-tiny: #{$spacing-tiny};
-    --spacing-small: #{$spacing-small};
-    --spacing-large: #{$spacing-large};
-    --spacing-huge: #{$spacing-huge};
-  }
-}
+$spacing-tiny-border: 0.375rem - $border-width;
+$spacing-small-border: 0.75rem - $border-width;
+$spacing-medium-border: 1.5rem - $border-width;
+$spacing-large-border: 3rem - $border-width;
+$spacing-huge-border: 6rem - $border-width;

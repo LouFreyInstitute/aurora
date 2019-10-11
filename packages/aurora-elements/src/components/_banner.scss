@@ -1,0 +1,24 @@
+.banner,
+.banner.is-default {
+  @include var("background-color", "--container-background-color", $container-background-color);
+  @include var("color", "--container-text-color", $container-text-color);
+}
+
+.banner.is-brand {
+  @include var("background-color", "--brand-background-color", $brand-background-color);
+  @include var("color", "--brand-text-color", $brand-text-color);
+}
+
+.banner.is-accent {
+  @include var("background-color", "--accent-background-color", $accent-background-color);
+  @include var("color", "--accent-text-color", $accent-text-color);
+}
+
+.banner,
+.banner.is-medium {
+  @include var("padding", "--spacing-large", $spacing-large);
+}
+
+.banner.is-large {
+  @include var("padding", "--spacing-huge", $spacing-huge);
+}

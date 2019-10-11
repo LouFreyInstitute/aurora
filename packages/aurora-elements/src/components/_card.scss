@@ -1,105 +1,88 @@
-// Card variables.
-$card-background-color: $background-color-component !default;
-$card-border-color: $border-color-component !default;
-$card-border-radius: $border-radius !default;
-$card-border-style: $border-style !default;
-$card-border-width: $border-width !default;
-$card-color: $color-component !default;
-
-// Card CSS properties.
-@if $enable-css-properties and $enable-root-css-properties {
-  :root {
-    --card-background-color: var(--background-color-default);
-    --card-border-color: var(--border-color);
-    --card-border-radius: var(--border-radius);
-    --card-border-style: var(--border-style);
-    --card-border-width: var(--border-width);
-    --card-color: var(--color-default);
-  }
-}
-
-// Card styles.
-.c-card {
-  @include css-property-fallback("background-color", "--card-background-color", $card-background-color);
-  @include css-property-fallback("border-color", "--card-border-color", $card-border-color);
-  @include css-property-fallback("border-radius", "--card-border-radius", $card-border-radius);
-  @include css-property-fallback("border-style", "--card-border-style", $card-border-style);
-  @include css-property-fallback("border-width", "--card-border-width", $card-border-width);
-  @include css-property-fallback("color", "--card-color", $card-color);
+.card {
+  border-color: transparent;
+  @include var("border-radius", "--border-radius", $border-radius);
+  @include var("border-style", "--border-style", $border-style);
+  @include var("border-width", "--border-width", $border-width);
   height: 100%;
 }
 
-.c-card.is-inverted {
-  @include css-property-fallback("background-color", "--card-color", $card-color);
-  @include css-property-fallback("color", "--card-background-color", $card-background-color);
+.card,
+.card.is-default {
+  @include var("background-color", "--container-background-color", $container-background-color);
+  @include var("color", "--container-text-color", $container-text-color);
 }
 
-// Card Colors
-// ----
-
-// Accent
-// ----
-
-// Accent variables.
-$card-background-color-accent: $background-color-accent !default;
-$card-border-color-accent: $border-color-accent !default;
-$card-color-accent: $color-accent !default;
-
-// Accent CSS properties.
-@if $enable-css-properties and $enable-root-css-properties {
-  :root {
-    --card-background-color-accent: var(--background-color-accent);
-    --card-border-color-accent: transparent;
-    --card-color-accent: var(--color-accent);
-  }
+.card.is-inverted {
+  @include var("background-color", "--container-text-color", $container-text-color);
+  @include var("color", "--container-background-color", $container-background-color);
 }
 
-// Accent styles.
-.c-card.is-accent {
-  @include css-property-fallback("background-color", "--card-background-color-accent", $card-background-color-accent);
-  @include css-property-fallback("border-color", "--card-border-color-accent", $card-border-color-accent);
-  @include css-property-fallback("color", "--card-color-accent", $card-color-accent);
+.card.is-brand {
+  @include var("background-color", "--brand-background-color", $brand-background-color);
+  @include var("color", "--brand-text-color", $brand-text-color);
 }
 
-// Accent inverted.
-.c-card.is-accent.is-inverted {
-  @include css-property-fallback("background-color", "--card-color-accent", $card-color-accent);
-  @include css-property-fallback("color", "--card-background-color-accent", $card-background-color-accent);
+.card.is-brand.is-inverted {
+  @include var("background-color", "--brand-text-color", $brand-text-color);
+  @include var("color", "--brand-background-color", $brand-background-color);
 }
 
-// Brand
-// ----
-
-// Brand variables.
-$card-background-color-brand: $background-color-brand !default;
-$card-border-color-brand: $border-color-brand !default;
-$card-color-brand: $color-brand !default;
-
-// Brand CSS properties.
-@if $enable-css-properties and $enable-root-css-properties {
-  :root {
-    --card-background-color-brand: var(--background-color-brand);
-    --card-border-color-brand: transparent;
-    --card-color-brand: var(--color-brand);
-  }
+.card.is-accent {
+  @include var("background-color", "--accent-background-color", $accent-background-color);
+  @include var("color", "--accent-text-color", $accent-text-color);
 }
 
-// Brand styles.
-.c-card.is-brand {
-  @include css-property-fallback("background-color", "--card-background-color-brand", $card-background-color-brand);
-  @include css-property-fallback("border-color", "--card-border-color-brand", $card-border-color-brand);
-  @include css-property-fallback("color", "--card-color-brand", $card-color-brand);
+.card.is-accent.is-inverted {
+  @include var("background-color", "--accent-text-color", $accent-text-color);
+  @include var("color", "--accent-background-color", $accent-background-color);
 }
 
-.c-card-media > img {
+.card.is-hollow,
+.card.is-hollow.is-default {
+  background-color: transparent;
+  border-color: currentColor;
+  color: inherit;
+}
+
+.card.is-hollow.is-brand {
+  @include var("border-color", "--brand-background-color", $brand-background-color);
+}
+
+.card.is-hollow.is-accent {
+  @include var("border-color", "--accent-background-color", $accent-background-color);
+}
+
+.card.has-outline,
+.card.has-outline.is-default {
+  @include var("border-color", "--container-border-color", $container-border-color);
+}
+
+.card.has-outline.is-brand {
+  @include var("border-color", "--brand-border-color", $brand-border-color);
+}
+
+.card.has-outline.is-accent {
+  @include var("border-color", "--accent-border-color", $accent-border-color);
+}
+
+.card-media {
+  margin: -1 * $border-width;
+}
+
+.card-media:first-child {
+  border-top-left-radius: $border-radius;
+  border-top-right-radius: $border-radius;
+}
+
+.card-media > img {
   display: block;
   height: auto;
   width: 100%;
 }
 
-.c-card-body {
-  padding-bottom: $spacing - $card-border-width;
-  padding-left: $spacing - $card-border-width;
-  padding-right: $spacing - $card-border-width;
-  padding-top: $spacing - $card-border-width;
+.card-body {
+  padding-bottom: $spacing-medium-border;
+  padding-left: $spacing-medium-border;
+  padding-right: $spacing-medium-border;
+  padding-top: $spacing-medium-border;
 }
