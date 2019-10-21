@@ -1,7 +1,7 @@
 {
   "author": "Mike Barnahrdt <mikebarnhardt+github@gmail.com>",
   "dependencies": {
-    "@lou-frey-institute/aurora-hooks": "^2.0.0",
+    "@lou-frey-institute/aurora-hooks": "^2.0.1",
     "classnames": "^2.2.6",
     "prop-types": "^15.7.2"
   },
