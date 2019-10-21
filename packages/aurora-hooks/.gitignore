@@ -1,0 +1,7 @@
+*.log
+.DS_Store
+coverage
+es
+logs
+node_modules
+npm-debug.log*
