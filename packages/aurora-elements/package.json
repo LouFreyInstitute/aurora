@@ -19,5 +19,5 @@
     "build": "sass --style compressed src/:dist/",
     "start": "sass src/:dist/ --watch"
   },
-  "version": "2.0.0"
+  "version": "2.1.0"
 }
