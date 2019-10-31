@@ -1,0 +1,32 @@
+.section.is-default {
+  @include var("background-color", "--container-background-color", $container-background-color);
+  @include var("color", "--container-text-color", $container-text-color);
+}
+
+.section.is-inverted {
+  @include var("background-color", "--container-text-color", $container-text-color);
+  @include var("color", "--container-background-color", $container-background-color);
+}
+
+.section.is-brand {
+  @include var("background-color", "--brand-background-color", $brand-background-color);
+  @include var("color", "--brand-text-color", $brand-text-color);
+}
+
+.section.is-accent {
+  @include var("background-color", "--accent-background-color", $accent-background-color);
+  @include var("color", "--accent-text-color", $accent-text-color);
+}
+
+.section,
+.section.is-medium {
+  @include var("padding", "--spacing-medium", $spacing-medium);
+}
+
+.section.is-small {
+  @include var("padding", "--spacing-small", $spacing-small);
+}
+
+.section.is-large {
+  @include var("padding", "--spacing-large", $spacing-large);
+}
